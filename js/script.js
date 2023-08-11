@@ -1024,7 +1024,7 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "5300") {
+      if ($(this).scrollTop() > number && currentScroll < "4400") {
         animatebodymovin(animDuration, anim);
       }
     });

@@ -1447,25 +1447,28 @@
   width: 100%;
   padding: 100px 0;
   @include transition(opacity 0.5s);
-  overflow: hidden;
+  background-image: url("../img/preimuschestva.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   &.hide {
     opacity: 0 !important;
     pointer-events: none;
   }
 
-  @include before {
-    width: 2113px;
-    height: 1319px;
-    left: 50%;
-    top: -320px;
-    background-image: url("../img/preimuschestva.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: -1050px;
-    pointer-events: none;
-    z-index: -1;
-  }
+  // @include before {
+  //   width: 2113px;
+  //   height: 1319px;
+  //   left: 50%;
+  //   top: -320px;
+  //   background-image: url("../img/preimuschestva.png");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   margin-left: -1050px;
+  //   pointer-events: none;
+  //   z-index: -1;
+  // }
 }
 
 .incision__inner {
@@ -8470,7 +8473,7 @@ $fontSize: (
 }
 
 .lottie-first{
-  height: 2500px;
+  height: 3000px;
   background-image: url(../img/bg-anim-text.png);
   background-position: center;
   background-repeat: no-repeat;

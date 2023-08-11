@@ -954,7 +954,7 @@ div::-webkit-scrollbar-thumb {
 
 #lottie-1 {
   position: sticky;
-  top: -170px;
+  top: -150px;
   left: 0;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -963,6 +963,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  margin-top: -530px;
 }
 #lottie-1.show {
   opacity: 1;
@@ -999,27 +1000,6 @@ div::-webkit-scrollbar-thumb {
 #lottie-2.hide {
   opacity: 0;
 }
-#lottie-2.back::before {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 2141px;
-  height: 1080px;
-  left: 50%;
-  top: 180px;
-  background-image: url(../img/bg-anim-text.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: -1130px;
-}
-
 #lottie-3 {
   margin-left: -1140px;
   opacity: 0;
@@ -3314,29 +3294,14 @@ div::-webkit-scrollbar-thumb {
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
-  overflow: hidden;
+  background-image: url("../img/preimuschestva.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .incision.hide {
   opacity: 0 !important;
   pointer-events: none;
-}
-.incision::before {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 2113px;
-  height: 1319px;
-  left: 50%;
-  top: -320px;
-  background-image: url("../img/preimuschestva.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: -1050px;
-  pointer-events: none;
-  z-index: -1;
 }
 
 .incision__inner {
@@ -10181,7 +10146,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .lottie-first {
-  height: 2500px;
+  height: 3000px;
   background-image: url(../img/bg-anim-text.png);
   background-position: center;
   background-repeat: no-repeat;
