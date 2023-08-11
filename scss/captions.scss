@@ -1,0 +1,38 @@
+.caption {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #2e2e2e;
+  font-family: $fontMain;
+
+  &--big {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 74px;
+  }
+
+  &--middle {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  &--small {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  &--big-v2 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.caption__desc {
+  font-size: 48px;
+  line-height: 64px;
+  display: block;
+  font-weight: 400;
+}

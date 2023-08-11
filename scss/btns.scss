@@ -1,0 +1,319 @@
+.btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  color: $colorWhite;
+  @include border-radius(50px);
+  @include transition(all 0.3s);
+  background-color: $colorSite;
+  padding: 20px 29px;
+  left: -3px;
+  top: -3px;
+
+  svg {
+    path {
+      stroke: $colorWhite;
+      @include transition(all 0.3s);
+    }
+  }
+
+  @include before {
+    left: 4px;
+    top: 4px;
+    border: 1px solid $colorSite;
+    @include border-radius(50px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    background-color: rgba(76, 185, 184);
+
+    &::before {
+      background-color: $colorSite;
+    }
+  }
+
+  &--white {
+    font-size: 18px;
+    line-height: 27px;
+    left: 0;
+    top: 0;
+    background-color: $colorWhite;
+    color: $colorSite;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover{
+      color: $colorWhite;
+    }
+  }
+
+  &--green {
+    font-size: 18px;
+    line-height: 27px;
+    left: 0;
+    top: 0;
+    background-color: $colorSite;
+    color: $colorWhite;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--border-green {
+    background-color: transparent;
+    border: solid 1px $colorSite;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $colorSite;
+    @include border-radius(20px);
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      color: $colorWhite;
+      border-color: rgba(76, 185, 184);
+
+      svg {
+        path {
+          stroke: $colorWhite;
+        }
+      }
+    }
+
+    svg {
+      path {
+        stroke: $colorSite;
+      }
+    }
+  }
+
+  &--border-white {
+    background-color: transparent;
+    border: solid 1px $colorWhite;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    line-height: 27px;
+    color: $colorWhite;
+    @include border-radius(50px);
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $colorWhite;
+      color: $colorBlack;
+
+      svg {
+        path {
+          stroke: $colorBlack;
+        }
+      }
+
+      &::before {
+        border-color: $colorWhite;
+      }
+    }
+  }
+
+  &--border-gray {
+    background-color: transparent;
+    border: solid 1px #aa9f8e;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2e2e2e;
+    @include border-radius(50px);
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #aa9f8e;
+      border-color: #aa9f8e;
+      color: $colorWhite;
+
+      svg {
+        path {
+          stroke: $colorWhite;
+        }
+      }
+    }
+
+    svg {
+      path {
+        stroke: #2e2e2e;
+      }
+    }
+  }
+}
+
+.btn-clear {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #2e2e2e;
+  border: 1px solid #aa9f8e;
+  @include border-radius(20px);
+  @include transition(all 0.3s);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 13px;
+
+  svg {
+    path {
+      stroke: $colorBlack;
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    background-color: #aa9f8e;
+    color: $colorWhite;
+
+    svg {
+      path {
+        stroke: $colorWhite;
+      }
+    }
+  }
+}
+
+.btn-favorite {
+  &:hover,
+  &.favorite {
+    svg {
+      path {
+        fill: $colorSite;
+        stroke: $colorSite;
+      }
+    }
+  }
+
+  svg {
+    path {
+      stroke: #aa9f8e;
+    }
+  }
+
+  &.favorite {
+    &:hover {
+      svg {
+        path {
+          fill: transparent;
+          stroke: #aa9f8e;
+        }
+      }
+    }
+  }
+}
+
+.btn-loadFile {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2e2e2e;
+
+  .size {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(46, 46, 46, 0.5);
+    margin-left: auto;
+    @include transition(color 0.3s);
+  }
+
+  &:hover {
+    .size {
+      color: $colorWhite;
+    }
+  }
+}
+
+.btn-360 {
+  cursor: pointer;
+  position: absolute;
+  right: 56px;
+  top: 59px;
+  z-index: 5;
+}
+
+.btn-search {
+  @include transition(opacity 0.3s);
+  display: block;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.btn-location {
+  @include transition(opacity 0.3s);
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.btn-back {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px 10px;
+  background-color: rgba(170, 159, 142, 0.2);
+  @include border-radius(80px);
+  @include transition(all 0.3s);
+  max-width: 203px;
+
+  &:hover {
+    background-color: rgba(170, 159, 142, 0.33);
+  }
+}
+
+.btn-favorite-invis {
+  position: fixed;
+  top: 145px;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  background-color: $colorWhite;
+  display: inline-flex;
+  align-items: center;
+  @include border-radius(30px 0px 0px 30px);
+  border: 2px solid rgba(0, 161, 154, 0.01);
+  padding: 20px;
+  font-size: 18px;
+  padding: 16px 20px;
+  @include box-shadow(0px 5px 20px 0px rgba(226, 216, 208, 0.7));
+  @include transition(all 0.3s);
+  @include transform(translateX(175px));
+
+  &:hover {
+    @include transform(translateX(0px));
+    border-color: $colorSite;
+    background-color: $colorWhite;
+    color: $colorSite;
+  }
+}
