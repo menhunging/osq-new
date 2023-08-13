@@ -3,78 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
-
-  // if ($(".animation-main").length > 0) {
-  //   if (currentScroll >= "3600") {
-  //     $("#lottie-1").addClass("show");
-  //   } else {
-  //     $("#lottie-1").removeClass("show");
-  //   }
-
-  //   if (currentScroll >= "5000") {
-  //     $("#lottie-1").removeClass("show");
-  //     $("#lottie-2").addClass("show");
-  //   } else {
-  //     $("#lottie-2").removeClass("show");
-  //   }
-
-  //   if (currentScroll >= "6200") {
-  //     $(".animation-text").addClass("hide");
-  //     $("#lottie-2").addClass("back");
-  //   } else {
-  //     $(".animation-text").removeClass("hide");
-  //     $("#lottie-2").removeClass("back");
-  //   }
-
-  //   if ($(".incision").length > 0) {
-  //     if (currentScroll >= "9200") {
-  //       $(".incision").addClass("hide");
-  //     } else {
-  //       $(".incision").removeClass("hide");
-  //     }
-  //   }
-
-  //   if (currentScroll >= "9200") {
-  //     $(".production").addClass("fixed");
-  //   } else {
-  //     $(".production").removeClass("fixed");
-  //   }
-
-  //   if (currentScroll >= "13800") {
-  //     $("#lottie-2").addClass("hide");
-  //     $("#lottie-3").addClass("visible");
-  //     $(".production").addClass("show");
-  //     $(".delivery--v1").addClass("fixed");
-  //   } else {
-  //     $("#lottie-2").removeClass("hide");
-  //     $("#lottie-3").removeClass("visible");
-  //     $(".production").removeClass("show");
-  //     $(".delivery--v1").removeClass("fixed");
-  //   }
-
-  //   if (currentScroll >= "16400") {
-  //     $(".delivery--v1").addClass("show");
-  //     $("#lottie-3").removeClass("visible");
-  //     $("#lottie-3").addClass("show");
-  //   } else {
-  //     $(".delivery--v1").removeClass("show");
-  //     $("#lottie-3").removeClass("show");
-  //   }
-
-  //   // if (currentScroll >= "25300") {
-  //   //   $(".news-main").addClass("show");
-  //   //   $(".news-main").addClass("fixed");
-  //   // } else {
-  //   //   $(".news-main").removeClass("show");
-  //   // }
-
-  //   // if (currentScroll >= "25900") {
-  //   //   $(".news-main").addClass("hide");
-  //   // } else {
-  //   //   $(".news-main").removeClass("hide");
-  //   // }
-  // }
+  // console.log(currentScroll);
 
   if ($(".btn-top-page").length > 0) {
     let btnTopPage = $(".btn-top-page");
@@ -196,7 +125,7 @@ $(document).ready(function () {
         delay: 5000,
         disableOnInteraction: false,
       },
-      loop:true,
+      loop: true,
       centeredSlides: true,
       slidesPerView: 1,
       navigation: {
@@ -229,6 +158,18 @@ $(document).ready(function () {
         delay: 5000,
         disableOnInteraction: false,
       },
+      on: {
+        init: function () {
+          let title = $(".catalog-main__slider .swiper-slide")
+            .eq(5)
+            .attr("data-title");
+          let text = $(".catalog-main__slider .swiper-slide")
+            .eq(5)
+            .attr("data-text");
+
+          changeTextCatalog(title, text);
+        },
+      },
       autoHeight: true,
       effect: "creative",
       slideToClickedSlide: true,
@@ -252,12 +193,14 @@ $(document).ready(function () {
       },
     });
 
+    swiper.on("init", function () {});
+
     swiper.on("slideChange", function () {
-      let title = $(".catalog-main__slider")
-        .find(".swiper-slide.swiper-slide-active")
+      let title = $(".catalog-main__slider .swiper-slide")
+        .eq(swiper.activeIndex)
         .attr("data-title");
-      let text = $(".catalog-main__slider")
-        .find(".swiper-slide.swiper-slide-active")
+      let text = $(".catalog-main__slider .swiper-slide")
+        .eq(swiper.activeIndex)
         .attr("data-text");
 
       changeTextCatalog(title, text);
@@ -1054,29 +997,47 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "8500") {
+      if ($(this).scrollTop() > number && currentScroll < "7050") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll < "7500" ) {
+      if (currentScroll < "6000") {
         $("#lottie-2").removeClass("fixed");
       }
 
-      if (currentScroll >= "7500" && currentScroll <= "9200") {
+      if (currentScroll >= "6000" && currentScroll <= "7500") {
         $("#lottie-2").addClass("fixed");
-        $('.animation-text').addClass('hide')
+        $(".animation-text").addClass("hide");
         anim.pause();
-      }else{
-        $('.animation-text').removeClass('hide')
+      } else {
+        $(".animation-text").removeClass("hide");
       }
 
-      if (currentScroll >= "9200" && currentScroll < "13000") {
+      if (currentScroll >= "7500" && currentScroll < "10000") {
         $("#lottie-2").addClass("back");
-        $('.incision').addClass('hide')
+        $(".incision").addClass("hide");
         anim.pause();
-        animatebodymovin(8000, anim, -1300);
-      }else{
-        $('.incision').removeClass('hide')
+        animatebodymovin(7000, anim, -1500);
+      } else {
+        $(".incision").removeClass("hide");
+      }
+
+      if (currentScroll > "6800") {
+        $(".incision").addClass("visible");
+      } else {
+        $(".incision").removeClass("visible");
+      }
+
+      if (currentScroll > "9400") {
+        $(".production").addClass("visible");
+      } else {
+        $(".production").removeClass("visible");
+      }
+
+      if (currentScroll > "10000") {
+        $("#lottie-2").addClass("hide");
+      } else {
+        $("#lottie-2").removeClass("hide");
       }
 
       // if (currentScroll < "7200") {
@@ -1090,7 +1051,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 13800;
+    let number = 10200;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1119,172 +1080,78 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "16200") {
+      if ($(this).scrollTop() > number && currentScroll < "12600") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "16200") {
+      if (currentScroll >= "12600") {
         anim.pause();
+      }
+
+      if (currentScroll >= "11000") {
+        $(".delivery--v1").addClass("fixed");
+      } else {
+        $(".delivery--v1").removeClass("fixed");
       }
     });
   }
 
-  if ($(".animation-main").length > 0) {
-    // if (ScrollTrigger.isTouch !== 1) {
-    //   gsap.fromTo(
-    //     ".animation-text",
-    //     { x: 0, opacity: 0, position: "relative" },
-    //     {
-    //       x: 0,
-    //       opacity: 1,
-    //       position: "fixed",
-    //       scrollTrigger: {
-    //         trigger: ".animation-text",
-    //         start: "1000",
-    //         end: "1500",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   // incision
-
-    //   gsap.fromTo(
-    //     ".incision",
-    //     { opacity: 0, position: "relative" },
-    //     {
-    //       opacity: 1,
-    //       position: "fixed",
-    //       scrollTrigger: {
-    //         trigger: ".animation-main",
-    //         start: "3000",
-    //         end: "5000",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   gsap.fromTo(
-    //     ".incision-list",
-    //     { opacity: 0 },
-    //     {
-    //       opacity: 1,
-    //       scrollTrigger: {
-    //         trigger: ".animation-main",
-    //         start: "3500",
-    //         end: "5000",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   // production
-
-    //   gsap.fromTo(
-    //     ".production__leftSide",
-    //     { opacity: 0 },
-    //     {
-    //       opacity: 1,
-    //       scrollTrigger: {
-    //         trigger: ".production",
-    //         start: "-4000",
-    //         end: "-3500",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   gsap.fromTo(
-    //     ".production__rightSide",
-    //     { opacity: 0 },
-    //     {
-    //       opacity: 1,
-    //       scrollTrigger: {
-    //         trigger: ".production",
-    //         start: "-6000",
-    //         end: "-5000",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   // delivery
-
-    //   gsap.fromTo(
-    //     ".delivery .btn",
-    //     { opacity: 0, x: 700 },
-    //     {
-    //       opacity: 1,
-    //       scrollTrigger: {
-    //         trigger: ".animation-main",
-    //         start: "12000",
-    //         end: "1000",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   gsap.fromTo(
-    //     ".delivery .line",
-    //     { opacity: 0 },
-    //     {
-    //       opacity: 1,
-    //       scrollTrigger: {
-    //         trigger: ".animation-main",
-    //         start: "12000",
-    //         end: "500",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   gsap.fromTo(
-    //     ".delivery .desc",
-    //     { x: 0 },
-    //     {
-    //       x: 700,
-    //       scrollTrigger: {
-    //         trigger: ".animation-main",
-    //         start: "12000",
-    //         end: "0",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   gsap.fromTo(
-    //     ".delivery .caption",
-    //     { x: 0 },
-    //     {
-    //       x: 700,
-    //       scrollTrigger: {
-    //         trigger: ".animation-main",
-    //         start: "12000",
-    //         end: "0",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-
-    //   // let itemsR = gsap.utils.toArray(".anim");
-
-    //   // itemsR.forEach((item) => {
-    //   //   gsap.fromTo(
-    //   //     item,
-    //   //     { opacity: 0, x: 500, borderWith: 0 },
-    //   //     {
-    //   //       opacity: 1,
-    //   //       x: 0,
-    //   //       scrollTrigger: {
-    //   //         trigger: item,
-    //   //         start: "-1750",
-    //   //         end: "bottom",
-    //   //         scrub: true,
-    //   //       },
-    //   //     }
-    //   //   );
-    //   // });
-    // }
+  if ($(".delivery").length > 0) {
+    if (ScrollTrigger.isTouch !== 1) {
+      // delivery
+      gsap.fromTo(
+        ".delivery .btn",
+        { opacity: 0, x: 700 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".delivery ",
+            start: "1000",
+            end: "1500",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        ".delivery .line",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".delivery ",
+            start: "1000",
+            end: "1500",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        ".delivery .desc",
+        { x: 0 },
+        {
+          x: 700,
+          scrollTrigger: {
+            trigger: ".delivery ",
+            start: "1000",
+            end: "1500",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        ".delivery .caption",
+        { x: 0 },
+        {
+          x: 700,
+          scrollTrigger: {
+            trigger: ".delivery ",
+            start: "1000",
+            end: "1500",
+            scrub: true,
+          },
+        }
+      );
+    }
   }
 
   if ($(".your-lines").length > 0) {

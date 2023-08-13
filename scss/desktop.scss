@@ -272,27 +272,10 @@
 }
 
 .news-main {
-  padding-top: 180px;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  $trans: opacity 1s, top 1s;
-  @include transition($trans);
-
-  &.fixed {
-    position: fixed;
-    margin-top: 0;
-    top: 0;
-  }
-
-  &.show {
-    opacity: 1;
-  }
-
-  &.hide {
-    top: -1000px;
-  }
 }
 
 .news-main__inner {
@@ -811,7 +794,7 @@
 }
 
 .catalog-main {
-  padding: 80px 0;
+  padding: 20px 0;
   overflow: hidden;
   left: 0;
   top: 0;
@@ -834,7 +817,7 @@
 .catalog-main__slider .swiper-wrapper {
   min-height: 850px;
   padding-top: 200px;
-  margin-bottom: -300px
+  margin-bottom: -400px;
 }
 .catalog-main__slider .swiper-slide {
   display: flex;
@@ -1034,6 +1017,10 @@
   border-left: solid 1px rgb(170, 159, 142);
   max-width: 1074px;
   width: 100%;
+
+  p {
+    max-width: 75%;
+  }
 }
 .catalog-main__right .caption {
   font-size: 26px;
@@ -1044,21 +1031,22 @@
 .animation-text {
   position: sticky;
   top: 80px;
-  left:0;
+  left: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
   color: #2e2e2e;
-  margin: 200px 0;
+  margin: 100px 0;
   width: 100%;
   height: 644px;
-  @include transition(opacity 1s);
   z-index: 5;
+  @include transition(opacity 0.3s);
 
   .caption {
     margin-bottom: 30px;
     font-size: 96px;
     line-height: 98px;
+    @include transition(opacity 0.3s);
 
     &--middle {
       font-size: 48px;
@@ -1084,6 +1072,7 @@
     justify-content: space-between;
     margin-top: 50px;
     gap: 20px;
+    @include transition(opacity 0.3s);
 
     .btn {
       width: calc(50% - 10px);
@@ -1115,9 +1104,8 @@
     pointer-events: none;
   }
 
-  &.hide {  
-
-  .animation-text__inner,
+  &.hide {
+    .animation-text__inner,
     .product-main,
     .logo-invis,
     .line {
@@ -1133,7 +1121,7 @@
   left: 0;
   width: 100%;
   opacity: 1;
-  @include transition(opacity 1s);
+  @include transition(opacity 0.3s);
 
   .caption {
     margin-bottom: 30px;
@@ -1227,13 +1215,15 @@
 }
 
 .production {
-  left: 0;
-  top: 90px;
   width: 100%;
   opacity: 1;
   z-index: 3;
   $trans: opacity 1s, top 1s;
   @include transition($trans);
+  position: sticky;
+  top: 90px;
+  left: 0;
+  width: 100%;
 
   &.fixed {
     position: fixed;
@@ -1245,6 +1235,12 @@
     top: -1000px;
     pointer-events: none;
   }
+
+  &.visible {
+    .caption:not(.caption--small) {
+      opacity: 1;
+    }
+  }
 }
 
 .production__inner {
@@ -1255,7 +1251,9 @@
   display: flex;
   justify-content: space-between;
 
-  .caption {
+  .caption:not(.caption--small) {
+    opacity: 0;
+    @include transition(all 0.3s);
   }
 
   .caption--small {
@@ -1345,20 +1343,18 @@
   position: relative;
 
   &.fixed {
-    position: fixed;
     margin: 0;
   }
 
   &--v1 {
-    // background-image: url("../img/bg-map1.png");
+    position: sticky;
+    top:0;
+    left:0;
+    width: 100%;
     background-image: url("../img/bg-delivery.png");
     background-position: center -121px;
-    margin-top: 0;
-    opacity: 0;
 
     &.fixed {
-      opacity: 1;
-
       .desc,
       .caption {
         opacity: 1;
@@ -1387,9 +1383,7 @@
     line-height: 64px;
     display: block;
     opacity: 0;
-    transition: all 1s;
-    transition-delay: 0.5s;
-    left: -1500px;
+    transition: all .3s;
     position: relative;
   }
 
@@ -1402,15 +1396,12 @@
     color: #2e2e2e;
     display: block;
     opacity: 0;
-    transition: all 1s;
-    transition-delay: 0.5s;
-    left: -1500px;
+    transition: all .3s;
     position: relative;
   }
 
   .btn {
     margin-top: 40px;
-    
   }
 
   .delivery__inner {
@@ -1457,6 +1448,17 @@
     pointer-events: none;
   }
 
+  &.visible {
+    .incision-adv,
+    .incision__head {
+      opacity: 1;
+    }
+
+    .incision-list {
+      opacity: 1;
+    }
+  }
+
   // @include before {
   //   width: 2113px;
   //   height: 1319px;
@@ -1487,6 +1489,9 @@
 }
 
 .incision__head {
+  opacity: 0;
+  @include transition(opacity 1s);
+
   .caption {
     font-size: 96px;
     line-height: 87px;
@@ -1503,6 +1508,8 @@
   width: 100%;
   height: 395px;
   position: relative;
+  opacity: 0;
+  @include transition(opacity 1s 0.5s);
 }
 
 .incision-item {
@@ -1578,6 +1585,8 @@
   justify-content: space-between;
   gap: 30px;
   margin-top: 70px;
+  opacity: 0;
+  @include transition(opacity 1s);
 }
 
 .incision-adv__item {
@@ -7802,7 +7811,6 @@
 $wrapClass: "dop-dev";
 
 .#{$wrapClass} * {
-  font-family: "Circe", sans-serif;
   font-size: 16px;
   box-sizing: initial;
 }
@@ -8472,18 +8480,48 @@ $fontSize: (
   flex-direction: row-reverse;
 }
 
-.lottie-first{
-  height: 3000px;
+.lottie-first {
+  height: 1900px;
   background-image: url(../img/bg-anim-text.png);
-  background-position: center 0px;
+  background-position: center bottom;
+  background-size: contain;
 }
 
-.lottie-two{
+.lottie-two {
   height: 1950px;
   background-image: url(../img/bg-anim-text.png);
   background-position: center 30px;
 }
 
-.lottie-three{
+.lottie-three {
   height: 1950px;
+}
+
+.lottie-four {
+  height: 2000px;
+}
+
+.lottie-five{
+  height: 2600px;
+}
+
+.product__back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2e2e2e;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  @include transition(color 0.3s);
+
+  &:hover {
+    color: $colorSite;
+  }
+
+  svg {
+    path {
+      stroke: #00a19a;
+    }
+  }
 }
