@@ -770,12 +770,9 @@ div {
 
   &.fixed {
     position: fixed;
-    left: calc(50% - 870px);
-    top: -140px;
-    // width: 1920px;
-    // height: 948px;
-    // margin-left: -940px;
-    // margin-top: -547px;
+    left: calc(50% - 800px);
+    top: -60px;
+    width: 1600px;
   }
 
   &.show {

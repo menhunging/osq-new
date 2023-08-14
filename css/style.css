@@ -989,8 +989,9 @@ div::-webkit-scrollbar-thumb {
 }
 #lottie-2.fixed {
   position: fixed;
-  left: calc(50% - 870px);
-  top: -140px;
+  left: calc(50% - 800px);
+  top: -60px;
+  width: 1600px;
 }
 #lottie-2.show {
   opacity: 1;
@@ -10173,7 +10174,7 @@ div::-webkit-scrollbar-thumb {
 .lottie-first {
   height: 1900px;
   background-image: url(../img/bg-anim-text.png);
-  background-position: center bottom;
+  background-position: center top;
   background-size: contain;
 }
 
