@@ -2679,6 +2679,7 @@ div::-webkit-scrollbar-thumb {
 .catalog-main__slider .swiper-slide.swiper-slide-active img {
   width: 685px;
   max-height: 650px;
+  height: 650px;
   object-fit: contain;
   max-width: inherit;
 }
