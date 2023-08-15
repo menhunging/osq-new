@@ -794,20 +794,6 @@ $(document).ready(function () {
           custom = "event";
         }
 
-        // switch (i) {
-        //   case current:
-        //     custom = "coming";
-        //     break;
-
-        //   case old:
-        //     custom = "past";
-        //     break;
-
-        //   default:
-        //     custom = "";
-        //     break;
-        // }
-
         calendar += `<div class='td ${custom}'>${i}</div>`;
         if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
           calendar += "</div><div class='tr'>";
@@ -1051,7 +1037,6 @@ $(document).ready(function () {
       } else {
         $("#lottie-2").removeClass("hide");
       }
-
     });
   }
 
@@ -1085,7 +1070,7 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "13250") {
+      if ($(this).scrollTop() > number && currentScroll < "12700") {
         animatebodymovin(animDuration, anim);
       }
 
@@ -1117,7 +1102,6 @@ $(document).ready(function () {
 
   if ($(".delivery").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
-
       gsap.fromTo(
         "#lottie-2",
         { y: 0 },
@@ -1147,7 +1131,7 @@ $(document).ready(function () {
           },
         }
       );
-      
+
       gsap.fromTo(
         ".delivery .desc",
         { x: 0 },
