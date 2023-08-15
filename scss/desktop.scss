@@ -892,6 +892,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 .catalog-main__slider .swiper-button-prev {
   position: relative;
@@ -968,11 +970,15 @@
 }
 .catalog-main__slider .btn {
   position: relative;
-  z-index: 5;
 }
 
 .catalog-main__item {
   @include invisLink;
+
+  .logo-product {
+    position: relative;
+    top: 60px;
+  }
 }
 
 .catalog-main__item .eye {
@@ -1020,7 +1026,7 @@
   width: 100%;
 
   p {
-    max-width: 75%;
+    max-width: 58%;
   }
 }
 .catalog-main__right .caption {
@@ -1037,7 +1043,7 @@
   font-size: 18px;
   line-height: 26px;
   color: #2e2e2e;
-  margin: 100px 0;
+  margin: 20px 0;
   width: 100%;
   height: 644px;
   z-index: 5;
@@ -1237,8 +1243,14 @@
     pointer-events: none;
   }
 
-  &.visible {
+  &.caption-visible {
     .caption:not(.caption--small) {
+      opacity: 1;
+    }
+  }
+
+  &.visible {
+    .production__rightSide {
       opacity: 1;
     }
   }
@@ -1280,6 +1292,8 @@
 .production__rightSide {
   width: 682px;
   font-size: 20px;
+  opacity: 0;
+  @include transition(opacity .3s);
 }
 
 .production__slider {
@@ -1345,12 +1359,13 @@
 
   &.fixed {
     margin: 0;
+    z-index: 5;
   }
 
   &--v1 {
     position: sticky;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     background-image: url("../img/bg-delivery.png");
     background-position: center -121px;
@@ -1384,7 +1399,7 @@
     line-height: 64px;
     display: block;
     opacity: 0;
-    transition: all .3s;
+    transition: all 0.3s;
     position: relative;
   }
 
@@ -1397,12 +1412,19 @@
     color: #2e2e2e;
     display: block;
     opacity: 0;
-    transition: all .3s;
+    transition: all 0.3s;
     position: relative;
   }
 
   .btn {
     margin-top: 40px;
+    left: 700px;
+    opacity: 0;
+    @include transition(opacity .3s);
+
+    &.show{
+      opacity: 1;
+    }
   }
 
   .delivery__inner {
@@ -8502,8 +8524,8 @@ $fontSize: (
   height: 2000px;
 }
 
-.lottie-five{
-  height: 2600px;
+.lottie-five {
+  height: 3500px;
 }
 
 .product__back {

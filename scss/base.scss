@@ -54,7 +54,6 @@ input {
 
 .main {
   width: 100%;
-  
 }
 
 .check-block {
@@ -757,7 +756,7 @@ div {
   left: -210px;
   width: 1800px;
   z-index: 2;
-  $trans: opacity 0.3s;
+  $trans: opacity 0.3s, margin 0.3s;
   @include transition($trans);
 
   &.small {
@@ -771,7 +770,7 @@ div {
   &.fixed {
     position: fixed;
     left: calc(50% - 800px);
-    top: -60px;
+    top: -140px;
     width: 1600px;
   }
 
@@ -783,6 +782,9 @@ div {
     opacity: 0;
   }
 
+  &.paused {
+    margin-top: 70px;
+  }
 }
 
 #lottie-3 {

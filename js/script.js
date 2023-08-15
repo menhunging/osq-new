@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
 
   if ($(".btn-top-page").length > 0) {
     let btnTopPage = $(".btn-top-page");
@@ -127,7 +127,7 @@ $(document).ready(function () {
       },
       loop: true,
       centeredSlides: true,
-      slidesPerView: 1,
+      slidesPerView: "auto",
       navigation: {
         nextEl: ".sertificate__slider .swiper-button-next",
         prevEl: ".sertificate__slider .swiper-button-prev",
@@ -1005,6 +1005,12 @@ $(document).ready(function () {
         $("#lottie-2").removeClass("fixed");
       }
 
+      if ((currentScroll > "7050") && (currentScroll < "7500")) {
+        $("#lottie-2").addClass("paused");
+      }else{
+        $("#lottie-2").removeClass("paused");
+      }
+
       if (currentScroll >= "6000" && currentScroll <= "7500") {
         $("#lottie-2").addClass("fixed");
         $(".animation-text").addClass("hide");
@@ -1028,10 +1034,16 @@ $(document).ready(function () {
         $(".incision").removeClass("visible");
       }
 
-      if (currentScroll > "9400") {
+      if (currentScroll > "8800") {
         $(".production").addClass("visible");
       } else {
         $(".production").removeClass("visible");
+      }
+
+      if (currentScroll > "9400") {
+        $(".production").addClass("caption-visible");
+      } else {
+        $(".production").removeClass("caption-visible");
       }
 
       if (currentScroll > "10000") {
@@ -1051,7 +1063,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 10200;
+    let number = 10800;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1080,13 +1092,21 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "12600") {
+      if ($(this).scrollTop() > number && currentScroll < "13250") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "12600") {
+      
+      if (currentScroll >= "13200") {
+        $('.delivery .btn').addClass('show')
+      }else{
+        $('.delivery .btn').removeClass('show')
+      }
+
+      if (currentScroll >= "13250") {
         anim.pause();
       }
+
 
       if (currentScroll >= "11000") {
         $(".delivery--v1").addClass("fixed");
@@ -1099,28 +1119,28 @@ $(document).ready(function () {
   if ($(".delivery").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
       // delivery
-      gsap.fromTo(
-        ".delivery .btn",
-        { opacity: 0, x: 700 },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: ".delivery ",
-            start: "1000",
-            end: "1500",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".delivery .btn",
+      //   { opacity: 0, x: 700 },
+      //   {
+      //     opacity: 1,
+      //     scrollTrigger: {
+      //       trigger: ".delivery",
+      //       start: "2000",
+      //       end: "2500",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
       gsap.fromTo(
         ".delivery .line",
         { opacity: 0 },
         {
           opacity: 1,
           scrollTrigger: {
-            trigger: ".delivery ",
-            start: "1000",
-            end: "1500",
+            trigger: ".delivery",
+            start: "2000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -1131,9 +1151,9 @@ $(document).ready(function () {
         {
           x: 700,
           scrollTrigger: {
-            trigger: ".delivery ",
-            start: "1000",
-            end: "1500",
+            trigger: ".delivery",
+            start: "2000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -1144,9 +1164,9 @@ $(document).ready(function () {
         {
           x: 700,
           scrollTrigger: {
-            trigger: ".delivery ",
-            start: "1000",
-            end: "1500",
+            trigger: ".delivery",
+            start: "2000",
+            end: "2500",
             scrub: true,
           },
         }
