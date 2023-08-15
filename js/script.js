@@ -978,7 +978,7 @@ $(document).ready(function () {
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 4000;
+    let animDuration = 4200;
     let animData = {
       container: document.getElementById("lottie-2"),
       renderer: "svg",
@@ -997,7 +997,7 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "7050") {
+      if ($(this).scrollTop() > number && currentScroll < "6740") {
         animatebodymovin(animDuration, anim);
       }
 
@@ -1005,9 +1005,9 @@ $(document).ready(function () {
         $("#lottie-2").removeClass("fixed");
       }
 
-      if ((currentScroll > "7050") && (currentScroll < "7500")) {
+      if (currentScroll > "6740" && currentScroll < "7500") {
         $("#lottie-2").addClass("paused");
-      }else{
+      } else {
         $("#lottie-2").removeClass("paused");
       }
 
@@ -1023,12 +1023,12 @@ $(document).ready(function () {
         $("#lottie-2").addClass("back");
         $(".incision").addClass("hide");
         anim.pause();
-        animatebodymovin(7000, anim, -1500);
+        animatebodymovin(7000, anim, -1300);
       } else {
         $(".incision").removeClass("hide");
       }
 
-      if (currentScroll > "6800") {
+      if (currentScroll > "6500") {
         $(".incision").addClass("visible");
       } else {
         $(".incision").removeClass("visible");
@@ -1096,22 +1096,26 @@ $(document).ready(function () {
         animatebodymovin(animDuration, anim);
       }
 
-      
-      if (currentScroll >= "13200") {
-        $('.delivery .btn').addClass('show')
-      }else{
-        $('.delivery .btn').removeClass('show')
-      }
-
-      if (currentScroll >= "13250") {
-        anim.pause();
-      }
-
-
       if (currentScroll >= "11000") {
         $(".delivery--v1").addClass("fixed");
       } else {
         $(".delivery--v1").removeClass("fixed");
+      }
+
+      if (currentScroll >= "13000") {
+        $("#lottie-3").addClass("small");
+      }else{
+        $("#lottie-3").removeClass("small");
+      }
+
+      if (currentScroll >= "13200") {
+        $(".delivery .btn").addClass("show");
+      } else {
+        $(".delivery .btn").removeClass("show");
+      }
+
+      if (currentScroll >= "13250") {
+        anim.pause();
       }
     });
   }

@@ -8511,9 +8511,10 @@ $fontSize: (
 }
 
 .lottie-two {
-  height: 1950px;
+  height: 1800px;
   background-image: url(../img/bg-anim-text.png);
-  background-position: center 30px;
+  background-position: center bottom;
+  background-size: contain;
 }
 
 .lottie-three {

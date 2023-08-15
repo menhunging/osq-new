@@ -770,7 +770,7 @@ div {
   &.fixed {
     position: fixed;
     left: calc(50% - 800px);
-    top: -140px;
+    top: -160px;
     width: 1600px;
   }
 
@@ -789,7 +789,7 @@ div {
 
 #lottie-3 {
   margin-left: -1050px;
-  $trans: opacity 1s, top 1s;
+  $trans: opacity 1s;
   @include transition($trans);
   width: 1800px;
   left: 50%;
@@ -802,6 +802,10 @@ div {
 
   &.show {
     top: -1000px;
+  }
+
+  &.small{
+    // top:-100px
   }
 }
 
