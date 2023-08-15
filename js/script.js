@@ -978,7 +978,7 @@ $(document).ready(function () {
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 4200;
+    let animDuration = 4000;
     let animData = {
       container: document.getElementById("lottie-2"),
       renderer: "svg",
@@ -1052,13 +1052,6 @@ $(document).ready(function () {
         $("#lottie-2").removeClass("hide");
       }
 
-      // if (currentScroll < "7200") {
-      //   $("#lottie-2").removeClass("paused");
-      // }
-
-      // if (currentScroll < "9200" && currentScroll >= "7200") {
-      //   $("#lottie-2").removeClass("back");
-      // }
     });
   }
 
@@ -1103,12 +1096,6 @@ $(document).ready(function () {
       }
 
       if (currentScroll >= "13000") {
-        $("#lottie-3").addClass("small");
-      }else{
-        $("#lottie-3").removeClass("small");
-      }
-
-      if (currentScroll >= "13200") {
         $(".delivery .btn").addClass("show");
       } else {
         $(".delivery .btn").removeClass("show");

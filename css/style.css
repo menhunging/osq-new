@@ -1020,6 +1020,7 @@ div::-webkit-scrollbar-thumb {
 #lottie-3.show {
   top: -1000px;
 }
+
 .animation-main {
   height: 13200px;
   display: flex;
@@ -10206,12 +10207,12 @@ div::-webkit-scrollbar-thumb {
 .lottie-two {
   height: 1800px;
   background-image: url(../img/bg-anim-text.png);
-  background-position: center bottom;
+  background-position: center top;
   background-size: contain;
 }
 
 .lottie-three {
-  height: 1950px;
+  height: 1800px;
 }
 
 .lottie-four {
