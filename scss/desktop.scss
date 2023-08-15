@@ -1401,6 +1401,10 @@
     opacity: 0;
     transition: all 0.3s;
     position: relative;
+
+    &.visible{
+      opacity: 1;
+    }
   }
 
   .desc {
@@ -1412,8 +1416,12 @@
     color: #2e2e2e;
     display: block;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.5s 0.3s;
     position: relative;
+
+    &.visible{
+      opacity: 1;
+    }
   }
 
   .btn {

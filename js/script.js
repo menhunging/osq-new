@@ -1056,7 +1056,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 10800;
+    let number = 10300;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1087,6 +1087,14 @@ $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > number && currentScroll < "13250") {
         animatebodymovin(animDuration, anim);
+      }
+
+      if (currentScroll >= "10000") {
+        $(".delivery--v1 .desc").addClass("visible");
+        $(".delivery--v1 .caption").addClass("visible");
+      } else {
+        $(".delivery--v1 .desc").removeClass("visible");
+        $(".delivery--v1 .caption").removeClass("visible");
       }
 
       if (currentScroll >= "11000") {
@@ -1139,6 +1147,7 @@ $(document).ready(function () {
           },
         }
       );
+      
       gsap.fromTo(
         ".delivery .desc",
         { x: 0 },

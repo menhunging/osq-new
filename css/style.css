@@ -3258,6 +3258,9 @@ div::-webkit-scrollbar-thumb {
   transition: all 0.3s;
   position: relative;
 }
+.delivery .caption.visible {
+  opacity: 1;
+}
 .delivery .desc {
   font-weight: 400;
   font-size: 64px;
@@ -3267,8 +3270,11 @@ div::-webkit-scrollbar-thumb {
   color: #2e2e2e;
   display: block;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.5s 0.3s;
   position: relative;
+}
+.delivery .desc.visible {
+  opacity: 1;
 }
 .delivery .btn {
   margin-top: 40px;
