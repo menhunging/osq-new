@@ -10207,8 +10207,9 @@ div::-webkit-scrollbar-thumb {
 .lottie-two {
   height: 1800px;
   background-image: url(../img/bg-anim-text.png);
-  background-position: center top;
+  background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .lottie-three {
