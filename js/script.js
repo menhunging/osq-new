@@ -1046,7 +1046,7 @@ $(document).ready(function () {
         $(".production").removeClass("caption-visible");
       }
 
-      if (currentScroll > "10000") {
+      if (currentScroll > "10300") {
         $("#lottie-2").addClass("hide");
       } else {
         $("#lottie-2").removeClass("hide");
@@ -1109,20 +1109,23 @@ $(document).ready(function () {
 
   if ($(".delivery").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
+
+      gsap.fromTo(
+        "#lottie-2",
+        { y: 0 },
+        {
+          y: -700,
+          scrollTrigger: {
+            trigger: ".production",
+            start: "1100",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
       // delivery
-      // gsap.fromTo(
-      //   ".delivery .btn",
-      //   { opacity: 0, x: 700 },
-      //   {
-      //     opacity: 1,
-      //     scrollTrigger: {
-      //       trigger: ".delivery",
-      //       start: "2000",
-      //       end: "2500",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
+
       gsap.fromTo(
         ".delivery .line",
         { opacity: 0 },
