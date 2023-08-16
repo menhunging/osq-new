@@ -267,6 +267,7 @@
       top: 0;
       left: auto;
       height: 100%;
+      @include transition(all 0.3s);
     }
   }
 }
@@ -1046,8 +1047,8 @@
   margin: 20px 0;
   width: 100%;
   height: 644px;
-  z-index: 5;
   @include transition(opacity 0.3s);
+  z-index: 5;
 
   .caption {
     margin-bottom: 30px;
@@ -1232,11 +1233,6 @@
   left: 0;
   width: 100%;
 
-  &.fixed {
-    position: fixed;
-    top: 90px;
-  }
-
   &.show {
     opacity: 0;
     top: -1000px;
@@ -1245,12 +1241,6 @@
 
   &.caption-visible {
     .caption:not(.caption--small) {
-      opacity: 1;
-    }
-  }
-
-  &.visible {
-    .production__rightSide {
       opacity: 1;
     }
   }
@@ -1263,6 +1253,7 @@
   color: #2e2e2e;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   .caption:not(.caption--small) {
     opacity: 0;
@@ -1292,8 +1283,7 @@
 .production__rightSide {
   width: 682px;
   font-size: 20px;
-  opacity: 0;
-  @include transition(opacity .3s);
+  @include transition(opacity 0.3s);
 }
 
 .production__slider {
@@ -1359,7 +1349,6 @@
 
   &.fixed {
     margin: 0;
-    z-index: 5;
   }
 
   &--v1 {
@@ -1402,7 +1391,7 @@
     transition: all 0.3s;
     position: relative;
 
-    &.visible{
+    &.visible {
       opacity: 1;
     }
   }
@@ -1419,7 +1408,7 @@
     transition: all 0.5s 0.3s;
     position: relative;
 
-    &.visible{
+    &.visible {
       opacity: 1;
     }
   }
@@ -1428,9 +1417,9 @@
     margin-top: 40px;
     left: 700px;
     opacity: 0;
-    @include transition(opacity .3s);
+    @include transition(all 0.3s);
 
-    &.show{
+    &.show {
       opacity: 1;
     }
   }
@@ -8527,11 +8516,11 @@ $fontSize: (
 }
 
 .lottie-three {
-  height: 1800px;
+  height: 1500px;
 }
 
 .lottie-four {
-  height: 2000px;
+  height: 2500px;
 }
 
 .lottie-five {

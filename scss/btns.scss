@@ -54,7 +54,7 @@
       display: none;
     }
 
-    &:hover{
+    &:hover {
       color: $colorWhite;
     }
   }
@@ -296,6 +296,7 @@
   position: fixed;
   top: 145px;
   right: 0;
+  z-index: 9;
   left: auto;
   bottom: auto;
   background-color: $colorWhite;

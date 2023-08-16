@@ -5,6 +5,20 @@ addEventListener("scroll", (event) => {
 
   console.log(currentScroll);
 
+  if ($(".indexPage").length > 0) {
+    if (currentScroll > "6500") {
+      $(".incision").addClass("visible");
+    } else {
+      $(".incision").removeClass("visible");
+    }
+
+    if (currentScroll > "8200") {
+      $(".production").addClass("caption-visible");
+    } else {
+      $(".production").removeClass("caption-visible");
+    }
+  }
+
   if ($(".btn-top-page").length > 0) {
     let btnTopPage = $(".btn-top-page");
     let scrollWhich = 700;
@@ -991,7 +1005,7 @@ $(document).ready(function () {
         $("#lottie-2").removeClass("fixed");
       }
 
-      if (currentScroll > "6740" && currentScroll < "7500") {
+      if (currentScroll > "6740") {
         $("#lottie-2").addClass("paused");
       } else {
         $("#lottie-2").removeClass("paused");
@@ -1004,38 +1018,41 @@ $(document).ready(function () {
       } else {
         $(".animation-text").removeClass("hide");
       }
+    });
+  }
 
-      if (currentScroll >= "7500" && currentScroll < "10000") {
-        $("#lottie-2").addClass("back");
-        $(".incision").addClass("hide");
-        anim.pause();
-        animatebodymovin(7000, anim, -1300);
-      } else {
-        $(".incision").removeClass("hide");
+  if ($("#lottie-2-2").length > 0) {
+    let number = 8300;
+
+    let theWindow = $(window);
+    let winHeight = theWindow.height();
+    let animDuration = 1500;
+    let animData = {
+      container: document.getElementById("lottie-2-2"),
+      renderer: "svg",
+      loop: true,
+      autoplay: false,
+      path: "json/block2_2.json",
+    };
+
+    let anim = bodymovin.loadAnimation(animData);
+
+    function animatebodymovin(duration, animObject, paused = 0) {
+      let scrollPosition = theWindow.scrollTop() - number - paused;
+      let maxFrames = animObject.totalFrames;
+      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+      animObject.goToAndStop(frame, true);
+    }
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > number && currentScroll < "9700") {
+        animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll > "6500") {
-        $(".incision").addClass("visible");
+      if (currentScroll >= "8300") {
+        $("#lottie-2-2").addClass("show");
       } else {
-        $(".incision").removeClass("visible");
-      }
-
-      if (currentScroll > "8800") {
-        $(".production").addClass("visible");
-      } else {
-        $(".production").removeClass("visible");
-      }
-
-      if (currentScroll > "9400") {
-        $(".production").addClass("caption-visible");
-      } else {
-        $(".production").removeClass("caption-visible");
-      }
-
-      if (currentScroll > "10300") {
-        $("#lottie-2").addClass("hide");
-      } else {
-        $("#lottie-2").removeClass("hide");
+        $("#lottie-2-2").removeClass("show");
       }
     });
   }
@@ -1088,7 +1105,7 @@ $(document).ready(function () {
         $(".delivery--v1").removeClass("fixed");
       }
 
-      if (currentScroll >= "13000") {
+      if (currentScroll >= "12600") {
         $(".delivery .btn").addClass("show");
       } else {
         $(".delivery .btn").removeClass("show");
@@ -1100,17 +1117,17 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".delivery").length > 0) {
+  if ($(".indexPage").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
       gsap.fromTo(
         "#lottie-2",
         { y: 0 },
         {
-          y: -700,
+          y: -1050,
           scrollTrigger: {
             trigger: ".production",
-            start: "1100",
-            end: "2500",
+            start: "-930",
+            // end: "2500",
             scrub: true,
           },
         }
@@ -1125,8 +1142,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "2500",
+            start: "1800",
+            end: "1800",
             scrub: true,
           },
         }
@@ -1139,12 +1156,13 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "2500",
+            start: "1800",
+            end: "1800",
             scrub: true,
           },
         }
       );
+
       gsap.fromTo(
         ".delivery .caption",
         { x: 0 },
@@ -1152,8 +1170,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "2500",
+            start: "1800",
+            end: "1800",
             scrub: true,
           },
         }
@@ -1333,6 +1351,10 @@ $(document).ready(function () {
     });
   }
 });
+
+// $(window).on("load", function () {
+//   $('body').addClass('load')
+// });
 
 function isVisibleMapBlock() {
   $(".list-cites li").map(function () {

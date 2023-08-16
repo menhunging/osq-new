@@ -6,6 +6,10 @@ body {
   &.hidden {
     overflow: hidden;
   }
+
+  &.load {
+    overflow: visible;
+  }
 }
 
 .container {
@@ -725,13 +729,6 @@ div {
   position: relative;
   pointer-events: none;
   z-index: 999;
-
-  //   top: 50%;
-  //   left: 50%;
-  //   width: 1920px;
-  //   height: 1060px;
-  //   margin-left: -960px;
-  //   margin-top: -700px;
 }
 
 #lottie-1 {
@@ -744,10 +741,6 @@ div {
   max-width: 1920px;
   margin: 0 auto;
   margin-top: -470px;
-
-  &.show {
-    opacity: 1;
-  }
 }
 
 #lottie-2 {
@@ -758,14 +751,6 @@ div {
   z-index: 2;
   $trans: opacity 0.3s, margin 0.3s;
   @include transition($trans);
-
-  &.small {
-    width: 1600px;
-    height: 700px;
-    margin-left: -830px;
-    margin-top: -400px;
-    z-index: 1;
-  }
 
   &.fixed {
     position: fixed;
@@ -787,6 +772,21 @@ div {
   }
 }
 
+#lottie-2-2 {
+  position: absolute;
+  top: -320px;
+  left: -250px;
+  width: 1800px;
+  z-index: 2;
+  $trans: opacity 0.3s;
+  @include transition($trans);
+  opacity: 0;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
 #lottie-3 {
   margin-left: -1050px;
   $trans: opacity 1s;
@@ -803,7 +803,6 @@ div {
   &.show {
     top: -1000px;
   }
-
 }
 
 .animation-main {
