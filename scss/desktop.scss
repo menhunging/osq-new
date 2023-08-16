@@ -1229,7 +1229,7 @@
   $trans: opacity 1s, top 1s;
   @include transition($trans);
   position: sticky;
-  top: 90px;
+  top: 40px;
   left: 0;
   width: 100%;
 
@@ -1239,11 +1239,11 @@
     pointer-events: none;
   }
 
-  &.caption-visible {
-    .caption:not(.caption--small) {
-      opacity: 1;
-    }
-  }
+  // &.caption-visible {
+  //   .caption:not(.caption--small) {
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 .production__inner {
@@ -1256,7 +1256,7 @@
   position: relative;
 
   .caption:not(.caption--small) {
-    opacity: 0;
+    // opacity: 0;
     @include transition(all 0.3s);
   }
 
@@ -1278,15 +1278,23 @@
 }
 
 .production__leftSide {
+   width: 682px;
+  font-size: 20px;
+  @include transition(opacity 0.3s);
 }
 
 .production__rightSide {
   width: 682px;
   font-size: 20px;
   @include transition(opacity 0.3s);
+  position: relative;
+  overflow: hidden;
+  top: -40px;
 }
 
 .production__slider {
+  margin-top: 40px;
+
   .swiper-wrapper {
   }
 

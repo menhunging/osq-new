@@ -12,11 +12,11 @@ addEventListener("scroll", (event) => {
       $(".incision").removeClass("visible");
     }
 
-    if (currentScroll > "8200") {
-      $(".production").addClass("caption-visible");
-    } else {
-      $(".production").removeClass("caption-visible");
-    }
+    // if (currentScroll > "8200") {
+    //   $(".production").addClass("caption-visible");
+    // } else {
+    //   $(".production").removeClass("caption-visible");
+    // }
   }
 
   if ($(".btn-top-page").length > 0) {

@@ -998,8 +998,8 @@ div::-webkit-scrollbar-thumb {
 
 #lottie-2-2 {
   position: absolute;
-  top: -320px;
-  left: -250px;
+  top: -290px;
+  left: -20px;
   width: 1800px;
   z-index: 2;
   -webkit-transition: opacity 0.3s;
@@ -3125,7 +3125,7 @@ div::-webkit-scrollbar-thumb {
   -o-transition: opacity 1s, top 1s;
   transition: opacity 1s, top 1s;
   position: sticky;
-  top: 90px;
+  top: 40px;
   left: 0;
   width: 100%;
 }
@@ -3133,9 +3133,6 @@ div::-webkit-scrollbar-thumb {
   opacity: 0;
   top: -1000px;
   pointer-events: none;
-}
-.production.caption-visible .caption:not(.caption--small) {
-  opacity: 1;
 }
 
 .production__inner {
@@ -3148,7 +3145,6 @@ div::-webkit-scrollbar-thumb {
   position: relative;
 }
 .production__inner .caption:not(.caption--small) {
-  opacity: 0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -3171,7 +3167,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-.production__rightSide {
+.production__leftSide {
   width: 682px;
   font-size: 20px;
   -webkit-transition: opacity 0.3s;
@@ -3180,6 +3176,21 @@ div::-webkit-scrollbar-thumb {
   transition: opacity 0.3s;
 }
 
+.production__rightSide {
+  width: 682px;
+  font-size: 20px;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  position: relative;
+  overflow: hidden;
+  top: -40px;
+}
+
+.production__slider {
+  margin-top: 40px;
+}
 .production__slider .swiper-pagination {
   margin-top: 70px;
 }
