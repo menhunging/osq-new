@@ -1482,8 +1482,8 @@ div::-webkit-scrollbar-thumb {
 }
 
 .btn-quest {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(255, 255, 255, 0.7);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1495,8 +1495,8 @@ div::-webkit-scrollbar-thumb {
   color: rgb(0, 161, 154);
   font-size: 15px;
   position: absolute;
-  bottom: 0;
-  right: -20px;
+  top: 0px;
+  right: -30px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
