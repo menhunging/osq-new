@@ -1022,7 +1022,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-2-2").length > 0) {
-    let number = 8300;
+    let number = 7500;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1049,7 +1049,7 @@ $(document).ready(function () {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "8300") {
+      if (currentScroll >= number) {
         $("#lottie-2-2").addClass("show");
       } else {
         $("#lottie-2-2").removeClass("show");

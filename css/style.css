@@ -998,7 +998,7 @@ div::-webkit-scrollbar-thumb {
 
 #lottie-2-2 {
   position: absolute;
-  top: -290px;
+  top: 0px;
   left: -20px;
   width: 1800px;
   z-index: 2;
@@ -1151,6 +1151,7 @@ div::-webkit-scrollbar-thumb {
   margin-bottom: 0;
 }
 
+#modal-info .modal__inner,
 #modal-personal .modal__inner {
   max-width: 930px;
 }
@@ -1478,6 +1479,32 @@ div::-webkit-scrollbar-thumb {
   border-color: rgb(0, 161, 154);
   background-color: rgb(255, 255, 255);
   color: rgb(0, 161, 154);
+}
+
+.btn-quest {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 161, 154);
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-quest:hover {
+  background-color: rgb(0, 161, 154);
+  color: rgb(255, 255, 255);
 }
 
 .caption {
@@ -1994,6 +2021,9 @@ div::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
 }
+.sertificate__slider .swiper-slide-active .btn-quest {
+  display: flex;
+}
 .sertificate__slider .swiper-slide-active .sertificate-item {
   width: 650px !important;
 }
@@ -2017,6 +2047,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .sertificate-item {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -2714,10 +2745,6 @@ div::-webkit-scrollbar-thumb {
   opacity: 1 !important;
 }
 
-.catalog-main__slider .swiper-slide.swiper-slide-next img {
-  /*width: 80%;*/
-}
-
 .catalog-main__slider .swiper-slide.swiper-slide-next + .swiper-slide {
   opacity: 1 !important;
   top: -170px !important;
@@ -2911,7 +2938,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
 }
 .catalog-main__right p {
-  max-width: 58%;
+  max-width: 680px;
 }
 
 .catalog-main__right .caption {
@@ -9063,15 +9090,19 @@ div::-webkit-scrollbar-thumb {
   opacity: 0.5;
 }
 
+.modal-info .caption,
 .modal-personal .caption {
   max-width: 720px;
 }
+.modal-info p + p,
 .modal-personal p + p {
   margin-top: 15px;
 }
+.modal-info .terms-wrap,
 .modal-personal .terms-wrap {
   position: relative;
 }
+.modal-info .terms-wrap::before,
 .modal-personal .terms-wrap::before {
   content: "";
   position: absolute;
@@ -9087,6 +9118,7 @@ div::-webkit-scrollbar-thumb {
   z-index: 2;
   pointer-events: none;
 }
+.modal-info .terms-text,
 .modal-personal .terms-text {
   margin-top: 40px;
   overflow: auto;
@@ -9095,11 +9127,13 @@ div::-webkit-scrollbar-thumb {
   scrollbar-color: rgb(0, 161, 154) #eeece8;
   scrollbar-width: thin;
 }
+.modal-info .terms-text::-webkit-scrollbar,
 .modal-personal .terms-text::-webkit-scrollbar {
   width: 5px;
   background-color: #eeece8;
   left: 5px;
 }
+.modal-info .terms-text::-webkit-scrollbar-thumb,
 .modal-personal .terms-text::-webkit-scrollbar-thumb {
   width: 5px;
   background-color: rgb(0, 161, 154);
@@ -9108,6 +9142,7 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
+.modal-info .text,
 .modal-personal .text {
   color: #2e2e2e;
   font-size: 16px;
@@ -9115,15 +9150,18 @@ div::-webkit-scrollbar-thumb {
   line-height: 24px;
   padding-bottom: 50px;
 }
+.modal-info .modal__controls,
 .modal-personal .modal__controls {
   display: flex;
   align-items: center;
   gap: 10px;
   display: none;
 }
+.modal-info .modal__controls.visible,
 .modal-personal .modal__controls.visible {
   display: flex;
 }
+.modal-info .modal__controls .btn,
 .modal-personal .modal__controls .btn {
   font-size: 16px;
   -webkit-border-radius: 60px;

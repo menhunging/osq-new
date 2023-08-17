@@ -774,7 +774,7 @@ div {
 
 #lottie-2-2 {
   position: absolute;
-  top: -290px;
+  top: 0px;
   left: -20px;
   width: 1800px;
   z-index: 2;
@@ -953,6 +953,7 @@ div {
   }
 }
 
+#modal-info,
 #modal-personal {
   .modal__inner {
     max-width: 930px;
