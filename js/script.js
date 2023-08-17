@@ -1026,7 +1026,7 @@ $(document).ready(function () {
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 1500;
+    let animDuration = 2000;
     let animData = {
       container: document.getElementById("lottie-2-2"),
       renderer: "svg",
@@ -1045,7 +1045,7 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "9700") {
+      if ($(this).scrollTop() > number && currentScroll < "9200") {
         animatebodymovin(animDuration, anim);
       }
 
