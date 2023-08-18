@@ -9679,6 +9679,7 @@ div::-webkit-scrollbar-thumb {
 }
 .dop-dev .b-product-lines__switch {
   display: flex;
+  align-items: center;
   gap: 50px;
 }
 .dop-dev .b-product-lines__switch-btn {
