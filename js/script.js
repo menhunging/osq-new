@@ -1142,8 +1142,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "1800",
-            end: "1800",
+            start: "2400",
+            end: "2430",
             scrub: true,
           },
         }
@@ -1156,8 +1156,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "1800",
-            end: "1800",
+            start: "2400",
+            end: "2430",
             scrub: true,
           },
         }
@@ -1170,8 +1170,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "1800",
-            end: "1800",
+            start: "2400",
+            end: "2430",
             scrub: true,
           },
         }
