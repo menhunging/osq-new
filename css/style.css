@@ -2737,6 +2737,10 @@ div::-webkit-scrollbar-thumb {
   max-width: inherit;
 }
 
+.catalog-main__slider .swiper-slide.swiper-slide-active img.logo-product {
+  width: 520px;
+}
+
 .catalog-main__slider .swiper-slide.swiper-slide-active .eye {
   opacity: 1;
 }
@@ -2985,7 +2989,7 @@ div::-webkit-scrollbar-thumb {
   min-height: 662px;
 }
 .animation-text__inner {
-  max-width: 500px;
+  max-width: 580px;
   margin-left: auto;
 }
 .animation-text__controls {

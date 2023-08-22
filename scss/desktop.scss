@@ -861,6 +861,10 @@
   max-width: inherit;
 }
 
+.catalog-main__slider .swiper-slide.swiper-slide-active img.logo-product{
+  width: 520px;
+}
+
 .catalog-main__slider .swiper-slide.swiper-slide-active .eye {
   opacity: 1;
 }
@@ -1100,7 +1104,7 @@
   }
 
   &__inner {
-    max-width: 500px;
+    max-width: 580px;
     margin-left: auto;
   }
 
