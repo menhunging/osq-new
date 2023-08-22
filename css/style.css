@@ -2969,18 +2969,21 @@ div::-webkit-scrollbar-thumb {
   z-index: 5;
 }
 .animation-text .caption {
-  margin-bottom: 30px;
   font-size: 96px;
   line-height: 98px;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  margin-bottom: 10px;
+  left: -5px;
+  position: relative;
 }
 .animation-text .caption--middle {
   font-size: 48px;
   line-height: 44px;
-  margin-bottom: 10px;
+  left: 0;
+  margin-bottom: 30px;
 }
 .animation-text .animation-text__wrap {
   position: relative;
@@ -3421,6 +3424,7 @@ div::-webkit-scrollbar-thumb {
 .incision__head .caption {
   font-size: 96px;
   line-height: 87px;
+  margin-bottom: 10px;
 }
 .incision__head .desc {
   font-size: 48px;
