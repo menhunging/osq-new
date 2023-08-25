@@ -1,15 +1,29 @@
 .grettings {
+  overflow: hidden;
 }
 
 .grettings__slider {
   overflow: visible;
+  position: relative;
 
   .swiper-wrapper {
   }
 
+  &:has(.video-block) {
+  }
+
+  .video-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
   .swiper-slide {
     @include transition(all 0.3s);
-    @include box-shadow(0px 30px 90px #bbb4af);
+    @include box-shadow(0px 15px 30px #bbb4af);
     @include border-radius(27px);
     position: relative;
 
@@ -6926,7 +6940,25 @@
       font-weight: 400;
       line-height: 18px;
       text-transform: uppercase;
-      @include transition(color 0.3s);
+      @include transition(all 0.3s);
+      position: relative;
+
+      @include before {
+        bottom: -4px;
+        width: 0%;
+        height: 2.5px;
+        background-color: $colorSite;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        @include border-radius(5px);
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
     }
   }
   .tabs-body {
@@ -7466,6 +7498,10 @@
     font-weight: 400;
     line-height: 24px;
     padding-bottom: 50px;
+
+    h2 {
+      margin: 20px 0;
+    }
   }
 
   .modal__controls {
@@ -8404,6 +8440,16 @@ $fontSize: (
   height: var(--lineap-item-height);
   border-radius: 20px;
   transition: 0.1s;
+
+  // @include before{
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(255, 255, 255, 0.25);
+  //   left:0;
+  //   top:0;
+  //   @include border-radius(20px);
+  //   pointer-events: none;
+  // }
 }
 
 .lineap-item:hover {

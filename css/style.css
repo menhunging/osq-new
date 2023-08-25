@@ -1862,17 +1862,30 @@ div::-webkit-scrollbar-thumb {
   fill: rgb(0, 161, 154);
 }
 
+.grettings {
+  overflow: hidden;
+}
+
 .grettings__slider {
   overflow: visible;
+  position: relative;
+}
+.grettings__slider .video-block {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 .grettings__slider .swiper-slide {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  -webkit-box-shadow: 0px 30px 90px #bbb4af;
-  -moz-box-shadow: 0px 30px 90px #bbb4af;
-  box-shadow: 0px 30px 90px #bbb4af;
+  -webkit-box-shadow: 0px 15px 30px #bbb4af;
+  -moz-box-shadow: 0px 15px 30px #bbb4af;
+  box-shadow: 0px 15px 30px #bbb4af;
   -webkit-border-radius: 27px;
   -moz-border-radius: 27px;
   -ms-border-radius: 27px;
@@ -8654,10 +8667,33 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+.events-invis .list-tabs a::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  bottom: -4px;
+  width: 0%;
+  height: 2.5px;
+  background-color: rgb(0, 161, 154);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.events-invis .list-tabs a:hover::before {
+  width: 100%;
 }
 .events-invis .tabs-body {
   margin-top: 45px;
@@ -9157,6 +9193,10 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   line-height: 24px;
   padding-bottom: 50px;
+}
+.modal-info .text h2,
+.modal-personal .text h2 {
+  margin: 20px 0;
 }
 .modal-info .modal__controls,
 .modal-personal .modal__controls {

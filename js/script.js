@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 
   if ($(".indexPage").length > 0) {
     if (currentScroll > "6500") {
@@ -11,19 +11,13 @@ addEventListener("scroll", (event) => {
     } else {
       $(".incision").removeClass("visible");
     }
-
-    // if (currentScroll > "8200") {
-    //   $(".production").addClass("caption-visible");
-    // } else {
-    //   $(".production").removeClass("caption-visible");
-    // }
   }
 
   if ($(".btn-top-page").length > 0) {
     let btnTopPage = $(".btn-top-page");
-    let scrollWhich = 700;
+    let scrollWhich = $(".footer").offset().top;
 
-    if (currentScroll > scrollWhich) {
+    if (currentScroll > scrollWhich - 1000) {
       !btnTopPage.hasClass("show") && btnTopPage.addClass("show");
     } else {
       btnTopPage.hasClass("show") && btnTopPage.removeClass("show");
@@ -1127,7 +1121,6 @@ $(document).ready(function () {
           scrollTrigger: {
             trigger: ".production",
             start: "-930",
-            // end: "2500",
             scrub: true,
           },
         }
