@@ -1009,3 +1009,9 @@ div {
     width: 18px;
   }
 }
+
+@media (min-width: 1024px) {
+  .menu {
+    display: block !important;
+  }
+}

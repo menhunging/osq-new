@@ -1,2 +1,119 @@
 @media (max-width: 1619px) {
+  .animation-text {
+    top: 20px;
+  }
+
+  .production__inner .caption--small {
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .production__slider {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .production__inner .picture {
+    height: 250px;
+  }
+
+  .grettings__slide {
+    height: 600px;
+  }
+
+  .dop-dev .b-product-lines::before {
+    background-size: contain;
+    height: 477px;
+    top: -90px;
+    margin-left: -782px;
+  }
+
+  .dop-dev .box {
+    max-width: 1200px;
+  }
+
+  .lineap {
+    max-width: 1200px;
+  }
+
+  .animation-text .animation-text__wrap {
+    position: relative;
+    width: 100%;
+    padding: 80px 30px;
+    min-height: 662px;
+  }
+
+  #lottie-2 {
+    top: -210px;
+    left: -160px;
+    width: 1300px;
+  }
+
+  .animation-text .caption {
+    font-size: 86px;
+    line-height: 88px;
+  }
+
+  .animation-text .caption--middle {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  :root {
+    --lineap-item-width: 500px;
+    --lineap-item-height: 376px;
+    --lineap-item-title-width: 65px;
+    --lineap-item-content-width: calc(
+      var(--lineap-item-width) - var(--lineap-item-title-width)
+    );
+  }
+
+  .dop-dev .box {
+    max-width: 1100px;
+  }
+
+  .dop-dev .b-product-lines::before {
+    background-size: contain;
+    height: 477px;
+    top: -30px;
+    width: 100%;
+    left: 50%;
+    margin-left: -551px;
+    background-repeat: no-repeat;
+  }
+
+  .dop-dev .b-product-lines__switch-btn {
+    font-size: 24px;
+  }
+
+  .dop-dev .b-product-lines__title {
+    font-size: 50px;
+    line-height: 44px;
+  }
+
+  .dop-dev .b-product-lines__header {
+    padding: 0 35px;
+  }
+
+  .lineap-item__content-controls{
+    flex-wrap: wrap;
+  }
+
+  .lineap-item__control {
+    width: 50px;
+    height: 50px;
+  }
+
+  .lineap-item__control--large{
+    width: auto;
+    max-width: 230px;
+  }
+
+  .lineap-item__content {
+    flex-grow: 1;
+    position: relative;
+    padding: 50px 30px;
+  }
 }

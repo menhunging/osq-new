@@ -243,6 +243,7 @@
 
 .subscribe-news {
   margin-top: 90px;
+  overflow: hidden;
 }
 
 .subscribe-news__inner {
@@ -296,6 +297,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .news-main__inner {
@@ -674,6 +676,7 @@
 
 .food-type {
   margin-top: 150px;
+  overflow: hidden;
 }
 
 .food-type__head {
@@ -2837,6 +2840,17 @@
   }
 }
 
+.smi-section {
+  .blog-item {
+    .picture {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
 .text-details {
   padding-bottom: 130px;
   font-size: 16px;
@@ -3189,9 +3203,9 @@
     justify-content: center;
 
     img {
-      // width: 100%;
-      // height: 100%;
-      // object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -3410,7 +3424,7 @@
   .swiper-slide {
     display: flex;
     @include transition(all 0.3s);
-    @include box-shadow(0px 30px 90px #bbb4af);
+    @include box-shadow(0px 10px 40px #bbb4af);
     @include border-radius(27px);
     position: relative;
     background-color: $colorWhite;
@@ -4742,6 +4756,8 @@
 }
 
 .contacts-page {
+  overflow: hidden;
+
   .title-page__inner {
     padding: 3px 0;
   }
@@ -5027,6 +5043,8 @@
 }
 
 .storage-section {
+  overflow: hidden;
+
   .caption {
   }
 
@@ -5230,6 +5248,8 @@
 }
 
 .production-page {
+  overflow: hidden;
+
   .about-advantages {
     padding: 144px 0 136px;
 
@@ -6173,6 +6193,7 @@
 .events-slider__wrap {
   margin-top: 53px;
   position: relative;
+  overflow: hidden;
 
   .swiper-pagination {
   }
@@ -7144,6 +7165,7 @@
 
 .distr-section {
   padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .filter-line {
@@ -8648,8 +8670,12 @@ $fontSize: (
   }
 }
 
-.btn-filter{
+.btn-filter {
   display: none;
   align-items: center;
   line-height: 20px;
+}
+
+.product-catalog__mobileFilter {
+  display: none;
 }
