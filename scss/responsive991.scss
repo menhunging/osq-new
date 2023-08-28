@@ -1,1 +1,146 @@
-@media (max-width: 991px) {}
+@media (max-width: 1023px) {
+  .burger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fbf5f1;
+    padding: 45px 0;
+    border-top: solid 1px #b6aa9b;
+  }
+
+  .menu > ul {
+    width: 100%;
+    display: block;
+
+    li + li {
+      margin-top: 45px;
+    }
+  }
+
+  .menu-link {
+    font-size: 18px;
+    line-height: 20px;
+    width: 100%;
+    display: block;
+  }
+
+  .header {
+    .logo-wrapper {
+      order: -1;
+    }
+  }
+
+  .header__inner .btn {
+    display: block;
+    order: -1;
+    margin: 0 auto;
+  }
+
+  .title-page__inner {
+    flex-wrap: wrap;
+    padding: 25px 0;
+
+    .title-page__text {
+      margin-top: 30px;
+    }
+  }
+
+  .btn-filter {
+    display: flex;
+    line-height: 16px;
+    padding: 12px 20px;
+  }
+
+  .category-filter {
+    display: none;
+  }
+
+  .cateregory-tags {
+    li {
+      &:not(:last-child) {
+        display: none;
+      }
+    }
+  }
+
+  .category-catalog__inner {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .category-catalog {
+    padding: 0 0 50px;
+  }
+
+  .caption--middle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .tabs-section__links a {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .footer-top__caption {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .footer-top {
+    padding: 30px 15px;
+  }
+
+  .footer-top .input-wrapper input {
+    padding-right: 200px;
+  }
+
+  .footer-top .btn {
+    min-width: 155px;
+  }
+
+  .footer-leftSide {
+    padding: 30px;
+  }
+
+  .footer-rightSide {
+    padding: 30px;
+  }
+
+  .menu-footer {
+    padding-bottom: 15px;
+    gap: 10px;
+
+    li {
+      width: calc(100% / 3 - 15px);
+    }
+  }
+
+  .footer-info {
+    gap: 30px;
+    padding: 15px 0;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 15px;
+  }
+
+  .js-action-link::before {
+    right: 0;
+    @include transform(rotate(-90deg));
+    width: 8px;
+    height: 9px;
+    margin-top: -4px;
+  }
+}

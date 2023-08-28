@@ -381,7 +381,20 @@ $(document).ready(function () {
             on: {
               init: function (swiper) {},
             },
-            breakpoints: {},
+            breakpoints: {
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+              },
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+              },
+              1440: {
+                slidesPerView: 4,
+                spaceBetween: 37,
+              },
+            },
           });
         } else {
           return;
@@ -1341,6 +1354,13 @@ $(document).ready(function () {
       if (prevItem.length !== 0) {
         setActiveLineapItem($(prevItem));
       }
+    });
+  }
+
+  if ($(".burger").length > 0) {
+    $(".burger").on("click", function () {
+      $(".burger").toggleClass("opened");
+      $(".menu").toggleClass("opened").slideToggle();
     });
   }
 });

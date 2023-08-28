@@ -966,3 +966,46 @@ div {
     background-color: #fbf5f1;
   }
 }
+
+.burger {
+  width: 38px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &.opened {
+    .burger-line {
+      &:nth-child(1) {
+        @include transform(rotate(45deg) translate(8px, 6px));
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        @include transform(rotate(-45deg) translate(8px, -4px));
+      }
+    }
+  }
+}
+
+.burger-line {
+  width: 100%;
+  height: 2px;
+  background-color: $colorSite;
+  @include border-radius(5px);
+  @include transition(all 0.3s);
+
+  &:nth-child(1) {
+  }
+
+  &:nth-child(2) {
+    width: 28px;
+  }
+  &:nth-child(3) {
+    width: 18px;
+  }
+}

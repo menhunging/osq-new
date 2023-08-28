@@ -1905,7 +1905,6 @@
 .tabs-section__links {
   display: flex;
   gap: 90px;
-  flex-wrap: wrap;
   border-top: solid 1px rgba(182, 170, 155, 0.5);
   padding-top: 31px;
 
@@ -8647,4 +8646,10 @@ $fontSize: (
     margin-top: 30px;
     margin-bottom: 16px;
   }
+}
+
+.btn-filter{
+  display: none;
+  align-items: center;
+  line-height: 20px;
 }

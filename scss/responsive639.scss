@@ -1,2 +1,44 @@
 @media (max-width: 639px) {
+  .category-catalog__item {
+    width: 100%;
+  }
+
+  .caption--middle {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .category-catalog__item .picture {
+    height: 205px;
+  }
+
+  .search-block {
+    position: static;
+  }
+
+  .search-invis.opened {
+    width: calc(100% - 48px);
+    right: 50px;
+    margin: 0;
+    top: 28px;
+  }
+
+  .search-invis input {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .search-invis button,
+  .search-invis input {
+    font-size: 12px;
+  }
+
+  .search-invis button {
+    right: 15px;
+  }
+
+  .btn-top-page {
+    bottom: 20px;
+    right: 20px;
+  }
 }
