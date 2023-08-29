@@ -412,6 +412,17 @@ $(document).ready(function () {
       slidesPerView: 5,
       freeMode: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+        },
+        480: {
+          slidesPerView: 4,
+        },
+        640: {
+          slidesPerView: 5,
+        },
+      },
     });
 
     const swiper = new Swiper(".product__picture__slider", {

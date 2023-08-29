@@ -135,5 +135,146 @@
 
   .category-catalog__item {
     width: calc(100% / 3 - 10px);
-}
+  }
+
+  .caption--big {
+    font-size: 60px;
+    line-height: 65px;
+  }
+
+  .universal-containers {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .product-catalog__mobileFilter {
+    display: flex;
+
+    .btn-filter {
+      display: flex;
+    }
+
+    .cateregory-tags {
+      li:not(.clear) {
+        display: none;
+      }
+    }
+
+    .category-catalog__inner {
+      width: 100%;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .product-catalog__leftSide {
+    position: fixed;
+    left: -330px;
+    top: 0;
+    z-index: 9;
+    background-color: #fbf5f1;
+    padding: 30px 10px;
+  }
+
+  .product-catalog__rightSide {
+    width: 100%;
+  }
+
+  .product-catalog {
+    .product-list {
+    }
+
+    .product-item {
+      width: calc(calc(100% / 3) - 20px);
+    }
+  }
+
+  .prodcut-text__caption {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .prodcut-text__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .news-section {
+    .news-item {
+      .news-item__content {
+        min-height: inherit;
+
+        .btn {
+          margin-top: 20px;
+        }
+      }
+
+      .news-item__name {
+        font-size: 28px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .text-video {
+    height: 362px;
+  }
+
+  .text-picture__list img {
+    height: 180px;
+  }
+
+  .blog-item__content {
+    padding: 15px;
+  }
+
+  .blog-item__link {
+    min-height: 110px;
+  }
+
+  .blog-list {
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .blog-item {
+    width: calc(50% - 7.5px);
+  }
+
+  .text-caption .caption {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .other-section .blog-item__content {
+    padding: 15px;
+  }
+
+  .other-section .blog-item__content {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .other-section .blog-item__date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .text-details {
+    padding-bottom: 70px;
+  }
+
+  .not-page {
+    .caption--small {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .not-page__content {
+    margin-top: 30px;
+  }
 }

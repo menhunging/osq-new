@@ -197,9 +197,276 @@
     padding-bottom: 50px;
   }
 
-  .tabs-section .tabs-body{
+  .tabs-section .tabs-body {
     padding: 15px 15px 50px;
   }
-  
-  
+
+  .universal-containers__slider {
+    margin-bottom: 0;
+    margin-top: -30px;
+  }
+
+  .product__name .caption {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .product__desc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+
+  .product__name .btn-favorite {
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .product__icons {
+    margin-top: 15px;
+  }
+
+  .product__column {
+    padding: 15px;
+  }
+
+  .product__info {
+    margin-top: 20px;
+  }
+
+  .product__controls {
+    margin-top: 20px;
+  }
+
+  .product-text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .product__info li {
+    padding: 10px 0;
+  }
+
+  .btn-360 {
+    right: 10px;
+    top: 15px;
+
+    svg {
+      width: 30px;
+      height: 28px;
+    }
+  }
+
+  .product__inner {
+    background-color: #f3ece7;
+    @include border-radius(30px);
+  }
+
+  .product__picture__slider .swiper-pagination {
+    font-size: 12px;
+  }
+
+  .breadcrumbs {
+    padding: 20px 0;
+  }
+
+  .product__back {
+    font-size: 14px;
+  }
+
+  .reviews-product {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  .review-text {
+    padding: 10px 5px;
+  }
+
+  .reviews-product__slider .swiper-pagination {
+    margin-top: 20px;
+  }
+
+  .product__inner {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
+
+  .news-section {
+    .news-item--big {
+      .news-item__content {
+        p {
+          display: none;
+        }
+
+        .btn {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .news-item {
+      .news-item__name {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .news-section .news-item .news-item__date {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .news-section .news-item--big .news-item__content {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  .news-item .btn {
+    padding: 12px 28px;
+  }
+
+  .news-section .news {
+    margin-top: 24px;
+  }
+
+  .news-section .news-item + .news-item {
+    margin-top: 25px;
+  }
+
+  .news-section {
+    padding-bottom: 50px;
+  }
+
+  .text-details .picture {
+    &:not(:has(.text-caption)) {
+      min-height: 230px;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .text-details__title {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+
+  .text-details h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .author-article {
+    margin-top: 20px;
+  }
+
+  .blog-list {
+  }
+
+  .blog-item {
+    width: 100%;
+  }
+
+  .blog-item .picture {
+    height: auto;
+  }
+
+  .blog-item__link {
+    min-height: inherit;
+  }
+
+  .blog-item__content {
+    padding-top: 50px;
+    position: relative;
+  }
+
+  .blog-item__date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .smi-section .blog-item .picture {
+    min-height: 200px;
+  }
+
+  .blog-list {
+    margin-top: 15px;
+  }
+
+  .other-section {
+    padding-bottom: 30px;
+  }
+
+  .typeFood__caption {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .typeFood__content {
+    padding: 15px;
+  }
+
+  .typeFood__link {
+    margin-top: 20px;
+  }
+
+  .typeFood__controls {
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .btn {
+      max-width: 100%;
+    }
+  }
+
+  .product-other .caption {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .product-other {
+    padding: 50px 0;
+  }
+
+  .search-result__not {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  .search-result__title {
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+    padding-bottom: 15px;
+  }
+
+  .search-result__controls {
+    flex-wrap: wrap;
+  }
+
+  .not-page__content {
+    min-height: inherit;
+  }
+
+  .not-page .invisCaption {
+    right: calc(50% - 400px);
+    font-size: 275px;
+    bottom: -60px;
+}
 }

@@ -2484,7 +2484,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 5px 50px
   }
 
   li,
@@ -3145,12 +3145,14 @@
 
   &::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
     background-color: rgba(170, 159, 142, 0.33);
     @include border-radius(10px);
   }
 
   &::-webkit-scrollbar-thumb {
     width: 5px;
+    height: 5px;
     background-color: $colorSite;
     @include border-radius(10px);
   }
@@ -8678,4 +8680,8 @@ $fontSize: (
 
 .product-catalog__mobileFilter {
   display: none;
+}
+
+.typeFood-section{
+  overflow: hidden;
 }

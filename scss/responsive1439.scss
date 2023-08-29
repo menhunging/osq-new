@@ -704,5 +704,9 @@
 
   .news-item--big .news-item__content {
     padding: 0 30px;
-}
+  }
+
+  .news-section .news-item {
+    width: 100% !important;
+  }
 }

@@ -1,2 +1,33 @@
-@media (max-width: 374px) {
+@media (max-width: 479px) {
+  .universal-containers__slider
+    .swiper-slide-active
+    .universal-containers__item
+    img {
+    height: 230px;
+    width: 280px;
+  }
+
+  .universal-gallery {
+    height: 250px;
+  }
+
+  .universal-containers__slider .swiper-pagination {
+    top: 30px;
+    bottom: auto;
+  }
+
+  .universal-containers__slider .swiper-slide {
+    min-height: 540px;
+  }
+
+  .universal-containers__slider {
+    margin-bottom: -70px;
+    margin-top: 0;
+  }
+
+  .not-page .invisCaption {
+    right: calc(50% - 140px);
+    font-size: 170px;
+    letter-spacing: 0;
+  }
 }
