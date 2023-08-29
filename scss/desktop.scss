@@ -8541,7 +8541,7 @@ $fontSize: (
 .lineap-item__content-controls {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 10px;
   margin-top: auto;
 }
@@ -8560,6 +8560,14 @@ $fontSize: (
   cursor: pointer;
 }
 
+.lineap-item__control--next{
+  order: 3;
+}
+
+.lineap-item__control--prev{
+  order: -1;
+}
+
 .lineap-item__control--large {
   cursor: pointer;
   text-decoration: none;
@@ -8574,6 +8582,8 @@ $fontSize: (
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  order: 2;
+  margin: 0 auto;
 }
 
 .lineap-item__control:hover {
