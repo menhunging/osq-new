@@ -470,4 +470,170 @@
     font-size: 275px;
     bottom: -120px;
   }
+
+  .about-block__left {
+    width: 100%;
+  }
+
+  .about-block__right {
+    width: 100%;
+    max-height: 360px;
+  }
+
+  .our-brands__list {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .our-brands__item {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .our-brands__item .our-invis {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .our-brands__item::after {
+    display: none;
+  }
+
+  .our-brands__item .our-invis {
+    padding: 15px;
+  }
+
+  .about-numbers__left {
+    width: 100%;
+  }
+
+  .about-numbers__right {
+    width: 100%;
+  }
+
+  .about-numbers {
+    padding: 50px 0;
+    overflow: hidden;
+  }
+
+  .about-numbers__list .text {
+    font-size: 18px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .about-numbers__inner .logo-invis {
+    left: 192px;
+    bottom: -310px;
+  }
+
+  .why-block__item {
+    padding: 15px;
+  }
+
+  .why-block__list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-advantages {
+    padding: 35px 0 75px;
+  }
+
+  .manufactured-products__wrap {
+    padding: 30px 30px 300px;
+    text-align: center;
+  }
+
+  .manufactured-products .caption {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .manufactured-products__wrap::before {
+    margin-left: -510px;
+    top: calc(100% - 265px);
+    margin-top: 0;
+  }
+
+  .esg-block__left {
+    width: 100%;
+  }
+
+  .esg-block__right {
+    width: 100%;
+  }
+
+  .esg-report__left {
+    width: 100%;
+  }
+
+  .esg-report .other-list li + li {
+    margin-top: 0;
+  }
+
+  .esg-report .other-list {
+    height: auto;
+  }
+
+  .esg-report__right {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .esg-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .esg__inner .caption {
+    font-size: 38px;
+  }
+
+  .esg__inner {
+    padding: 15px;
+  }
+
+  .esg__inner .picture {
+    margin-bottom: 0;
+    margin-top: 30px;
+    height: auto;
+  }
+
+  .esg__inner .caption {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .delivery-sng {
+    flex-wrap: wrap;
+  }
+
+  .delivery-sng__picture {
+    order: 2;
+    margin: -140px auto 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .delivery-sng__right {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 200px;
+  }
+
+  .delivery-sng__right .caption {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
+
+  .delivery-free .caption {
+    font-size: 32px;
+    line-height: 36px;
+}
 }

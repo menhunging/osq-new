@@ -468,5 +468,367 @@
     right: calc(50% - 400px);
     font-size: 275px;
     bottom: -60px;
-}
+  }
+
+  .caption--small {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .about-block__left {
+    padding: 15px;
+  }
+
+  .about-block__left .caption {
+    margin-bottom: 15px;
+    line-height: 26px;
+  }
+
+  .tabs-section__tabs--lineBottom .tabs-section__links {
+    border-bottom: solid 2px rgba(182, 170, 155, 0.5);
+  }
+
+  .tabs-section__tabs--lineBottom .tabs-section__links li {
+    width: auto;
+  }
+
+  .tabs::before {
+    display: none;
+  }
+
+  .tabs-section__tabs--lineBottom .tabs-section__links::before {
+    display: none;
+  }
+
+  .tabs-section__tabs--lineBottom .tabs-section__links a::before {
+    top: calc(100% + 32px);
+  }
+
+  .tabs-section__tabs--lineBottom .tabs-section__links li + li {
+    margin-left: 25px;
+  }
+
+  .about-block {
+    margin: 30px 0;
+  }
+
+  .caption--big-v2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .our-brands img {
+    width: 100px;
+  }
+
+  .our-brands__item {
+    font-size: 32px;
+  }
+
+  .about-numbers__right {
+    padding: 30px 15px;
+  }
+
+  .about-numbers__left {
+    padding: 30px 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .about-numbers__desc {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .about-numbers__list {
+    gap: 30px;
+  }
+
+  .about-numbers__list li {
+    width: 100%;
+  }
+
+  .about-numbers__list .num {
+    font-size: 46px;
+    line-height: 49px;
+  }
+
+  .about-numbers__list .cur {
+    font-size: 30px;
+  }
+
+  .about-numbers__list li {
+    grid-template-columns: 40px 1fr 1fr;
+  }
+
+  .video-block .text-video {
+    height: 280px;
+  }
+
+  .video-block {
+    padding: 25px 0;
+  }
+
+  .about-advantages__list {
+    grid-template-columns: 1fr;
+  }
+
+  .caption__desc {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .about-advantages__title .title {
+    font-size: 25px;
+    line-height: 27px;
+  }
+
+  .about-advantages__title {
+    min-height: inherit;
+  }
+
+  .about-advantages__content {
+    padding-right: 15px;
+  }
+
+  .about-advantages {
+    padding: 25px 0 55px;
+  }
+
+  .why-block__title {
+    margin-bottom: 15px;
+  }
+
+  .why-block__item {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .manufactured-products .btn {
+    margin-top: 25px;
+    font-size: 18px;
+    padding: 15px 19px;
+  }
+
+  .manufactured-products__inner {
+    overflow: hidden;
+  }
+
+  .manufactured-products .picture {
+    right: 50%;
+    margin-right: -250px;
+  }
+
+  .sertificate {
+    padding: 100px 0 60px;
+  }
+
+  .caption {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .manufactured-products {
+    padding-bottom: 30px;
+  }
+
+  .esg-block__left .quote {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  .esg-block__left {
+    padding: 15px;
+  }
+
+  .esg-block {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .esg-report__right strong {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .esg-report__right h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+
+  .esg-report__right p + h2 {
+    margin-top: 25px;
+  }
+
+  .esg-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .esg__inner .caption {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .delivery-sng {
+    padding: 30px 0;
+  }
+
+  .delivery-sng__right {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 160px;
+  }
+
+  .delivery-sng__picture img {
+    width: 320px;
+    height: 202px;
+  }
+
+  .delivery-free {
+    flex-wrap: wrap;
+  }
+
+  .delivery-free li span {
+    display: block;
+  }
+
+  .delivery-free__right {
+    left: 0;
+    position: relative;
+    width: 320px;
+    top: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .delivery-free__desc {
+    margin-top: 30px;
+  }
+
+  .delivery-shipping .caption {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .delivery-pickup .caption {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .delivery-pickup {
+    min-height: inherit;
+    width: 100%;
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+
+  .delivery-pickup__box {
+    margin-top: -215px;
+    margin-left: -110px;
+  }
+
+  .delivery-pickup__icon {
+    top: -77px;
+    width: 170px;
+    margin-left: -90px;
+  }
+
+  .delivery-pickup .caption {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .delivery-pickup .btn {
+    margin-top: 30px;
+  }
+
+  .modal__inner {
+    padding: 15px;
+  }
+
+  .modal__form .caption {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .modal__form .input-wrapper input {
+    height: 40px;
+  }
+
+  .modal__close {
+    right: 20px;
+    top: 30px;
+  }
+
+  .modal__form .modal__controls {
+    margin-top: 20px;
+  }
+
+  .modal__form .input-list {
+    margin-top: 20px;
+  }
+
+  .modal-info .modal__controls.visible,
+  .modal-personal .modal__controls.visible {
+    flex-wrap: wrap;
+  }
+
+  .modal-thank .caption {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .modal-thank .caption-desc {
+    font-size: 22px;
+    line-height: 38px;
+  }
+
+  .modal-thank p {
+    margin-top: 0;
+  }
+
+  .modal-thank {
+    min-height: 300px;
+  }
+
+  .input-wrapper input,
+  .input-wrapper textarea {
+    @include border-radius(15px);
+  }
+
+  .modal-product .modal-product__picture {
+    width: 240px;
+    height: 302px;
+    margin-top: 0;
+    background-size: contain;
+  }
+
+  .modal-product__info ul {
+    gap: 5px 10px;
+    flex-wrap: wrap;
+  }
+
+  .modal-product .modal-product__controls {
+    width: 100px;
+    height: 30px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .modal-info .terms-text,
+  .modal-personal .terms-text {
+    margin-top: 20px;
+  }
+
+  #modal-order-v2 .input-list .input-wrapper {
+    width: 100%;
+  }
 }
