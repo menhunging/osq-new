@@ -848,13 +848,12 @@ $(document).ready(function () {
       let block = than.attr("data-open");
 
       if (than.hasClass("active")) {
-        console.log("back");
         return false;
       }
 
       if ($(".js-action-link").hasClass("active")) {
         $(".js-action-link").removeClass("active");
-        $(".invis-block").removeClass("open").slideUp(200);
+        $(".invis-block").removeClass("open").slideUp(100);
         $(".invis-block").off("mouseover");
         isLeave = false;
         setTimeout(function () {
@@ -1141,10 +1140,10 @@ $(document).ready(function () {
         "#lottie-2",
         { y: 0 },
         {
-          y: -1050,
+          y: -1090,
           scrollTrigger: {
             trigger: ".production",
-            start: "-930",
+            start: "-980",
             scrub: true,
           },
         }
@@ -1403,7 +1402,7 @@ function isVisibleMapBlock() {
 function openInvisBlock(than, block, isLeave) {
   than.addClass("active");
 
-  $(`.${block}`).addClass("open").slideDown(200);
+  $(`.${block}`).addClass("open").slideDown(100);
 
   $(than).mouseleave(function () {
     mouseLeaveHandle();
@@ -1417,7 +1416,7 @@ function openInvisBlock(than, block, isLeave) {
     let div = $(`.${block}`);
     if (!div.is(e.target) && div.has(e.target).length === 0) {
       $(".js-action-link").removeClass("active");
-      div.removeClass("open").slideUp(200);
+      div.removeClass("open").slideUp(100);
       $(document).off("mouseup");
     }
   });
@@ -1442,7 +1441,7 @@ function openInvisBlock(than, block, isLeave) {
 
   function closeInvis(block, timer = undefined) {
     $(".js-action-link").removeClass("active");
-    $(`.${block}`).removeClass("open").slideUp(200);
+    $(`.${block}`).removeClass("open").slideUp(100);
     $(`.${block}`).off("mouseover");
     $(document).off("mouseup");
     isLeave = false;

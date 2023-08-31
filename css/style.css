@@ -2729,6 +2729,7 @@ div::-webkit-scrollbar-thumb {
   justify-content: center;
   gap: 20px;
   margin-top: 55px;
+  padding-bottom: 5px;
 }
 .food-controls .btn {
   min-width: 235px;
@@ -5583,6 +5584,7 @@ div::-webkit-scrollbar-thumb {
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 245px;
+  overflow: hidden;
 }
 .not-page .caption {
   margin-bottom: 10px;
@@ -10466,6 +10468,49 @@ div::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+.news-item--big .news-item__content p {
+  max-height: 170px;
+}
+
+.news-item--big .news-item__name {
+  max-height: 76px;
+  overflow: hidden;
+}
+
+.footer-bottom {
+  position: relative;
+}
+.footer-bottom .btn-top-page {
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  position: absolute;
+  left: 50%;
+  top: -65px;
+  bottom: auto;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-left: -50px;
+}
+.footer-bottom .btn-top-page svg {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 @media (max-width: 1619px) {
   .animation-text {
     top: 20px;
@@ -11935,6 +11980,9 @@ div::-webkit-scrollbar-thumb {
   .delivery-free .caption {
     font-size: 32px;
     line-height: 36px;
+  }
+  .footer-bottom .btn-top-page {
+    display: none;
   }
 }
 @media (max-width: 767px) {
