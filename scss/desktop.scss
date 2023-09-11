@@ -1923,6 +1923,7 @@
       }
     }
   }
+
   a {
     font-weight: 400;
     font-size: 32px;
@@ -1939,6 +1940,24 @@
       background-color: $colorSite;
       top: calc(0% - 32px);
     }
+  }
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    height: 0;
+    width: 0;
   }
 }
 
@@ -8707,7 +8726,6 @@ $fontSize: (
   overflow: hidden;
 }
 
-
 .footer-bottom{
   position: relative;
 
@@ -8731,4 +8749,29 @@ $fontSize: (
       @include transform(rotate(-90deg));
     }
   }
+}
+
+.text-block-opening{
+  .btn-more-text{
+    display: none;
+  }
+}
+
+.btn-more-text{
+  color: $colorSite;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  @include transition(all 0.3s);
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  
+  &:hover{
+    text-decoration-color: $colorSite;
+  }
+}
+
+.documents-links--mobile{
+  display: none;
 }

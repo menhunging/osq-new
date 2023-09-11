@@ -1373,6 +1373,33 @@ $(document).ready(function () {
       $(".menu").toggleClass("opened").slideToggle();
     });
   }
+
+  if ($(".text-block-opening").length > 0) {
+    $(".text-block-opening p").first();
+
+    $(".text-block-opening").map(function () {
+      let block = $(this);
+      let height = block.first().height();
+
+      block.find("p").first().css("display", "block");
+
+      block.find(".btn-more-text").on("click", function (event) {
+        event.preventDefault();
+
+        if ($(this).hasClass("active")) {
+          block.find("p").css("display", "none");
+          block.find("p").first().css("display", "block");
+          let text = $(this).attr("data-text");
+          $(this).removeClass("active").text(text);
+        } else {
+          block.find("p").css("display", "block");
+
+          let text = $(this).attr("data-text-active");
+          $(this).addClass("active").text(text);
+        }
+      });
+    });
+  }
 });
 
 // $(window).on("load", function () {

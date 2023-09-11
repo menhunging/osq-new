@@ -400,4 +400,90 @@
     margin-left: -190px;
     width: 470px;
   }
+
+  .events-mons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .calendarWrapper {
+    padding: 15px;
+  }
+
+  .events-slider__wrap {
+    margin-top: 30px;
+  }
+
+  .events {
+    padding: 50px 0;
+  }
+
+  .events-calendar {
+    margin-top: 50px;
+  }
+
+  .calendar .td {
+    height: 50px;
+    padding: 5px;
+  }
+
+  .calendar .td::before {
+    left: 6px;
+    top: 6px;
+  }
+
+  .events-item {
+    padding: 20px;
+  }
+
+  .events-item__controls {
+    flex-wrap: wrap;
+  }
+
+  .events-item__info {
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+
+  .events-item__controls {
+    margin-top: 30px;
+  }
+
+  .events-calendar__leftSide {
+    padding: 15px;
+  }
+
+  .events-all .caption {
+    font-size: 54px;
+  }
+
+  .events-age {
+    font-size: 54px;
+  }
+
+  .events-calendar .caption__desc {
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .events-slider .btn{
+    margin-top: 20px;
+  }
+
+  .events-slider .swiper-slide{
+    min-height: inherit;
+  }
+
+  .documents-links--mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 300px;
+
+    .btn:not(.btn-loadFile) + .btn{
+      margin-top: 0;
+    }
+  }
 }

@@ -600,6 +600,10 @@
     margin-bottom: 0;
     margin-top: 30px;
     height: auto;
+    position: relative;
+    left: -15px;
+    bottom: -15px;
+    width: calc(100% + 30px);
   }
 
   .esg__inner .caption {
@@ -639,5 +643,29 @@
 
   .footer-bottom .btn-top-page {
     display: none;
+  }
+
+  .events-calendar__leftSide {
+    display: none;
+  }
+
+  .events-calendar__rightSide {
+    width: 100%;
+  }
+
+  .events-slider .swiper-slide {
+    padding: 35px;
+  }
+
+  .events-all .caption {
+    font-size: 44px;
+  }
+
+  .events-slider__wrap {
+    margin-top: 20px;
+  }
+
+  .events-item__info {
+    width: 100%;
   }
 }

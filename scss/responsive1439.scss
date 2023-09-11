@@ -709,4 +709,8 @@
   .news-section .news-item {
     width: 100% !important;
   }
+
+  .btn-favorite-invis{
+    @include transform(translateX(140px));
+  }
 }

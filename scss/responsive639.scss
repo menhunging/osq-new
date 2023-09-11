@@ -219,23 +219,6 @@
     width: 100%;
   }
 
-  .text-caption .text-caption__content {
-    width: 100%;
-  }
-
-  .text-caption .text-caption__inner {
-    flex-wrap: wrap;
-  }
-
-  .text-details .picture {
-    min-height: 380px;
-  }
-
-  .text-caption .caption {
-    font-size: 20px;
-    line-height: 22px;
-  }
-
   .product-other .product-item {
     width: 100%;
   }
@@ -252,15 +235,21 @@
     width: 100%;
   }
 
+  .search-result__title{
+    flex-wrap: nowrap;
+  }
+
   .search-result__text {
     margin-top: 15px;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     padding-bottom: 15px;
   }
 
-  .not-page .invisCaption {
-    right: calc(50% - 200px);
-    font-size: 250px;
+  .search-section .btn-clear {
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 18px;
   }
+
 }
