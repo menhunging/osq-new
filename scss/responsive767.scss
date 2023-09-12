@@ -471,14 +471,15 @@
   .not-page__content {
     min-height: inherit;
     margin-top: 142px;
+    padding-bottom: 100px;
   }
 
   .not-page .invisCaption {
-    right: -85px;
+    right: -68px;
     font-size: 250px;
     line-height: 250px;
     letter-spacing: -0.05em;
-    bottom: -10px;
+    bottom: 2px;
     @include transform(rotate(-90deg));
   }
 
@@ -735,33 +736,47 @@
   }
 
   .delivery-sng__right {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 160px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .delivery-sng__picture img {
-    width: 240px;
+    width: 100%;
     height: auto;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/12;
+    min-width: 210px;
+    width: calc(100% - 230px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .delivery-sng__picture {
-    margin: -120px auto 50px;
+    margin: -60px auto 50px;
+  }
+
+  .delivery-sng__right .caption {
+    font-size: 26px;
+    line-height: 30px;
   }
 
   .delivery-free {
     flex-wrap: wrap;
+    padding-bottom: 300px;
   }
 
   .delivery-free__right {
-    left: 0;
-    position: relative;
-    width: 320px;
+    left: calc(50% - 170px);
+    position: absolute;
+    min-width: 450px;
     top: auto;
     height: auto;
     margin: 0 auto;
+    bottom: 0px;
+    width: calc(100% - 90px);
   }
 
   .delivery-free__desc {
@@ -783,17 +798,25 @@
     width: 100%;
     margin-top: 200px;
     margin-bottom: 50px;
+    padding: 130px 40px 50px;
+    text-align: left;
   }
 
   .delivery-pickup__box {
-    margin-top: -205px;
-    margin-left: -150px;
+    margin-top: -215px;
+    margin-left: -157px;
+    @include transform(scale(1.4));
+    z-index: 3;
   }
 
   .delivery-pickup__icon {
-    top: -77px;
+    top: -37px;
     width: 170px;
     margin-left: -140px;
+  }
+
+  .delivery-pickup__text{
+    margin-top: 50px;
   }
 
   .delivery-pickup .caption {
@@ -1035,7 +1058,7 @@
   .text-caption {
     align-items: flex-start;
     padding: 30px;
-    height: auto;
+    height: 100%;
   }
 
   .text-caption .text-caption__date {
@@ -1098,5 +1121,20 @@
   .delivery-free li {
     font-size: 12px;
     line-height: 14px;
-}
+  }
+
+  .documents-links--mobile {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-back {
+    max-width: 165px;
+    padding: 17px 10px;
+    font-size: 14px;
+  }
+
+  .search-result {
+    padding-top: 20px;
+  }
 }
