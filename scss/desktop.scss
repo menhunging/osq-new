@@ -1023,11 +1023,26 @@
 }
 
 .catalog-main__item {
+  cursor: pointer;
   @include invisLink;
 
   .logo-product {
     position: relative;
     top: 60px;
+  }
+
+  a{
+    pointer-events: none
+  }
+}
+
+.swiper-slide{
+  &.swiper-slide-active{
+    .catalog-main__item{
+      a{
+        pointer-events: all;
+      }
+    }
   }
 }
 
@@ -2542,6 +2557,9 @@
 }
 
 .product {
+  .btn-back{
+    margin-bottom: 60px;
+  }
 }
 
 .product__inner {
@@ -2632,6 +2650,24 @@
     justify-content: center;
     width: 60px;
     height: 60px;
+    position: relative;
+
+    &:hover {
+      @include after {
+        content: attr(data-title);
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        background-color: $colorWhite;
+        color: $colorBlack;
+        padding: 14px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+        @include border-radius(20px);
+        @include box-shadow(1px 1px 10px 0px rgba(170, 159, 142, 0.1));
+      }
+    }
   }
 }
 
@@ -2669,6 +2705,10 @@
   margin-top: 50px;
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   .btn {
     padding: 19px 53px;
@@ -7714,6 +7754,7 @@
         animation-duration: 5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
+        animation-delay: 5s
       }
     }
 
@@ -8733,20 +8774,20 @@ $fontSize: (
     background-color: transparent;
     @include border-radius(0);
     position: absolute;
-    left:50%;
-    top: -65px;
-    bottom: auto;
-    margin: 0 auto;
     color: $colorWhite;
     @include transform(rotate(0deg));
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    margin-left: -50px;
+    left:200px;
+    top: 50%;
+    font-size: 18px;
 
     svg{
       @include transform(rotate(-90deg));
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -8773,5 +8814,9 @@ $fontSize: (
 }
 
 .documents-links--mobile{
+  display: none;
+}
+
+.btn-back--mobile{
   display: none;
 }

@@ -365,7 +365,7 @@
 
   .delivery-shipping::before {
     background-image: none;
-    border: dashed 2px #AA9F8E;
+    border: dashed 2px #aa9f8e;
     @include border-radius(20px);
     height: 100%;
   }
@@ -470,15 +470,15 @@
     line-height: 42px;
   }
 
-  .events-slider .btn{
+  .events-slider .btn {
     margin-top: 20px;
   }
 
-  .events-slider .swiper-slide{
+  .events-slider .swiper-slide {
     min-height: inherit;
   }
 
-  .documents-links--mobile{
+  .documents-links--mobile {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -486,8 +486,17 @@
     width: 100%;
     max-width: 320px;
 
-    .btn:not(.btn-loadFile) + .btn{
+    .btn:not(.btn-loadFile) + .btn {
       margin-top: 0;
     }
+  }
+
+  .btn-patented:hover::after {
+    left: auto;
+    right: 50%;
+  }
+
+  .btn-patented {
+    @include transform(scale(0.8));
   }
 }

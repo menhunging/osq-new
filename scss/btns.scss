@@ -339,3 +339,40 @@
     color: $colorWhite;
   }
 }
+
+.btn-patented {
+  display: flex;
+  align-items: center;
+  @include border-radius(100px);
+  border: solid 1px $colorSite;
+  padding: 20px 30px 20px 90px;
+  position: relative;
+  min-height: 73px;
+  color: $colorSite;
+  font-size: 18px;
+  font-weight: 400;
+
+  svg {
+    position: absolute;
+    left: -20px;
+    top: -16px;
+  }
+
+  &:hover {
+    @include after() {
+      content: attr(data-title);
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      background-color: $colorWhite;
+      color: $colorBlack;
+      padding: 30px;
+      font-size: 16px;
+      line-height: 24px;
+      @include border-radius(20px);
+      text-align: left;
+      width: 395px;
+      @include box-shadow(1px 1px 10px 0px rgba(170, 159, 142, 0.1));
+    }
+  }
+}
