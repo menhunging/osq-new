@@ -499,4 +499,8 @@
   .btn-patented {
     @include transform(scale(0.8));
   }
+
+  .gallery-slider {
+    max-width: 770px;
+}
 }

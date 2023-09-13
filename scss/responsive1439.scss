@@ -710,7 +710,11 @@
     width: 100% !important;
   }
 
-  .btn-favorite-invis{
+  .btn-favorite-invis {
     @include transform(translateX(140px));
+  }
+
+  .gallery-slider {
+    max-width: 950px;
   }
 }

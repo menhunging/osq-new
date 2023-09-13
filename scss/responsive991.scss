@@ -9,10 +9,12 @@
     left: -15px;
     top: 100%;
     width: calc(100% + 30px);
+    height: calc(100vh - 103px);
     background-color: #fbf5f1;
     border-top: solid 1px #b6aa9b;
     padding: 45px 15px;
     z-index: 15;
+    overflow: auto;
   }
 
   .menu > ul {
@@ -667,5 +669,14 @@
 
   .events-item__info {
     width: 100%;
+  }
+
+  .reviews-product {
+    margin-top: 20px;
+
+    .swiper-button-prev svg path,
+    .swiper-button-next svg path {
+      stroke: $colorWhite;
+    }
   }
 }
