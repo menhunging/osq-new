@@ -5879,6 +5879,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 104px;
+  overflow: visible;
+
+  .swiper-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   &.aos-animate {
     .step-item {

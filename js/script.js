@@ -357,8 +357,8 @@ $(document).ready(function () {
   if ($(".gallery-slider").length > 0) {
     const swiper = new Swiper(".gallery-slider", {
       slidesPerView: 3,
-      centeredSlides:true,
-      initialSlide:1,
+      centeredSlides: true,
+      initialSlide: 1,
       spaceBetween: 30,
       navigation: {
         nextEl: ".reviews-product .swiper-button-next",
@@ -371,17 +371,17 @@ $(document).ready(function () {
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 20
+          spaceBetween: 20,
         },
         640: {
           slidesPerView: 2,
-          spaceBetween: 20
+          spaceBetween: 20,
         },
         992: {
           slidesPerView: 3,
-          spaceBetween: 20
+          spaceBetween: 20,
         },
-      }
+      },
     });
   }
 
@@ -1445,11 +1445,65 @@ $(document).ready(function () {
       $(".product-text").height(height);
 
       btnAll.on("click", function (event) {
-        event.preventDefault()
+        event.preventDefault();
         $(this).addClass("active");
-        $(".product-text").addClass("opened").height(defaultHeight)
+        $(".product-text").addClass("opened").height(defaultHeight);
       });
     }
+  }
+
+  if ($(".step-list").length > 0) {
+    if ($(window).width() < 1200) {
+      const swiper = new Swiper(".step-list", {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".step-list .swiper-button-next",
+          prevEl: ".step-list .swiper-button-prev",
+        },
+        pagination: {
+          el: ".step-list .swiper-pagination",
+          type: "progressbar",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+
+          768: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    }
+  }
+
+  if ($(".btn-filter").length > 0) {
+    $(".btn-filter").on("click", function () {
+      $(".product-catalog__leftSide").addClass("opened");
+
+      let block = `<div class="filter-close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 17L9 9M9 9L1 17M9 9L1 1M9 9L17 1" stroke="#AA9F8E" stroke-width="2"/>
+          </svg>
+        </div>`;
+
+      $(".product-catalog__leftSide").append(block);
+
+      $(".filter-close").on("click", function () {
+        $(".product-catalog__leftSide").removeClass("opened");
+      });
+
+      $(document).mouseup(function (e) {
+        let div = $(".product-catalog__leftSide");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          $(".product-catalog__leftSide").removeClass("opened");
+          $(document).off("mouseup");
+        }
+      });
+    });
   }
 });
 

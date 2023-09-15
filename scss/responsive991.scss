@@ -679,4 +679,124 @@
       stroke: $colorWhite;
     }
   }
+
+  .production-page__slider .swiper-slide {
+    padding: 0 30px;
+    height: 400px;
+  }
+
+  .production-page__sliderWrapper {
+    margin-top: 30px;
+  }
+
+  .platform-item {
+    width: 100%;
+  }
+
+  .technologies-section__line:nth-child(2n) .technologies-section__text {
+    padding: 0 30px;
+    width: 100%;
+    order: -1;
+  }
+
+  .technologies-section .picture--small {
+    width: 100%;
+    height: auto;
+    margin: 30px 0 0;
+  }
+
+  .technologies-section__line:nth-child(2n) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .possibilities__title {
+    font-size: 34px;
+    line-height: 45px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .possibilities li {
+    flex-wrap: wrap;
+  }
+
+  .possibilities__content {
+    width: 100%;
+  }
+
+  .possibilities__data {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .possibilities {
+    padding: 30px;
+  }
+
+  .possibilities li + li {
+    margin-top: 30px;
+  }
+
+  .production-page .about-advantages__list {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .slider-simple .swiper-slide {
+    padding: 0 30px;
+  }
+
+  .types-print__item .text {
+    max-width: 265px;
+  }
+
+  .sertificate {
+    padding: 50px 0;
+  }
+
+  .types-print {
+    padding-top: 50px;
+    margin-top: 50px;
+  }
+
+  .contacts-page .title-page__inner {
+    gap: 0;
+  }
+
+  .contacts-info__left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacts-info__right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacts-controls {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  .contacts-page .title-page .caption {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .storage-item {
+    width: 100%;
+  }
+
+  .distr-list .contacts-info__list {
+    grid-template-columns: 1fr;
+  }
+
+  .distr-item__line {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }

@@ -176,6 +176,29 @@
     z-index: 9;
     background-color: #fbf5f1;
     padding: 30px 10px;
+    @include transition(left 0.3s);
+    height: 100vh;
+    overflow: auto;
+
+    &.opened {
+      left: 0;
+    }
+  }
+
+  .filter-close {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+  }
+
+  .filter-row {
+    .documents-links {
+      display: none;
+    }
+  }
+
+  .filter-row + .filter-row {
+    margin-top: 0;
   }
 
   .product-catalog__rightSide {
@@ -502,5 +525,127 @@
 
   .gallery-slider {
     max-width: 770px;
-}
+  }
+
+  .technologies-section__line:nth-child(2n-1) .technologies-section__text {
+    width: 100%;
+  }
+
+  .technologies-section__line {
+    flex-wrap: wrap;
+  }
+
+  .technologies-section .caption {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .technologies-section .picture--big {
+    width: 100%;
+    height: auto;
+  }
+
+  .technologies-section__line + .technologies-section__line {
+    margin-top: 30px;
+  }
+
+  .slider-simple__wrap {
+    margin-top: 50px;
+  }
+
+  .production-page .about-advantages {
+    padding: 50px 0;
+  }
+
+  .technologies-section {
+    margin-top: 50px;
+  }
+
+  .platform-section {
+    padding-top: 50px;
+  }
+
+  .individual-design__head .caption {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .individual-design__head .picture {
+    margin-top: 50px;
+  }
+
+  .steps-block {
+    padding-top: 50px;
+  }
+
+  .delivery-section .swiper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .delivery-section__inner {
+    flex-wrap: wrap;
+  }
+
+  .delivery-section__inner::before {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .delivery-section {
+    padding: 0 0 50px;
+  }
+
+  .types-print__item {
+    width: 100%;
+  }
+
+  .types-print__item img {
+    left: 0;
+  }
+
+  .types-print__item:nth-child(2n) img {
+    right: 0;
+  }
+
+  .step-list {
+    margin-top: 50px;
+
+    .step-item {
+      width: 100%;
+      @include transition(all 0s!important);
+
+      .name,
+      .num {
+        @include transition(all 0s!important);
+      }
+    }
+  }
+
+  .step-item {
+    .line-top {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  .step-list {
+    .swiper-wrapper {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .step-item {
+    height: auto;
+  }
+
+  .contacts-page .title-page__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
 }

@@ -717,4 +717,9 @@
   .gallery-slider {
     max-width: 950px;
   }
+
+  .technologies-section__line:nth-child(2n) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
