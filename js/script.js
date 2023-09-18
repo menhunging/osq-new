@@ -874,26 +874,41 @@ $(document).ready(function () {
   if ($(".js-action-link").length > 0) {
     let isLeave = false;
 
-    $(".js-action-link").mouseover(function (event) {
-      let than = $(this);
-      let block = than.attr("data-open");
+    if ($(window).width() > 1024) {
+      $(".js-action-link").mouseover(function (event) {
+        let than = $(this);
+        let block = than.attr("data-open");
 
-      if (than.hasClass("active")) {
-        return false;
-      }
+        if (than.hasClass("active")) {
+          return false;
+        }
 
-      if ($(".js-action-link").hasClass("active")) {
-        $(".js-action-link").removeClass("active");
-        $(".invis-block").removeClass("open").slideUp(100);
-        $(".invis-block").off("mouseover");
-        isLeave = false;
-        setTimeout(function () {
+        if ($(".js-action-link").hasClass("active")) {
+          $(".js-action-link").removeClass("active");
+          $(".invis-block").removeClass("open").slideUp(100);
+          $(".invis-block").off("mouseover");
+          isLeave = false;
+          setTimeout(function () {
+            openInvisBlock(than, block, isLeave);
+          }, 200);
+        } else {
           openInvisBlock(than, block, isLeave);
-        }, 200);
-      } else {
-        openInvisBlock(than, block, isLeave);
-      }
-    });
+        }
+      });
+    } else {
+      $(".js-action-link").on("click", function (event) {
+        let than = $(this);
+        let attr = than.attr("data-open");
+
+        $(".menu").addClass("sub-menu-opened");
+
+        $(".sub-menu-mobile").map(function () {
+          if ($(this).attr("data-mobile-open") === attr) {
+            $(this).addClass("opened");
+          }
+        });
+      });
+    }
   }
 
   if ($(".btn-search").length > 0) {
@@ -976,11 +991,20 @@ $(document).ready(function () {
   }
 
   if ($(".terms-text").length > 0) {
-    $(".terms-text").scroll(function () {
-      if ($(".terms-text").scrollTop() >= $($(".terms-text")).height()) {
-        $(".modal-personal .read-to").addClass("hide");
-        $(".modal-personal .modal__controls").addClass("visible");
-      }
+    $(".terms-text").map(function () {
+      $(this).scroll(function () {
+        let scroll = $(this).scrollTop();
+        let height = $(this).find(".text").height();
+        let percent = (height / 100) * 85; // 85%
+
+        if (scroll >= percent) {
+          $(this).closest(".modal").find(".read-to").addClass("hide");
+          $(this)
+            .closest(".modal")
+            .find(".modal__controls")
+            .addClass("visible");
+        }
+      });
     });
   }
 
@@ -1401,8 +1425,12 @@ $(document).ready(function () {
   if ($(".burger").length > 0) {
     $(".burger").on("click", function () {
       $(".burger").toggleClass("opened");
-      $(".menu").toggleClass("opened").slideToggle();
+      $(".menu")
+        .toggleClass("opened")
+        .slideToggle()
+        .removeClass("sub-menu-opened");
       $("body").toggleClass("hidden");
+      $(".sub-menu-mobile").removeClass("opened");
     });
   }
 
@@ -1481,29 +1509,61 @@ $(document).ready(function () {
   }
 
   if ($(".btn-filter").length > 0) {
-    $(".btn-filter").on("click", function () {
-      $(".product-catalog__leftSide").addClass("opened");
+    if ($(".product-catalog__leftSide").length > 0) {
+      $(".btn-filter").on("click", function () {
+        $(".product-catalog__leftSide").addClass("opened");
 
-      let block = `<div class="filter-close">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 17L9 9M9 9L1 17M9 9L1 1M9 9L17 1" stroke="#AA9F8E" stroke-width="2"/>
-          </svg>
-        </div>`;
+        if ($(".product-catalog__leftSide").find(".filter-close").length <= 0) {
+          let block = `<div class="filter-close">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 17L9 9M9 9L1 17M9 9L1 1M9 9L17 1" stroke="#AA9F8E" stroke-width="2"/>
+            </svg>
+          </div>`;
 
-      $(".product-catalog__leftSide").append(block);
+          $(".product-catalog__leftSide").append(block);
 
-      $(".filter-close").on("click", function () {
-        $(".product-catalog__leftSide").removeClass("opened");
-      });
-
-      $(document).mouseup(function (e) {
-        let div = $(".product-catalog__leftSide");
-        if (!div.is(e.target) && div.has(e.target).length === 0) {
-          $(".product-catalog__leftSide").removeClass("opened");
-          $(document).off("mouseup");
+          $(".filter-close").on("click", function () {
+            $(".product-catalog__leftSide").removeClass("opened");
+          });
         }
+
+        $(document).mouseup(function (e) {
+          let div = $(".product-catalog__leftSide");
+          if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $(".product-catalog__leftSide").removeClass("opened");
+            $(document).off("mouseup");
+          }
+        });
       });
-    });
+    }
+
+    if ($(".category-filter").length > 0) {
+      $(".btn-filter").on("click", function () {
+        $(".category-filter").addClass("opened");
+
+        if ($(".category-filter").find(".filter-close").length <= 0) {
+          let block = `<div class="filter-close">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 17L9 9M9 9L1 17M9 9L1 1M9 9L17 1" stroke="#AA9F8E" stroke-width="2"/>
+            </svg>
+          </div>`;
+
+          $(".category-filter").append(block);
+
+          $(".filter-close").on("click", function () {
+            $(".category-filter").removeClass("opened");
+          });
+        }
+
+        $(document).mouseup(function (e) {
+          let div = $(".category-filter");
+          if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $(".category-filter").removeClass("opened");
+            $(document).off("mouseup");
+          }
+        });
+      });
+    }
   }
 });
 

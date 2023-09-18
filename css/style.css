@@ -1615,7 +1615,7 @@ div::-webkit-scrollbar-thumb {
   font-family: "Qanelas";
 }
 .caption--big {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 96px;
   line-height: 74px;
 }
@@ -3702,7 +3702,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .title-page .caption {
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0em;
   font-size: 64px;
   line-height: 74px;
@@ -4899,6 +4899,7 @@ div::-webkit-scrollbar-thumb {
   font-size: 48px;
   line-height: 48px;
   margin-bottom: 13px;
+  max-height: inherit;
 }
 .news-section .news-item .news-item__content {
   padding: 10px 60px 0;
@@ -10784,6 +10785,41 @@ div::-webkit-scrollbar-thumb {
   height: 200px;
 }
 
+.product-catalog__leftSide .filter-close,
+.category-filter .filter-close {
+  display: none;
+}
+
+.events-news .news-item + .news-item {
+  margin-top: 0;
+}
+.events-news .news-item__picture {
+  width: 100%;
+  height: 300px;
+}
+.events-news .news-item__content {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+.events-news .btn {
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  border-radius: 40px;
+  display: block !important;
+}
+
+.sub-menu-mobile {
+  display: none !important;
+}
+
+.catalog-invis__list--menu-mobile {
+  display: none !important;
+}
+
 @media (max-width: 1619px) {
   .animation-text {
     top: 20px;
@@ -11596,11 +11632,17 @@ div::-webkit-scrollbar-thumb {
     -moz-transition: left 0.3s;
     -o-transition: left 0.3s;
     transition: left 0.3s;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
     height: 100vh;
     overflow: auto;
   }
   .product-catalog__leftSide.opened {
     left: 0;
+  }
+  .product-catalog__leftSide .filter-close {
+    display: flex;
   }
   .filter-close {
     position: absolute;
@@ -11973,6 +12015,9 @@ div::-webkit-scrollbar-thumb {
     align-items: flex-start;
     gap: 30px;
   }
+  .events-news .btn {
+    margin-top: 15px;
+  }
 }
 @media (max-width: 1023px) {
   .burger {
@@ -11989,7 +12034,8 @@ div::-webkit-scrollbar-thumb {
     border-top: solid 1px #b6aa9b;
     padding: 45px 15px;
     z-index: 15;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .menu > ul {
     width: 100%;
@@ -12025,7 +12071,41 @@ div::-webkit-scrollbar-thumb {
     padding: 12px 20px;
   }
   .category-filter {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    background-color: rgb(251, 245, 241);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 10;
+    width: 320px;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+  .category-filter.opened {
+    left: 0;
+  }
+  .category-filter .filter-close {
+    display: flex;
+  }
+  .category-filter__list .input-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+  .category-filter__list {
+    flex-direction: column;
+    width: 100%;
+  }
+  .category-filter__list .selectric {
+    width: 100%;
+    max-width: 100%;
   }
   .cateregory-tags li:not(:last-child) {
     display: none;
@@ -12600,6 +12680,40 @@ div::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+  .sub-menu-mobile {
+    display: block !important;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    padding: 45px 15px;
+    width: 100%;
+    -webkit-transition: right 0.3s;
+    -moz-transition: right 0.3s;
+    -o-transition: right 0.3s;
+    transition: right 0.3s;
+    background-color: #fbf5f1;
+    height: 100%;
+    z-index: 9;
+    overflow: auto;
+  }
+  .sub-menu-mobile.opened {
+    right: 0;
+  }
+  .menu.sub-menu-opened > ul:not(.sub-menu-mobile) {
+    display: none;
+  }
+  .catalog-invis__list--menu-mobile li a {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .catalog-invis__list--menu-mobile li img {
+    width: 135px !important;
+    height: 115px !important;
+  }
+  .catalog-invis__list--menu-mobile .text {
+    max-width: 140px;
+    text-align: center;
   }
 }
 @media (min-width: 768px) {

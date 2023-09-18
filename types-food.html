@@ -38,7 +38,9 @@
           <nav class="menu">
             <ul>
               <li><a href="#" class="menu-link">Главная</a></li>
-              <li><a href="#" class="menu-link js-action-link" data-open="events-invis">О нас</a></li>
+              <li>
+                <a href="#" class="menu-link js-action-link" data-open="events-invis">О нас</a>
+              </li>
               <li><a href="#" class="menu-link js-action-link" data-open="catalog-invis">Каталог</a></li>
               <li><a href="#" class="menu-link">Производство</a></li>
               <li>
@@ -55,7 +57,78 @@
                 </ul>
               </li>
             </ul>
+
+            <ul class="sub-menu-mobile" data-mobile-open="events-invis">
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">СМИ о нас</a></li>
+              <li><a href="#">Блог</a></li>
+            </ul>
+
+            <ul class="sub-menu-mobile catalog-invis__list catalog-invis__list--menu-mobile" data-mobile-open="catalog-invis">
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat1.png" alt="">
+                  <span class="text">универсальные контейнеры</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat2.png" alt="">
+                  <span class="text">круглые
+                    контейнеры</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat3.png" alt="">
+                  <span class="text">Упаковка для фастфуда</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat4.png" alt="">
+                  <span class="text">упаковка для
+                    сэндвичей</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat5.png" alt="">
+                  <span class="text">упаковка для
+                    суши и лапши</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat6.png" alt="">
+                  <span class="text">кондитерская упаковка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat7.png" alt="">
+                  <span class="text">упаковка для
+                    горячих напитков</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat8.png" alt="">
+                  <span class="text">упаковка для
+                    retail</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/pic-cat9.png" alt="">
+                  <span class="text">одноразовые бумажные пакеты</span>
+                </a>
+              </li>
+            </ul>
           </nav>
+
+
 
           <div class="header-controls">
             <div class="search-block">
@@ -378,37 +451,95 @@
                 </div>
               </div>
               <div class="tabs-body" id="tab2">
-                <div class="eventList-small swiper">
+                <div class="events-news eventList-small swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="event-small">
-                        <a href="#"></a>
-                        <picture class='picture'>
-                          <source type="image/webp" srcset="img/pic-grettings1.webp" />
-                          <img src="img/pic-grettings1.jpg" alt="grettings" />
-                        </picture>
-                        <span class="date">12 января 2023, 18:00</span>
-                        <h2 class="caption caption--small">Retail business russia</h2>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="event-small">
-                        <a href="#"></a>
-                        <picture class='picture'>
-                          <img src="img/pic-small1.jpg" alt="grettings" />
-                        </picture>
-                        <span class="date">12 января 2023, 18:00</span>
-                        <h2 class="caption caption--small">Retail business russia</h2>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="event-small">
-                        <a href="#"></a>
-                        <picture class='picture'>
-                          <img src="img/pic-small2.jpg" alt="grettings" />
-                        </picture>
-                        <span class="date">12 января 2023, 18:00</span>
-                        <h2 class="caption caption--small">Retail business russia</h2>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
+                      </div>
+                    </div>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
+                      </div>
+                    </div>
+
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
+                      </div>
+                    </div>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
+                      </div>
+                    </div>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
+                      </div>
+                    </div>
+                    <div class="news-item swiper-slide">
+                      <picture class="picture news-item__picture">
+                        <source type="image/webp" srcset="img/pic-new-item1.webp">
+                        <img src="/img/pic-new-item1.jpg" alt="">
+                      </picture>
+                      <div class="news-item__content">
+                        <span class="news-item__date">Сентября 12, 2023</span>
+                        <a href="#" class="news-item__name">Original Superior Quality Original Superior</a>
+                        <a href="#" class="btn btn--border-green">Читать полностью</a>
                       </div>
                     </div>
                   </div>
