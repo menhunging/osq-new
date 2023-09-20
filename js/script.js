@@ -3,7 +3,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
+
   if ($(window).width() >= 1200) {
     if ($(".indexPage").length > 0) {
       let invisPosition = 6500;
@@ -171,6 +172,7 @@ $(document).ready(function () {
 
   if ($(".catalog-main__slider").length > 0) {
     const swiper = new Swiper(".catalog-main__slider", {
+      loopedSlides: 2,
       slidesPerView: 5,
       loop: true,
       spaceBetween: 0,
@@ -213,7 +215,20 @@ $(document).ready(function () {
         el: ".catalog-main__slider .swiper-pagination",
         type: "progressbar",
       },
+      breakpoints: {
+        320: {
+          autoHeight: true,
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        992: {
+          autoHeight: true,
+          slidesPerView: 5,
+          spaceBetween: 0,
+        }
+      }
     });
+
 
     swiper.on("init", function () {});
 
@@ -1675,8 +1690,8 @@ $(document).ready(function () {
         $(children[i]).wrapAll(swiperSlide);
       }
 
-      $(".lineap").find('.swiper-slide').wrapAll(swiperWrapper)
-      $(".lineap").append(swiperControls)
+      $(".lineap").find(".swiper-slide").wrapAll(swiperWrapper);
+      $(".lineap").append(swiperControls);
 
       const swiper = new Swiper(".lineap", {
         slidesPerView: 1,
@@ -1693,6 +1708,12 @@ $(document).ready(function () {
         },
       });
     }
+  }
+
+  if ($(".js-btn-cookie").length > 0) {
+    $(".js-btn-cookie").on('click', function () {
+      $(".cookee-block").addClass("good");
+    });
   }
 });
 

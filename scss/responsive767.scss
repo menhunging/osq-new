@@ -1700,15 +1700,29 @@
 
   .sertificate__slider .swiper-button-next {
     right: 15px;
-    margin-top: -130px;
+    top: 90px;
+    margin: 0;
   }
 
   .sertificate__slider .swiper-button-prev {
     left: 15px;
-    margin-top: -130px;
+    top: 90px;
+    margin: 0;
   }
   .sertificate__slider .swiper-slide-prev {
     opacity: 1;
     top: 0;
+  }
+
+  .cookee-block__inner {
+    padding: 15px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cookee-block__inner .btn {
+    padding: 10px;
   }
 }
