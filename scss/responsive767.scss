@@ -1455,4 +1455,260 @@
     width: 70%;
     max-width: 100%;
   }
+
+  .grettings__slide {
+    height: auto;
+    padding: calc(450 / 320 * 100%) 15px 15px;
+  }
+
+  .video-block .text-video {
+    height: 100%;
+  }
+
+  .food-type__head .caption--small {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .food-item {
+    width: 100%;
+  }
+
+  .food-controls {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .dop-dev .b-product-lines__switch {
+    display: none;
+    left: -15px;
+    white-space: nowrap;
+    overflow: auto;
+    position: relative;
+    padding: 0 15px;
+    width: calc(100% + 30px);
+  }
+
+  :root {
+    --lineap-item-width: 270px;
+    --lineap-item-height: auto;
+    --lineap-item-title-width: 35px;
+    --lineap-item-content-width: calc(
+      var(--lineap-item-width) - var(--lineap-item-title-width)
+    );
+  }
+
+  .lineap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    gap: 5px;
+  }
+
+  .lineap-item {
+    width: 100%;
+    margin: 0 !important;
+    @include transform(translateY(0) !important);
+    min-width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .lineap-item__control--next,
+  .lineap-item__control--prev {
+    display: none;
+  }
+
+  .lineap-item__title-text {
+    left: -3px;
+    position: relative;
+    display: none;
+  }
+
+  .lineap-item__content-image {
+    width: calc(100% + 30px);
+    height: 100%;
+    position: relative;
+    left: -15px;
+    top: 25px;
+    order: 2;
+    margin-top: -25px;
+  }
+
+  .lineap-item__content {
+    box-sizing: border-box;
+  }
+
+  .lineap-item__content-title {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  .delivery .caption,
+  .animation-text .caption,
+  .dop-dev .b-product-lines__title {
+    font-size: 32px;
+    line-height: 36px;
+    left: 0;
+  }
+
+  .animation-text .caption--middle {
+    margin-bottom: 10px;
+  }
+
+  .animation-text {
+    top: 0;
+  }
+
+  .animation-text__controls {
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .btn {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .your-lines {
+    padding: 50px 0;
+  }
+
+  .product-main .list {
+    padding: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .delivert-mobile {
+    position: relative;
+    width: 100%;
+    top: auto;
+    order: -1;
+    padding-top: calc(230 / 320 * 100%);
+    @include transform(translateY(0));
+    margin-bottom: 30px;
+  }
+
+  .delivery .desc {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .delivery-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .delivery.delivery--v1 {
+    padding: 50px 0;
+    min-height: inherit;
+  }
+
+  .delivery .btn {
+    margin-top: 20px;
+  }
+
+  .btn-new-all {
+    display: none;
+  }
+
+  .news-main .news-item--big {
+    height: auto;
+    width: 100%;
+    min-height: inherit;
+  }
+
+  .news-main .news-item--big .news-item__picture {
+    width: 100%;
+    height: 300px;
+  }
+
+  .news-main .news-item--big .news-item__content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .subscribe-news__rightSide .input-wrapper .btn {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+  }
+
+  .subscribe-news__rightSide .input-wrapper input {
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .subscribe-news__inner {
+    padding-top: 30px;
+  }
+
+  .sertificate__slider .swiper-slide .sertificate-item {
+    width: 100% !important;
+    padding: 0;
+  }
+  .sertificate__slider .swiper-slide {
+    .picture {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .sertificate-item {
+    display: block;
+  }
+
+  .sertificate__slider {
+    width: 100%;
+  }
+
+  .sertificate__slider .swiper-slide .caption,
+  .sertificate__slider .swiper-slide p {
+    width: 100%;
+  }
+
+  .sertificate__slider .sertificate-item .picture {
+    width: 100% !important;
+    height: 200px !important;
+    padding: 15px !important;
+  }
+
+  .btn-quest {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    right: 20px;
+  }
+
+  .sertificate .caption {
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+
+  .btn-quest {
+    right: 15px;
+    top: 15px;
+  }
+
+  .sertificate__slider .swiper-button-next {
+    right: 15px;
+    margin-top: -130px;
+  }
+
+  .sertificate__slider .swiper-button-prev {
+    left: 15px;
+    margin-top: -130px;
+  }
+  .sertificate__slider .swiper-slide-prev {
+    opacity: 1;
+    top: 0;
+  }
 }

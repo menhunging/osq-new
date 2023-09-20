@@ -3,13 +3,20 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
+  if ($(window).width() >= 1200) {
+    if ($(".indexPage").length > 0) {
+      let invisPosition = 6500;
 
-  if ($(".indexPage").length > 0) {
-    if (currentScroll > "6500") {
-      $(".incision").addClass("visible");
-    } else {
-      $(".incision").removeClass("visible");
+      if ($(window).width() < 1440) {
+        invisPosition = 7100;
+      }
+
+      if (currentScroll > invisPosition) {
+        $(".incision").addClass("visible");
+      } else {
+        $(".incision").removeClass("visible");
+      }
     }
   }
 
@@ -27,13 +34,20 @@ addEventListener("scroll", (event) => {
 
 $(document).ready(function () {
   if ($("[data-aos]").length > 0) {
-    $("[data-aos]").each((i, el) => {
-      AOS.init({
-        offset: 0,
-        duration: 1500,
-        // once: true,
+    if ($(window).width() >= 1200) {
+      $("[data-aos]").each((i, el) => {
+        AOS.init({
+          offset: 0,
+          duration: 1500,
+          // once: true,
+        });
       });
-    });
+    } else {
+      $("[data-aos]").map((i, el) => {
+        console.log(el);
+        $(el).removeAttr("data-aos");
+      });
+    }
   }
 
   if ($(".grettings__slider").length > 0) {
@@ -907,6 +921,8 @@ $(document).ready(function () {
             $(this).addClass("opened");
           }
         });
+
+        return false;
       });
     }
   }
@@ -1008,245 +1024,316 @@ $(document).ready(function () {
     });
   }
 
-  if ($("#lottie-1").length > 0) {
-    let number = $("#lottie-1").offset().top;
+  if ($(window).width() >= 1200) {
+    if ($("#lottie-1").length > 0) {
+      let number = $("#lottie-1").offset().top;
 
-    let theWindow = $(window);
-    let winHeight = theWindow.height();
-    let animDuration = 1600;
-    let animData = {
-      container: document.getElementById("lottie-1"),
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      path: "json/block1.json",
-    };
+      let theWindow = $(window);
+      let winHeight = theWindow.height();
+      let animDuration = 1600;
+      let animData = {
+        container: document.getElementById("lottie-1"),
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        path: "json/block1.json",
+      };
 
-    let anim = bodymovin.loadAnimation(animData);
+      let anim = bodymovin.loadAnimation(animData);
 
-    function animatebodymovin(duration, animObject) {
-      let scrollPosition = theWindow.scrollTop() - number;
-      let maxFrames = animObject.totalFrames;
-      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
-      animObject.goToAndStop(frame, true);
+      function animatebodymovin(duration, animObject) {
+        let scrollPosition = theWindow.scrollTop() - number;
+        let maxFrames = animObject.totalFrames;
+        let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+        animObject.goToAndStop(frame, true);
+      }
+
+      anim.addEventListener("enterFrame", function (animation) {
+        if (animation.currentTime > anim.totalFrames - 1) {
+          // animObject.pause();
+          anim.pause();
+        }
+      });
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > number && currentScroll < "4400") {
+          animatebodymovin(animDuration, anim);
+        }
+      });
     }
 
-    anim.addEventListener("enterFrame", function (animation) {
-      if (animation.currentTime > anim.totalFrames - 1) {
-        // animObject.pause();
-        anim.pause();
+    if ($("#lottie-2").length > 0) {
+      let number = $("#lottie-2").offset().top;
+      let positionLottie2Paused = 6740;
+
+      let theWindow = $(window);
+      let winHeight = theWindow.height();
+      let animDuration = 4000;
+      let animData = {
+        container: document.getElementById("lottie-2"),
+        renderer: "svg",
+        loop: true,
+        autoplay: false,
+        path: "json/block2.json",
+      };
+
+      let anim = bodymovin.loadAnimation(animData);
+
+      function animatebodymovin(duration, animObject, paused = 0) {
+        let scrollPosition = theWindow.scrollTop() - number - paused;
+        let maxFrames = animObject.totalFrames;
+        let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+        animObject.goToAndStop(frame, true);
       }
-    });
 
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "4400") {
-        animatebodymovin(animDuration, anim);
-      }
-    });
-  }
+      $(window).scroll(function () {
+        if ($(window).width() < 1440) {
+          positionLottie2Paused = 7300;
+        }
 
-  if ($("#lottie-2").length > 0) {
-    let number = $("#lottie-2").offset().top;
+        if (
+          $(this).scrollTop() > number &&
+          currentScroll < positionLottie2Paused
+        ) {
+          animatebodymovin(animDuration, anim);
+        }
 
-    let theWindow = $(window);
-    let winHeight = theWindow.height();
-    let animDuration = 4000;
-    let animData = {
-      container: document.getElementById("lottie-2"),
-      renderer: "svg",
-      loop: true,
-      autoplay: false,
-      path: "json/block2.json",
-    };
+        if (currentScroll < "6000") {
+          $("#lottie-2").removeClass("fixed");
+        }
 
-    let anim = bodymovin.loadAnimation(animData);
+        if (currentScroll > positionLottie2Paused) {
+          $("#lottie-2").addClass("paused");
+        } else {
+          $("#lottie-2").removeClass("paused");
+        }
 
-    function animatebodymovin(duration, animObject, paused = 0) {
-      let scrollPosition = theWindow.scrollTop() - number - paused;
-      let maxFrames = animObject.totalFrames;
-      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
-      animObject.goToAndStop(frame, true);
+        if (currentScroll >= "6000" && currentScroll <= "7500") {
+          $("#lottie-2").addClass("fixed");
+          $(".animation-text").addClass("hide");
+          anim.pause();
+        } else {
+          $(".animation-text").removeClass("hide");
+        }
+      });
     }
 
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "6740") {
-        animatebodymovin(animDuration, anim);
+    if ($("#lottie-2-2").length > 0) {
+      let number = 7500;
+
+      let theWindow = $(window);
+      let winHeight = theWindow.height();
+      let animDuration = 2000;
+      let animData = {
+        container: document.getElementById("lottie-2-2"),
+        renderer: "svg",
+        loop: true,
+        autoplay: false,
+        path: "json/block2_2.json",
+      };
+
+      let anim = bodymovin.loadAnimation(animData);
+
+      function animatebodymovin(duration, animObject, paused = 0) {
+        let scrollPosition = theWindow.scrollTop() - number - paused;
+        let maxFrames = animObject.totalFrames;
+        let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+        animObject.goToAndStop(frame, true);
       }
 
-      if (currentScroll < "6000") {
-        $("#lottie-2").removeClass("fixed");
-      }
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > number && currentScroll < "9200") {
+          animatebodymovin(animDuration, anim);
+        }
 
-      if (currentScroll > "6740") {
-        $("#lottie-2").addClass("paused");
-      } else {
-        $("#lottie-2").removeClass("paused");
-      }
-
-      if (currentScroll >= "6000" && currentScroll <= "7500") {
-        $("#lottie-2").addClass("fixed");
-        $(".animation-text").addClass("hide");
-        anim.pause();
-      } else {
-        $(".animation-text").removeClass("hide");
-      }
-    });
-  }
-
-  if ($("#lottie-2-2").length > 0) {
-    let number = 7500;
-
-    let theWindow = $(window);
-    let winHeight = theWindow.height();
-    let animDuration = 2000;
-    let animData = {
-      container: document.getElementById("lottie-2-2"),
-      renderer: "svg",
-      loop: true,
-      autoplay: false,
-      path: "json/block2_2.json",
-    };
-
-    let anim = bodymovin.loadAnimation(animData);
-
-    function animatebodymovin(duration, animObject, paused = 0) {
-      let scrollPosition = theWindow.scrollTop() - number - paused;
-      let maxFrames = animObject.totalFrames;
-      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
-      animObject.goToAndStop(frame, true);
+        if (currentScroll >= number) {
+          $("#lottie-2-2").addClass("show");
+        } else {
+          $("#lottie-2-2").removeClass("show");
+        }
+      });
     }
 
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "9200") {
-        animatebodymovin(animDuration, anim);
+    if ($("#lottie-3").length > 0) {
+      let number = 10300;
+
+      let theWindow = $(window);
+      let winHeight = theWindow.height();
+      let animDuration = 2500;
+      let animData = {
+        container: document.getElementById("lottie-3"),
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        path: "json/block3.json",
+      };
+
+      let anim = bodymovin.loadAnimation(animData);
+
+      function animatebodymovin(duration, animObject) {
+        let scrollPosition = theWindow.scrollTop() - number;
+        let maxFrames = animObject.totalFrames;
+        let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+        animObject.goToAndStop(frame, true);
       }
 
-      if (currentScroll >= number) {
-        $("#lottie-2-2").addClass("show");
-      } else {
-        $("#lottie-2-2").removeClass("show");
-      }
-    });
-  }
+      anim.addEventListener("enterFrame", function (animation) {
+        // if (animation.currentTime > anim.totalFrames - 1) {
+        //   anim.pause();
+        // }
+      });
 
-  if ($("#lottie-3").length > 0) {
-    let number = 10300;
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > number && currentScroll < "12700") {
+          animatebodymovin(animDuration, anim);
+        }
 
-    let theWindow = $(window);
-    let winHeight = theWindow.height();
-    let animDuration = 2500;
-    let animData = {
-      container: document.getElementById("lottie-3"),
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      path: "json/block3.json",
-    };
+        if (currentScroll >= "10000") {
+          $(".delivery--v1 .desc").addClass("visible");
+          $(".delivery--v1 .caption").addClass("visible");
+        } else {
+          $(".delivery--v1 .desc").removeClass("visible");
+          $(".delivery--v1 .caption").removeClass("visible");
+        }
 
-    let anim = bodymovin.loadAnimation(animData);
+        if (currentScroll >= "11000") {
+          $(".delivery--v1").addClass("fixed");
+        } else {
+          $(".delivery--v1").removeClass("fixed");
+        }
 
-    function animatebodymovin(duration, animObject) {
-      let scrollPosition = theWindow.scrollTop() - number;
-      let maxFrames = animObject.totalFrames;
-      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
-      animObject.goToAndStop(frame, true);
+        if (currentScroll >= "12600") {
+          $(".delivery .btn").addClass("show");
+        } else {
+          $(".delivery .btn").removeClass("show");
+        }
+
+        if (currentScroll >= "13250") {
+          anim.pause();
+        }
+      });
     }
-
-    anim.addEventListener("enterFrame", function (animation) {
-      // if (animation.currentTime > anim.totalFrames - 1) {
-      //   anim.pause();
-      // }
-    });
-
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "12700") {
-        animatebodymovin(animDuration, anim);
-      }
-
-      if (currentScroll >= "10000") {
-        $(".delivery--v1 .desc").addClass("visible");
-        $(".delivery--v1 .caption").addClass("visible");
-      } else {
-        $(".delivery--v1 .desc").removeClass("visible");
-        $(".delivery--v1 .caption").removeClass("visible");
-      }
-
-      if (currentScroll >= "11000") {
-        $(".delivery--v1").addClass("fixed");
-      } else {
-        $(".delivery--v1").removeClass("fixed");
-      }
-
-      if (currentScroll >= "12600") {
-        $(".delivery .btn").addClass("show");
-      } else {
-        $(".delivery .btn").removeClass("show");
-      }
-
-      if (currentScroll >= "13250") {
-        anim.pause();
-      }
-    });
   }
 
   if ($(".indexPage").length > 0) {
-    if (ScrollTrigger.isTouch !== 1) {
-      gsap.fromTo(
-        "#lottie-2",
-        { y: 0 },
-        {
-          y: -1090,
-          scrollTrigger: {
-            trigger: ".production",
-            start: "-980",
-            scrub: true,
-          },
-        }
-      );
+    if ($(window).width() >= 1200) {
+      if (ScrollTrigger.isTouch !== 1) {
+        if ($(window).width() < 1440) {
+          gsap.fromTo(
+            "#lottie-2",
+            { y: 0 },
+            {
+              y: -930,
+              scrollTrigger: {
+                trigger: ".production",
+                start: "-650",
+                scrub: true,
+              },
+            }
+          );
 
-      // delivery
+          // delivery
 
-      gsap.fromTo(
-        ".delivery .line",
-        { opacity: 0 },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: ".delivery",
-            start: "2400",
-            end: "2430",
-            scrub: true,
-          },
-        }
-      );
+          gsap.fromTo(
+            ".delivery .line",
+            { opacity: 0 },
+            {
+              opacity: 1,
+              scrollTrigger: {
+                trigger: ".delivery",
+                start: "2100",
+                end: "2130",
+                scrub: true,
+              },
+            }
+          );
 
-      gsap.fromTo(
-        ".delivery .desc",
-        { x: 0 },
-        {
-          x: 700,
-          scrollTrigger: {
-            trigger: ".delivery",
-            start: "2400",
-            end: "2430",
-            scrub: true,
-          },
-        }
-      );
+          gsap.fromTo(
+            ".delivery .desc",
+            { x: 0 },
+            {
+              x: 650,
+              scrollTrigger: {
+                trigger: ".delivery",
+                start: "2100",
+                end: "2130",
+                scrub: true,
+              },
+            }
+          );
 
-      gsap.fromTo(
-        ".delivery .caption",
-        { x: 0 },
-        {
-          x: 700,
-          scrollTrigger: {
-            trigger: ".delivery",
-            start: "2400",
-            end: "2430",
-            scrub: true,
-          },
+          gsap.fromTo(
+            ".delivery .caption",
+            { x: 0 },
+            {
+              x: 650,
+              scrollTrigger: {
+                trigger: ".delivery",
+                start: "2100",
+                end: "2130",
+                scrub: true,
+              },
+            }
+          );
+        } else {
+          gsap.fromTo(
+            "#lottie-2",
+            { y: 0 },
+            {
+              y: -1090,
+              scrollTrigger: {
+                trigger: ".production",
+                start: "-980",
+                scrub: true,
+              },
+            }
+          );
+
+          // delivery
+
+          gsap.fromTo(
+            ".delivery .line",
+            { opacity: 0 },
+            {
+              opacity: 1,
+              scrollTrigger: {
+                trigger: ".delivery",
+                start: "2400",
+                end: "2430",
+                scrub: true,
+              },
+            }
+          );
+
+          gsap.fromTo(
+            ".delivery .desc",
+            { x: 0 },
+            {
+              x: 700,
+              scrollTrigger: {
+                trigger: ".delivery",
+                start: "2400",
+                end: "2430",
+                scrub: true,
+              },
+            }
+          );
+
+          gsap.fromTo(
+            ".delivery .caption",
+            { x: 0 },
+            {
+              x: 700,
+              scrollTrigger: {
+                trigger: ".delivery",
+                start: "2400",
+                end: "2430",
+                scrub: true,
+              },
+            }
+          );
         }
-      );
+      }
     }
   }
 
@@ -1562,6 +1649,48 @@ $(document).ready(function () {
             $(document).off("mouseup");
           }
         });
+      });
+    }
+  }
+
+  if ($(".lineap").length > 0) {
+    if ($(window).width() < 768) {
+      let swiperWrapper = $("<div>", {
+        class: "swiper-wrapper",
+      });
+
+      let swiperSlide = $("<div>", {
+        class: "swiper-slide",
+      });
+
+      let swiperControls = $("<div>", {
+        class: "swiper-pagination",
+      });
+
+      $(".lineap").addClass("swiper");
+
+      let children = $(".lineap").children();
+
+      for (let i = 0; i < children.length; i++) {
+        $(children[i]).wrapAll(swiperSlide);
+      }
+
+      $(".lineap").find('.swiper-slide').wrapAll(swiperWrapper)
+      $(".lineap").append(swiperControls)
+
+      const swiper = new Swiper(".lineap", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".lineap .swiper-pagination",
+          type: "progressbar",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+        },
       });
     }
   }

@@ -484,7 +484,7 @@
   }
 
   .sertificate {
-    padding: 170px 0 100px;
+    padding: 100px 0;
   }
 
   .esg-block__left {
@@ -659,18 +659,16 @@
     width: 100%;
   }
 
+  .incision {
+    padding: 50px 0;
+  }
+
   .incision-item {
     font-size: 16px;
     line-height: 20px;
     gap: 5px;
     padding: 20px;
-  }
-
-  #lottie-2.fixed {
-    position: fixed;
-    left: calc(50% - 600px);
-    top: 20px;
-    width: 1200px;
+    max-width: 320px !important;
   }
 
   .incision-item {
@@ -681,10 +679,10 @@
   }
 
   .incision-item .circle {
-    left: -60px;
-    top: -61px;
-    width: 130px;
-    height: 130px;
+    left: -47px;
+    top: -41px;
+    width: 100px;
+    height: 100px;
   }
 
   .incision-item--left .circle {
@@ -721,5 +719,170 @@
   .technologies-section__line:nth-child(2n) {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .food-item .picture {
+    height: 182px;
+  }
+
+  .food-item__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .food-controls {
+    margin-top: 50px;
+  }
+
+  #lottie-1 {
+    top: 0;
+    margin: 0;
+  }
+
+  #lottie-2 {
+    top: -140px;
+    left: -90px;
+    width: 1200px;
+  }
+
+  .product-main .list .item {
+    width: 122px;
+  }
+
+  .product-main .picture {
+    height: 122px;
+    background-position: calc(50% + -30px) calc(50% + 23px);
+    background-repeat: no-repeat;
+    background-size: 215%;
+  }
+
+  .product-main .name {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .animation-text .caption {
+    font-size: 76px;
+    line-height: 78px;
+  }
+
+  .animation-text .caption--middle {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  #lottie-2.fixed {
+    left: calc(50% - 577px);
+    width: 1200px;
+    top: -120px;
+  }
+
+  .incision-list {
+    height: 245px;
+  }
+
+  .incision-item:nth-child(2) {
+    left: 50px;
+    top: 44px;
+  }
+
+  .incision-adv__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+
+  #lottie-2.paused {
+    margin-top: 30px;
+  }
+
+  .production__leftSide {
+    width: 555px;
+    font-size: 16px;
+  }
+
+  .production__inner .caption--small {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .production__slider {
+    margin-top: 20px;
+  }
+
+  .production__inner .picture {
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  #lottie-2-2 {
+    left: 0;
+    width: 1400px;
+  }
+
+  #lottie-3 {
+    margin-left: -840px;
+    width: 1400px;
+    top: -210px;
+  }
+
+  .delivery {
+    min-height: 704px;
+  }
+
+  .delivery .btn {
+    left: 650px;
+  }
+
+  .news-main {
+    padding: 50px 0;
+  }
+
+  .news-item__picture {
+    width: 93px;
+    height: 93px;
+  }
+
+  .news-main {
+    .news-list {
+      max-width: 360px;
+    }
+
+    .news-item__content {
+      width: calc(100% - 103px);
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .news-item__name {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .news-item--big {
+      height: 390px;
+      width: calc(100% - 400px);
+
+      .news-item__picture {
+        width: 350px;
+      }
+
+      .news-item__content {
+        width: calc(100% - 350px);
+      }
+    }
+  }
+
+  .news-item + .news-item {
+    margin-top: 35px;
+  }
+
+  .subscribe-news {
+    margin-top: 50px;
+  }
+
+  .subscribe-news__rightSide {
+    max-width: 540px;
   }
 }

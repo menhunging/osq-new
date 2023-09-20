@@ -745,9 +745,12 @@ div {
 
 #lottie-2 {
   position: absolute;
-  top: -320px;
-  left: -210px;
-  width: 1800px;
+  // top: -320px;
+  // left: -210px;
+  // width: 1800px;
+  top: -240px;
+  left: -110px;
+  width: 1600px;
   z-index: 2;
   $trans: opacity 0.3s, margin 0.3s;
   @include transition($trans);
