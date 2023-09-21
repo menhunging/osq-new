@@ -8984,7 +8984,7 @@ $fontSize: (
   left: 0;
   width: 100%;
   z-index: 999;
- 
+
   &.good {
     display: none;
   }
@@ -9031,4 +9031,894 @@ $fontSize: (
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.sub-menu-mobile__back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-cars {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  @include before {
+    left: -150px;
+    top: 11px;
+  }
+
+  &--piter {
+    background-image: url("../img/line-new-piter.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 641px;
+    height: 414px;
+    left: -150px;
+    top: 11px;
+
+    .new-car {
+      top: -20px;
+      left: 163px;
+    }
+  }
+
+  &--moscow {
+    background-image: url("../img/line-new-moscow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 559px;
+    height: 408px;
+    left: -57px;
+    top: -74px;
+
+    .new-car {
+      top: 70px;
+      left: 73px;
+    }
+  }
+
+  &--krasnadar {
+    background-image: url("../img/line-new-krasnadar.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 559px;
+    height: 408px;
+    left: 54px;
+    top: -153px;
+
+    .new-car {
+      top: 140px;
+      left: -47px;
+    }
+  }
+
+  &--kazan {
+    background-image: url("../img/line-new-kazan.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 528px;
+    height: 395px;
+    left: -112px;
+    top: -166px;
+
+    .new-car {
+      top: 150px;
+      left: calc(50% - 138px);
+    }
+  }
+
+  &--ekat {
+    background-image: url("../img/line-new-ekat.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 528px;
+    height: 395px;
+    left: -250px;
+    top: -219px;
+
+    .new-car {
+      top: 200px;
+      left: calc(50% - -2px);
+    }
+  }
+
+  &--novo {
+    background-image: url("../img/line-new-novo.svg");
+    background-position: center;
+    width: 586px;
+    height: 546px;
+    left: -440px;
+    top: -375px;
+
+    .new-car {
+      top: 360px;
+      left: calc(50% + 162px);
+    }
+  }
+}
+
+.new-car {
+  background-image: url(../img/new-car.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 82px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  // @include transition(3s);
+  @include transition(.3s);
+  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: 999;
+}
+
+.aos-animate {
+  .new-cars {
+    &--piter {
+      .new-car {
+        &:nth-child(1) {
+          animation: piter-newCar1 3s linear;
+        }
+        &:nth-child(2) {
+          animation: piter-newCar2 3s linear;
+        }
+        &:nth-child(3) {
+          animation: piter-newCar3 3s linear;
+        }
+        &:nth-child(4) {
+          animation: piter-newCar4 3s linear;
+        }
+        &:nth-child(5) {
+          animation: piter-newCar5 3s linear;
+        }
+      }
+    }
+
+    &--moscow {
+      .new-car {
+        &:nth-child(1) {
+          animation: moscow-newCar1 3s linear;
+        }
+        &:nth-child(2) {
+          animation: moscow-newCar2 3s linear;
+        }
+        &:nth-child(3) {
+          animation: moscow-newCar3 3s linear;
+        }
+        &:nth-child(4) {
+          animation: moscow-newCar4 3s linear;
+        }
+        &:nth-child(5) {
+          animation: moscow-newCar5 3s linear;
+        }
+      }
+    }
+
+    &--krasnadar{
+      .new-car {
+        &:nth-child(1) {
+          animation: krasnadar-newCar1 3s linear;
+        }
+        &:nth-child(2) {
+          animation: krasnadar-newCar2 3s linear;
+        }
+        &:nth-child(3) {
+          animation: krasnadar-newCar3 3s linear;
+        }
+        &:nth-child(4) {
+          animation: krasnadar-newCar4 3s linear;
+        }
+        &:nth-child(5) {
+          animation: krasnadar-newCar5 3s linear;
+        }
+      }
+    }
+
+    &--kazan{
+      .new-car {
+        &:nth-child(1) {
+          animation: kazan-newCar1 3s linear;
+        }
+        &:nth-child(2) {
+          animation: kazan-newCar2 3s linear;
+        }
+        &:nth-child(3) {
+          animation: kazan-newCar3 3s linear;
+        }
+        &:nth-child(4) {
+          animation: kazan-newCar4 3s linear;
+        }
+        &:nth-child(5) {
+          animation: kazan-newCar5 3s linear;
+        }
+      }
+    }
+
+    &--ekat{
+      .new-car {
+        &:nth-child(1) {
+          animation: ekat-newCar1 3s linear;
+        }
+        &:nth-child(2) {
+          animation: ekat-newCar2 3s linear;
+        }
+        &:nth-child(3) {
+          animation: ekat-newCar3 3s linear;
+        }
+        &:nth-child(4) {
+          animation: ekat-newCar4 3s linear;
+        }
+        &:nth-child(5) {
+          animation: ekat-newCar5 3s linear;
+        }
+      }
+    }
+
+    &--novo{
+      .new-car {
+        &:nth-child(1) {
+          animation: novo-newCar1 3s linear;
+        }
+        &:nth-child(2) {
+          animation: novo-newCar2 3s linear;
+        }
+        &:nth-child(3) {
+          animation: novo-newCar3 3s linear;
+        }
+        &:nth-child(4) {
+          animation: novo-newCar4 3s linear;
+        }
+        &:nth-child(5) {
+          animation: novo-newCar5 3s linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes piter-newCar1 {
+  0% {
+    @include transform(scale(-1,1)  translate(0, 0));
+    opacity: 1;
+  }
+
+  25% {
+    @include transform(scale(-1,1) translate(80px, 40px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(scale(-1,1) translate(170px, 210px));
+    opacity: 0;
+  }
+}
+
+@keyframes piter-newCar2 {
+  0% {
+    @include transform(scale(-1,1) translate(0, 0));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(scale(-1,1)  translate(33px, 30px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( scale(-1,1) translate(40px, 90px));
+    opacity: 0;
+  }
+}
+
+@keyframes piter-newCar3 {
+  0% {
+    @include transform(rotate(40deg) translate(0, 0));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(40deg) translate(130px, 130px));
+    opacity: 0;
+  }
+}
+
+@keyframes piter-newCar4 {
+  0% {
+    @include transform(translate(0, 0));
+    opacity: 1;
+  }
+
+  25% {
+    @include transform(translate(70px, 40px));
+  }
+
+  50% {
+    @include transform(translate(107px, 110px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(translate(147px, 250px));
+    opacity: 0;
+  }
+}
+
+@keyframes piter-newCar5 {
+  0% {
+    @include transform(rotate(40deg) translate(0, 0));
+    opacity: 1;
+  }
+
+  25%{
+    @include transform(translate(100px, 40px));
+  }
+
+  50% {
+    @include transform(translate(230px, 170px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( translate(343px, 400px));
+    opacity: 0;
+  }
+}
+
+// moscow
+
+@keyframes moscow-newCar1 {
+  0% {
+    @include transform(scale(-1,1)  translate(0, 0));
+    opacity: 1;
+  }
+
+  25% {
+    @include transform(scale(-1,1)  translate(45px, 63px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(scale(-1,1)  translate(125px, 123px));
+    opacity: 0;
+  }
+}
+
+@keyframes moscow-newCar2 {
+  0% {
+    @include transform(translate(0, 0));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(translate(46px, 50px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( translate(58px, 100px));
+    opacity: 0;
+  }
+}
+
+@keyframes moscow-newCar3 {
+  0% {
+    @include transform(rotate(-16deg) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  25%{
+    @include transform(rotate(-16deg) translate(70px, 50px))
+  }
+
+  50%{
+    @include transform(rotate(-10deg) translate(130px, 100px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(-10deg) translate(159px, 190px));
+    opacity: 0;
+  }
+}
+
+@keyframes moscow-newCar4 {
+  0% {
+    @include transform(rotate(-25deg) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  25% {
+    @include transform(rotate(-25deg) translate(100px, 66px));
+  }
+
+  50% {
+    @include transform(rotate(-9deg) translate(230px, 136px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-9deg) translate(337px, 356px));
+    opacity: 0;
+  }
+}
+
+@keyframes moscow-newCar5 {
+  0% {
+    @include transform(rotate(-115deg) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(-115deg) translate(79px, 90px));
+    opacity: 0;
+  }
+}
+
+// krasnadar
+
+@keyframes krasnadar-newCar1 {
+  0% {
+    @include transform(rotate(-110deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(-110deg)  translate(80px, 70px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-110deg)  translate(150px, 210px));
+    opacity: 0;
+  }
+}
+
+@keyframes krasnadar-newCar2 {
+  0% {
+    @include transform(rotate(-92deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(-92deg)  translate(43px, 82px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(-92deg)  translate(103px, 132px));
+    opacity: 0;
+  }
+}
+
+@keyframes krasnadar-newCar3 {
+  0% {
+    @include transform(rotate(-40deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+ 50%{
+    @include transform(rotate(-40deg)  translate(83px, 52px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-40deg)  translate(153px, 112px));
+    opacity: 0;
+  }
+}
+
+@keyframes krasnadar-newCar4 {
+  0% {
+    @include transform(rotate(-40deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(-40deg)  translate(93px, 122px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-40deg)  translate(223px, 237px));
+    opacity: 0;
+  }
+}
+
+@keyframes krasnadar-newCar5 {
+  0% {
+    @include transform(rotate(-40deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+  25%{
+    @include transform(rotate(-40deg)  translate(163px, 77px))
+  }
+
+  50%{
+    @include transform(rotate(-40deg)  translate(263px, 197px))
+  }
+
+  75%{
+    @include transform(rotate(-20deg)  translate(403px, 237px))
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(-20deg)  translate(423px, 347px));
+    opacity: 0;
+  }
+}
+
+// kazan
+
+@keyframes kazan-newCar1 {
+  0% {
+    @include transform(rotate(30deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(30deg) scale(-1, 1) translate(70px, 40px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(30deg) scale(-1, 1) translate(140px, 110px));
+    opacity: 0;
+  }
+}
+
+@keyframes kazan-newCar2 {
+  0% {
+    @include transform(rotate(-60deg) scale(1, -1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(-60deg) scale(1, -1) translate(50px, 50px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-60deg) scale(1, -1) translate(70px, 110px));
+    opacity: 0;
+  }
+}
+
+@keyframes kazan-newCar3 {
+  0% {
+    @include transform(rotate(-60deg) scale(1, -1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+ 50%{
+    @include transform(rotate(-60deg) scale(1, -1) translate(90px, 30px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-60deg) scale(1, -1) translate(160px, 110px));
+    opacity: 0;
+  }
+}
+
+@keyframes kazan-newCar4 {
+  0% {
+    @include transform(rotate(-26deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(-26deg)  translate(50px, 50px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(-26deg)  translate(92px, 110px));
+    opacity: 0;
+  }
+}
+
+@keyframes kazan-newCar5 {
+  0% {
+    @include transform(rotate(-26deg)  translate(0px, 0px));
+    opacity: 1;
+  }
+
+  25%{
+    @include transform(rotate(-26deg)  translate(112px, 80px))
+  }
+
+  50%{
+    @include transform(rotate(-26deg)  translate(172px, 180px))
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(-26deg)  translate(212px, 320px));
+    opacity: 0;
+  }
+}
+
+// ekat
+
+@keyframes ekat-newCar1 {
+  0% {
+    @include transform(rotate(40deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(40deg) scale(-1, 1) translate(90px, 90px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(40deg) scale(-1, 1) translate(260px, 180px));
+    opacity: 0;
+  }
+}
+
+@keyframes ekat-newCar2 {
+  0% {
+    @include transform(rotate(70deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(70deg) scale(-1, 1) translate(56px, 47px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(70deg) scale(-1, 1) translate(94px, 107px));
+    opacity: 0;
+  }
+}
+
+@keyframes ekat-newCar3 {
+  0% {
+    @include transform(rotate(90deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+ 50%{
+    @include transform(rotate(90deg) scale(-1, 1) translate(104px, 87px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(90deg) scale(-1, 1) translate(154px, 187px));
+    opacity: 0;
+  }
+}
+
+@keyframes ekat-newCar4 {
+  0% {
+    @include transform(rotate(110deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(110deg) scale(-1, 1) translate(104px, 67px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(90deg) scale(-1, 1) translate(253px, 137px));
+    opacity: 0;
+  }
+}
+
+@keyframes ekat-newCar5 {
+  0% {
+    @include transform(rotate(160deg) scale(-1, -1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50%{
+    @include transform(rotate(160deg) scale(-1, -1) translate(92px, 97px))
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(160deg) scale(-1, -1) translate(137px, 208px));
+    opacity: 0;
+  }
+}
+
+// novo
+
+@keyframes novo-newCar1 {
+  0% {
+    @include transform(rotate(80deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  40% {
+    @include transform(rotate(80deg) scale(-1, 1) translate(170px, 230px));
+  }
+
+  70% {
+    @include transform(rotate(60deg) scale(-1, 1) translate(350px, 280px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(50deg) scale(-1, 1) translate(461px, 280px));
+    opacity: 0;
+  }
+}
+
+@keyframes novo-newCar2 {
+  0% {
+    @include transform(rotate(100deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(100deg) scale(-1, 1) translate(70px, 89px));
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(60deg) scale(-1, 1) translate(220px, 99px));
+    opacity: 0;
+  }
+}
+
+@keyframes novo-newCar3 {
+  0% {
+    @include transform(rotate(100deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+ 50%{
+    @include transform(rotate(100deg) scale(-1, 1) translate(150px, 139px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(60deg) scale(-1, 1) translate(450px, 180px));
+    opacity: 0;
+  }
+}
+
+@keyframes novo-newCar4 {
+  0% {
+    @include transform(rotate(91deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  50% {
+    @include transform(rotate(91deg) scale(-1, 1) translate(150px, 130px));
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(rotate(60deg) scale(-1, 1) translate(340px, 180px));
+    opacity: 0;
+  }
+}
+
+@keyframes novo-newCar5 {
+  0% {
+    @include transform(rotate(121deg) scale(-1, 1) translate(0px, 0px));
+    opacity: 1;
+  }
+
+  25%{
+    @include transform(rotate(121deg) scale(-1, 1) translate(80px, 110px));
+  }
+
+  50%{
+    @include transform(rotate(81deg) scale(-1, 1) translate(290px, 108px))
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100% {
+    @include transform( rotate(81deg) scale(-1, 1) translate(450px, 268px));
+    opacity: 0;
+  }
 }

@@ -939,6 +939,11 @@ $(document).ready(function () {
 
         return false;
       });
+
+      $('.sub-menu-mobile__back').on('click',function(){
+        $(".menu").removeClass("sub-menu-opened");
+        $(".sub-menu-mobile").removeClass("opened");
+      })
     }
   }
 
