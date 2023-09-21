@@ -9149,7 +9149,7 @@ $fontSize: (
   left: 0;
   top: 0;
   // @include transition(3s);
-  @include transition(.3s);
+  @include transition(0.3s);
   animation-fill-mode: forwards;
   opacity: 0;
   z-index: 999;
@@ -9197,7 +9197,7 @@ $fontSize: (
       }
     }
 
-    &--krasnadar{
+    &--krasnadar {
       .new-car {
         &:nth-child(1) {
           animation: krasnadar-newCar1 3s linear;
@@ -9217,7 +9217,7 @@ $fontSize: (
       }
     }
 
-    &--kazan{
+    &--kazan {
       .new-car {
         &:nth-child(1) {
           animation: kazan-newCar1 3s linear;
@@ -9237,7 +9237,7 @@ $fontSize: (
       }
     }
 
-    &--ekat{
+    &--ekat {
       .new-car {
         &:nth-child(1) {
           animation: ekat-newCar1 3s linear;
@@ -9257,7 +9257,7 @@ $fontSize: (
       }
     }
 
-    &--novo{
+    &--novo {
       .new-car {
         &:nth-child(1) {
           animation: novo-newCar1 3s linear;
@@ -9281,41 +9281,41 @@ $fontSize: (
 
 @keyframes piter-newCar1 {
   0% {
-    @include transform(scale(-1,1)  translate(0, 0));
+    @include transform(scale(-1, 1) translate(0, 0));
     opacity: 1;
   }
 
   25% {
-    @include transform(scale(-1,1) translate(80px, 40px));
+    @include transform(scale(-1, 1) translate(80px, 40px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform(scale(-1,1) translate(170px, 210px));
+    @include transform(scale(-1, 1) translate(170px, 210px));
     opacity: 0;
   }
 }
 
 @keyframes piter-newCar2 {
   0% {
-    @include transform(scale(-1,1) translate(0, 0));
+    @include transform(scale(-1, 1) translate(0, 0));
     opacity: 1;
   }
 
   50% {
-    @include transform(scale(-1,1)  translate(33px, 30px));
+    @include transform(scale(-1, 1) translate(33px, 30px));
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( scale(-1,1) translate(40px, 90px));
+    @include transform(scale(-1, 1) translate(40px, 90px));
     opacity: 0;
   }
 }
@@ -9326,12 +9326,12 @@ $fontSize: (
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(40deg) translate(130px, 130px));
+    @include transform(rotate(40deg) translate(130px, 130px));
     opacity: 0;
   }
 }
@@ -9350,7 +9350,7 @@ $fontSize: (
     @include transform(translate(107px, 110px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9366,7 +9366,7 @@ $fontSize: (
     opacity: 1;
   }
 
-  25%{
+  25% {
     @include transform(translate(100px, 40px));
   }
 
@@ -9374,12 +9374,12 @@ $fontSize: (
     @include transform(translate(230px, 170px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( translate(343px, 400px));
+    @include transform(translate(343px, 400px));
     opacity: 0;
   }
 }
@@ -9388,20 +9388,20 @@ $fontSize: (
 
 @keyframes moscow-newCar1 {
   0% {
-    @include transform(scale(-1,1)  translate(0, 0));
+    @include transform(scale(-1, 1) translate(0, 0));
     opacity: 1;
   }
 
   25% {
-    @include transform(scale(-1,1)  translate(45px, 63px));
+    @include transform(scale(-1, 1) translate(45px, 63px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform(scale(-1,1)  translate(125px, 123px));
+    @include transform(scale(-1, 1) translate(125px, 123px));
     opacity: 0;
   }
 }
@@ -9417,12 +9417,12 @@ $fontSize: (
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( translate(58px, 100px));
+    @include transform(translate(58px, 100px));
     opacity: 0;
   }
 }
@@ -9433,20 +9433,20 @@ $fontSize: (
     opacity: 1;
   }
 
-  25%{
-    @include transform(rotate(-16deg) translate(70px, 50px))
+  25% {
+    @include transform(rotate(-16deg) translate(70px, 50px));
   }
 
-  50%{
+  50% {
     @include transform(rotate(-10deg) translate(130px, 100px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(-10deg) translate(159px, 190px));
+    @include transform(rotate(-10deg) translate(159px, 190px));
     opacity: 0;
   }
 }
@@ -9465,7 +9465,7 @@ $fontSize: (
     @include transform(rotate(-9deg) translate(230px, 136px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9481,12 +9481,12 @@ $fontSize: (
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(-115deg) translate(79px, 90px));
+    @include transform(rotate(-115deg) translate(79px, 90px));
     opacity: 0;
   }
 }
@@ -9495,109 +9495,109 @@ $fontSize: (
 
 @keyframes krasnadar-newCar1 {
   0% {
-    @include transform(rotate(-110deg)  translate(0px, 0px));
+    @include transform(rotate(-110deg) translate(0px, 0px));
     opacity: 1;
   }
 
   50% {
-    @include transform(rotate(-110deg)  translate(80px, 70px));
+    @include transform(rotate(-110deg) translate(80px, 70px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform(rotate(-110deg)  translate(150px, 210px));
+    @include transform(rotate(-110deg) translate(150px, 210px));
     opacity: 0;
   }
 }
 
 @keyframes krasnadar-newCar2 {
   0% {
-    @include transform(rotate(-92deg)  translate(0px, 0px));
+    @include transform(rotate(-92deg) translate(0px, 0px));
     opacity: 1;
   }
 
   50% {
-    @include transform(rotate(-92deg)  translate(43px, 82px));
+    @include transform(rotate(-92deg) translate(43px, 82px));
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(-92deg)  translate(103px, 132px));
+    @include transform(rotate(-92deg) translate(103px, 132px));
     opacity: 0;
   }
 }
 
 @keyframes krasnadar-newCar3 {
   0% {
-    @include transform(rotate(-40deg)  translate(0px, 0px));
+    @include transform(rotate(-40deg) translate(0px, 0px));
     opacity: 1;
   }
 
- 50%{
-    @include transform(rotate(-40deg)  translate(83px, 52px));
+  50% {
+    @include transform(rotate(-40deg) translate(83px, 52px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform(rotate(-40deg)  translate(153px, 112px));
+    @include transform(rotate(-40deg) translate(153px, 112px));
     opacity: 0;
   }
 }
 
 @keyframes krasnadar-newCar4 {
   0% {
-    @include transform(rotate(-40deg)  translate(0px, 0px));
+    @include transform(rotate(-40deg) translate(0px, 0px));
     opacity: 1;
   }
 
   50% {
-    @include transform(rotate(-40deg)  translate(93px, 122px));
+    @include transform(rotate(-40deg) translate(93px, 122px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform(rotate(-40deg)  translate(223px, 237px));
+    @include transform(rotate(-40deg) translate(223px, 237px));
     opacity: 0;
   }
 }
 
 @keyframes krasnadar-newCar5 {
   0% {
-    @include transform(rotate(-40deg)  translate(0px, 0px));
+    @include transform(rotate(-40deg) translate(0px, 0px));
     opacity: 1;
   }
 
-  25%{
-    @include transform(rotate(-40deg)  translate(163px, 77px))
+  25% {
+    @include transform(rotate(-40deg) translate(163px, 77px));
   }
 
-  50%{
-    @include transform(rotate(-40deg)  translate(263px, 197px))
+  50% {
+    @include transform(rotate(-40deg) translate(263px, 197px));
   }
 
-  75%{
-    @include transform(rotate(-20deg)  translate(403px, 237px))
+  75% {
+    @include transform(rotate(-20deg) translate(403px, 237px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(-20deg)  translate(423px, 347px));
+    @include transform(rotate(-20deg) translate(423px, 347px));
     opacity: 0;
   }
 }
@@ -9614,7 +9614,7 @@ $fontSize: (
     @include transform(rotate(30deg) scale(-1, 1) translate(70px, 40px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9635,7 +9635,7 @@ $fontSize: (
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9651,11 +9651,11 @@ $fontSize: (
     opacity: 1;
   }
 
- 50%{
+  50% {
     @include transform(rotate(-60deg) scale(1, -1) translate(90px, 30px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9667,44 +9667,44 @@ $fontSize: (
 
 @keyframes kazan-newCar4 {
   0% {
-    @include transform(rotate(-26deg)  translate(0px, 0px));
+    @include transform(rotate(-26deg) translate(0px, 0px));
     opacity: 1;
   }
 
   50% {
-    @include transform(rotate(-26deg)  translate(50px, 50px));
+    @include transform(rotate(-26deg) translate(50px, 50px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform(rotate(-26deg)  translate(92px, 110px));
+    @include transform(rotate(-26deg) translate(92px, 110px));
     opacity: 0;
   }
 }
 
 @keyframes kazan-newCar5 {
   0% {
-    @include transform(rotate(-26deg)  translate(0px, 0px));
+    @include transform(rotate(-26deg) translate(0px, 0px));
     opacity: 1;
   }
 
-  25%{
-    @include transform(rotate(-26deg)  translate(112px, 80px))
+  25% {
+    @include transform(rotate(-26deg) translate(112px, 80px));
   }
 
-  50%{
-    @include transform(rotate(-26deg)  translate(172px, 180px))
+  50% {
+    @include transform(rotate(-26deg) translate(172px, 180px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(-26deg)  translate(212px, 320px));
+    @include transform(rotate(-26deg) translate(212px, 320px));
     opacity: 0;
   }
 }
@@ -9721,7 +9721,7 @@ $fontSize: (
     @include transform(rotate(40deg) scale(-1, 1) translate(90px, 90px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9742,7 +9742,7 @@ $fontSize: (
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9758,11 +9758,11 @@ $fontSize: (
     opacity: 1;
   }
 
- 50%{
+  50% {
     @include transform(rotate(90deg) scale(-1, 1) translate(104px, 87px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9782,7 +9782,7 @@ $fontSize: (
     @include transform(rotate(110deg) scale(-1, 1) translate(104px, 67px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9798,16 +9798,16 @@ $fontSize: (
     opacity: 1;
   }
 
-  50%{
-    @include transform(rotate(160deg) scale(-1, -1) translate(92px, 97px))
+  50% {
+    @include transform(rotate(160deg) scale(-1, -1) translate(92px, 97px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(160deg) scale(-1, -1) translate(137px, 208px));
+    @include transform(rotate(160deg) scale(-1, -1) translate(137px, 208px));
     opacity: 0;
   }
 }
@@ -9828,7 +9828,7 @@ $fontSize: (
     @include transform(rotate(60deg) scale(-1, 1) translate(350px, 280px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9849,7 +9849,7 @@ $fontSize: (
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9865,11 +9865,11 @@ $fontSize: (
     opacity: 1;
   }
 
- 50%{
+  50% {
     @include transform(rotate(100deg) scale(-1, 1) translate(150px, 139px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9889,7 +9889,7 @@ $fontSize: (
     @include transform(rotate(91deg) scale(-1, 1) translate(150px, 130px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
@@ -9905,20 +9905,20 @@ $fontSize: (
     opacity: 1;
   }
 
-  25%{
+  25% {
     @include transform(rotate(121deg) scale(-1, 1) translate(80px, 110px));
   }
 
-  50%{
-    @include transform(rotate(81deg) scale(-1, 1) translate(290px, 108px))
+  50% {
+    @include transform(rotate(81deg) scale(-1, 1) translate(290px, 108px));
   }
 
-  95%{
+  95% {
     opacity: 1;
   }
 
   100% {
-    @include transform( rotate(81deg) scale(-1, 1) translate(450px, 268px));
+    @include transform(rotate(81deg) scale(-1, 1) translate(450px, 268px));
     opacity: 0;
   }
 }
