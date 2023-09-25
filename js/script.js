@@ -389,6 +389,7 @@ $(document).ready(function () {
       centeredSlides: true,
       initialSlide: 1,
       spaceBetween: 30,
+      loop:true,
       navigation: {
         nextEl: ".reviews-product .swiper-button-next",
         prevEl: ".reviews-product .swiper-button-prev",
@@ -471,6 +472,7 @@ $(document).ready(function () {
       spaceBetween: 10,
       slidesPerView: 5,
       freeMode: true,
+      loop:true,
       watchSlidesProgress: true,
       breakpoints: {
         0: {
@@ -488,6 +490,7 @@ $(document).ready(function () {
     const swiper = new Swiper(".product__picture__slider", {
       slidesPerView: 1,
       autoHeight: true,
+      loop:true,
       navigation: {
         nextEl: ".product__picture .swiper-button-next",
         prevEl: ".product__picture .swiper-button-prev",
