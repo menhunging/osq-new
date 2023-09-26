@@ -277,15 +277,14 @@
 
 .btn-back {
   font-size: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 25px 10px;
+  padding: 15px 20px;
   background-color: rgba(170, 159, 142, 0.2);
   @include border-radius(80px);
   @include transition(all 0.3s);
-  max-width: 203px;
 
   &:hover {
     background-color: rgba(170, 159, 142, 0.33);
@@ -354,6 +353,16 @@
 
   svg {
     position: absolute;
+    left: -20px;
+    top: -16px;
+  }
+
+  @include before {
+    background-image: url("../img/icon-patent.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 114px;
+    height: 114px;
     left: -20px;
     top: -16px;
   }

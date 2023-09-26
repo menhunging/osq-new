@@ -1471,11 +1471,11 @@ div::-webkit-scrollbar-thumb {
 
 .btn-back {
   font-size: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 25px 10px;
+  padding: 15px 20px;
   background-color: rgba(170, 159, 142, 0.2);
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
@@ -1485,7 +1485,6 @@ div::-webkit-scrollbar-thumb {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  max-width: 203px;
 }
 .btn-back:hover {
   background-color: rgba(170, 159, 142, 0.33);
@@ -1576,6 +1575,21 @@ div::-webkit-scrollbar-thumb {
 }
 .btn-patented svg {
   position: absolute;
+  left: -20px;
+  top: -16px;
+}
+.btn-patented::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-image: url("../img/icon-patent.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 114px;
+  height: 114px;
   left: -20px;
   top: -16px;
 }
@@ -4568,11 +4582,12 @@ div::-webkit-scrollbar-thumb {
   line-height: 64px;
 }
 .product__name .btn-favorite {
-  top: 15px;
+  top: 8px;
   position: relative;
 }
-.product__name .btn-favorite.favorite svg path {
-  stroke: transparent;
+.product__name .btn-favorite svg {
+  width: 31px;
+  height: 28px;
 }
 .product__name + .product__info li:first-child {
   border-top: 0;
@@ -10749,11 +10764,11 @@ div::-webkit-scrollbar-thumb {
   text-indent: 200%;
   white-space: nowrap;
 }
-.gallery-slider .swiper-slide.swiper-slide-active {
+.gallery-slider .swiper-slide.swiper-slide-active + .swiper-slide {
   height: 275px;
 }
-.gallery-slider .swiper-slide.swiper-slide-active img,
-.gallery-slider .swiper-slide.swiper-slide-active .text-video {
+.gallery-slider .swiper-slide.swiper-slide-active + .swiper-slide img,
+.gallery-slider .swiper-slide.swiper-slide-active + .swiper-slide .text-video {
   height: 100%;
 }
 .gallery-slider .text-video {
@@ -15251,8 +15266,8 @@ div::-webkit-scrollbar-thumb {
     margin-right: auto;
   }
   .btn-back {
-    max-width: 165px;
-    padding: 17px 10px;
+    max-width: 145px;
+    padding: 10px 15px;
     font-size: 14px;
   }
   .search-result {

@@ -386,8 +386,6 @@ $(document).ready(function () {
   if ($(".gallery-slider").length > 0) {
     const swiper = new Swiper(".gallery-slider", {
       slidesPerView: 3,
-      centeredSlides: true,
-      initialSlide: 1,
       spaceBetween: 30,
       loop:true,
       navigation: {
@@ -1576,7 +1574,7 @@ $(document).ready(function () {
     let text = $(".product-text p");
     let btnAll = $(".product-text").next(".btn-read-all");
 
-    if (text.length >= 3) {
+    if (text.length >= 2) {
       let height =
         $(text[0]).height() + $(text[1]).height() + $(text[1]).height() / 2;
 
