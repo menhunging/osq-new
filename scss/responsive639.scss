@@ -25,7 +25,12 @@
 
   .search-invis input {
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 40px;
+  }
+
+  .search-invis .btn-close-search {
+    left: 16px;
+    margin-top: 1px;
   }
 
   .search-invis button,
@@ -259,10 +264,6 @@
 
   .search-section .product-list {
     padding-top: 15px;
-  }
-
-  .search-section .product-item {
-    width: 100%;
   }
 
   .search-result__title {

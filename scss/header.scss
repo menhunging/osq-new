@@ -29,6 +29,10 @@
   li {
     position: relative;
   }
+
+  .mobile-visible{
+    display: none;
+  }
 }
 .menu-link {
   font-weight: 400;
@@ -114,9 +118,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  @include text-decoration-hover(#2e2e2e);
   color: #2e2e2e;
   opacity: 0.6;
+  @include transition(all 0.3s);
+
+  &:hover {
+    color: $colorSite;
+  }
 }
 
 .header-controls {

@@ -408,6 +408,7 @@
     padding: 30px;
     width: 470px;
     max-width: 100%;
+    padding-bottom: 130px;
   }
 
   .about-numbers__right {
@@ -737,6 +738,7 @@
   #lottie-1 {
     top: 0;
     margin: 0;
+    margin-top: -250px;
   }
 
   #lottie-2 {
@@ -888,5 +890,39 @@
 
   .event-about__picture {
     max-width: 70%;
+  }
+
+  .btn-toSection {
+    top: -60px;
+  }
+
+  .grettings__slide {
+    height: 480px;
+  }
+
+  .grettings__slider {
+    margin-bottom: 120px;
+  }
+
+  .catalog-main__slider {
+    @include transform(scale(0.97));
+  }
+
+  .individual-design__head {
+    gap: 20px 0;
+  }
+
+  .individual-design__head .picture {
+    margin-top: 20px;
+  }
+
+  .step-head {
+    gap: 10px;
+  }
+
+  .about-numbers__inner .picture {
+    left: -65px;
+    bottom: -448px;
+    width: 831px;
   }
 }

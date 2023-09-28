@@ -689,9 +689,13 @@ div {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    color: #aa9f8e;
+    color: $colorBlack;
     @include border-radius(100px);
     padding: 22px 30px 22px 30px;
+
+    &::placeholder {
+      color: #aa9f8e;
+    }
   }
 
   textarea {
@@ -701,9 +705,13 @@ div {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    color: #aa9f8e;
+    color: $colorBlack;
     @include border-radius(30px);
     padding: 22px 30px 22px 30px;
+
+    &::placeholder {
+      color: #aa9f8e;
+    }
   }
 }
 

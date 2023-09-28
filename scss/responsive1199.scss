@@ -628,6 +628,8 @@
   }
 
   .step-item {
+    background-color: $colorWhite;
+
     .line-top {
       display: none;
     }
@@ -636,6 +638,20 @@
     &::before {
       display: none;
     }
+  }
+
+  .step-item .name {
+    color: $colorSite;
+  }
+
+  .step-item .num {
+    color: $colorSite;
+    border: 0;
+    text-shadow: none;
+  }
+
+  .step-item .name + * {
+    margin-top: 0;
   }
 
   .step-list {
@@ -925,5 +941,38 @@
   .delivery-wrap .btn,
   .production__controls .btn {
     padding: 19px 35px;
+  }
+
+  .header__inner {
+    .btn-toSection {
+      display: block;
+    }
+  }
+
+  .btn-toSection {
+    display: block;
+    top: -52px;
+    padding: 12px;
+  }
+
+  .grettings__slider {
+    margin-bottom: 0;
+  }
+
+  .about-block .caption {
+    line-height: 45px;
+    font-size: 40px;
+  }
+
+  .search-invis {
+    height: 53px;
+
+    input {
+      height: 53px;
+    }
+  }
+
+  .search-invis.opened {
+    width: 360px;
   }
 }

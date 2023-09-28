@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
 
   if ($(window).width() >= 1200) {
     if ($(".indexPage").length > 0) {
@@ -194,7 +194,6 @@ $(document).ready(function () {
           changeTextCatalog(title, text);
         },
       },
-      autoHeight: true,
       effect: "creative",
       slideToClickedSlide: true,
       creativeEffect: {
@@ -217,18 +216,15 @@ $(document).ready(function () {
       },
       breakpoints: {
         320: {
-          autoHeight: true,
           slidesPerView: 1,
-          spaceBetween: 20
+          spaceBetween: 20,
         },
         992: {
-          autoHeight: true,
           slidesPerView: 5,
           spaceBetween: 0,
-        }
-      }
+        },
+      },
     });
-
 
     swiper.on("init", function () {});
 
@@ -387,7 +383,7 @@ $(document).ready(function () {
     const swiper = new Swiper(".gallery-slider", {
       slidesPerView: 3,
       spaceBetween: 30,
-      loop:true,
+      loop: true,
       navigation: {
         nextEl: ".reviews-product .swiper-button-next",
         prevEl: ".reviews-product .swiper-button-prev",
@@ -400,6 +396,7 @@ $(document).ready(function () {
         320: {
           slidesPerView: 1,
           spaceBetween: 20,
+          autoHeight: true,
         },
         640: {
           slidesPerView: 2,
@@ -470,7 +467,7 @@ $(document).ready(function () {
       spaceBetween: 10,
       slidesPerView: 5,
       freeMode: true,
-      loop:true,
+      loop: true,
       watchSlidesProgress: true,
       breakpoints: {
         0: {
@@ -488,7 +485,7 @@ $(document).ready(function () {
     const swiper = new Swiper(".product__picture__slider", {
       slidesPerView: 1,
       autoHeight: true,
-      loop:true,
+      loop: true,
       navigation: {
         nextEl: ".product__picture .swiper-button-next",
         prevEl: ".product__picture .swiper-button-prev",
@@ -667,41 +664,46 @@ $(document).ready(function () {
 
   if ($(".our-brands__item").length > 0) {
     $(".our-brands__item").on("click", function () {
-      $(this).toggleClass("opened");
-      $(this).find(".our-invis").slideToggle();
+      $(".our-brands__item").removeClass("opened");
+      $(".our-invis").stop().slideUp("opened");
+
+      $(this).addClass("opened");
+      $(this).find(".our-invis").stop().slideDown();
     });
   }
 
   if ($(".counter-box").length > 0) {
-    let show = true;
-    let countbox = ".counter-box";
+    if ($(window).width() > 768) {
+      let show = true;
+      let countbox = ".counter-box";
 
-    $(window).on("scroll load resize", function () {
-      if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-      var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-      var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-      var w_height = $(window).height(); // Высота окна браузера
-      var d_height = $(document).height(); // Высота всего документа
-      var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-      if (
-        w_top + 500 >= e_top ||
-        w_height + w_top == d_height ||
-        e_height + e_top < w_height
-      ) {
-        $(".benefits__number").css("opacity", "1");
-        $(".about-numbers__list .num").spincrement({
-          thousandSeparator: "",
-          duration: 3000,
-        });
+      $(window).on("scroll load resize", function () {
+        if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+        var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+        var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+        var w_height = $(window).height(); // Высота окна браузера
+        var d_height = $(document).height(); // Высота всего документа
+        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+        if (
+          w_top + 500 >= e_top ||
+          w_height + w_top == d_height ||
+          e_height + e_top < w_height
+        ) {
+          $(".benefits__number").css("opacity", "1");
+          $(".about-numbers__list .num").spincrement({
+            thousandSeparator: "",
+            duration: 3000,
+          });
 
-        $(".possibilities .num").spincrement({
-          thousandSeparator: "",
-          duration: 5000,
-        });
+          $(".possibilities .num").spincrement({
+            thousandSeparator: "",
+            duration: 5000,
+          });
 
-        show = false;
-      }
-    });
+          show = false;
+        }
+      });
+    }
   }
 
   if ($(".city-bl").length > 0) {
@@ -941,56 +943,27 @@ $(document).ready(function () {
         return false;
       });
 
-      $('.sub-menu-mobile__back').on('click',function(){
+      $(".sub-menu-mobile__back").on("click", function () {
         $(".menu").removeClass("sub-menu-opened");
         $(".sub-menu-mobile").removeClass("opened");
-      })
+      });
     }
   }
 
   if ($(".btn-search").length > 0) {
-    $(".btn-search").mouseover(function () {
-      console.log("mouseover");
-      initSearchBlock();
+    let searchBlock = $(".search-invis");
+    let searchInput = searchBlock.find("input");
+
+    $(".btn-search").on("click", function (event) {
+      event.preventDefault();
+      searchBlock.toggleClass("opened");
     });
 
-    function initSearchBlock() {
-      let searchBlock = $(".search-invis");
-      let searchInput = searchBlock.find("input");
-
-      let timer = setTimeout(function () {
-        searchBlock.removeClass("opened").off("mouseleave");
-      }, 5000);
-
-      searchBlock.addClass("opened");
-
-      searchBlock.mouseover(function () {
-        clearInterval(timer);
-      });
-
-      searchBlock.mouseleave(function () {
-        let timer = setTimeout(function () {
-          searchBlock.removeClass("opened").off("mouseleave");
-        }, 5000);
-
-        searchInput.off("input");
-
-        searchInput.on("input", function () {
-          clearInterval(timer);
-        });
-      });
-
-      $(document).mouseup(function (e) {
-        if (
-          !searchBlock.is(e.target) &&
-          searchBlock.has(e.target).length === 0 &&
-          !$(".btn-search").is(e.target)
-        ) {
-          searchBlock.removeClass("opened");
-          $(document).off("mouseup");
-        }
-      });
-    }
+    $(".btn-close-search").on("click", function (event) {
+      event.preventDefault();
+      $(".search-invis").removeClass("opened");
+      $(".search-invis").find("input");
+    });
   }
 
   if ($(".storage-section__tabs").length > 0) {
@@ -1030,14 +1003,13 @@ $(document).ready(function () {
   if ($(".terms-text").length > 0) {
     $(".terms-text").map(function () {
       $(this).scroll(function () {
-        let scroll = $(this).scrollTop();
-        let height = $(this).find(".text").height();
-        let percent = (height / 100) * 85; // 85%
+        let heightScroll = $(this)[0].scrollHeight;
+        let height = $(this).height();
 
-        if (scroll >= percent) {
-          $(this).closest(".modal").find(".read-to").addClass("hide");
+        if ($(this).scrollTop() >= heightScroll - height) {
+          $(this).parents(".modal").find(".read-to").addClass("hide");
           $(this)
-            .closest(".modal")
+            .parents(".modal")
             .find(".modal__controls")
             .addClass("visible");
         }
@@ -1702,6 +1674,7 @@ $(document).ready(function () {
       const swiper = new Swiper(".lineap", {
         slidesPerView: 1,
         spaceBetween: 30,
+        autoHeight: true,
         pagination: {
           el: ".lineap .swiper-pagination",
           type: "progressbar",
@@ -1717,7 +1690,7 @@ $(document).ready(function () {
   }
 
   if ($(".js-btn-cookie").length > 0) {
-    $(".js-btn-cookie").on('click', function () {
+    $(".js-btn-cookie").on("click", function () {
       $(".cookee-block").addClass("good");
     });
   }
