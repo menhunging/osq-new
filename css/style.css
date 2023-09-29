@@ -12870,6 +12870,15 @@ div::-webkit-scrollbar-thumb {
     height: 800px;
     margin-top: -80px;
   }
+  .grettings {
+    padding: 0 95px;
+  }
+  .grettings__slider .swiper-button-prev {
+    left: -80px;
+  }
+  .grettings__slider .swiper-button-next {
+    right: -80px;
+  }
 }
 @media (max-width: 1199px) {
   .logo-wrapper {
@@ -16055,6 +16064,9 @@ div::-webkit-scrollbar-thumb {
   }
   .location-invis {
     padding: 5px;
+  }
+  .grettings {
+    padding: 0;
   }
 }
 @media (max-width: 639px) {

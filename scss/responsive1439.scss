@@ -931,4 +931,16 @@
     height: 800px;
     margin-top: -80px;
   }
+
+  .grettings {
+    padding: 0 95px;
+  }
+
+  .grettings__slider .swiper-button-prev {
+    left: -80px;
+  }
+
+  .grettings__slider .swiper-button-next {
+    right: -80px;
+  }
 }
