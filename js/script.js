@@ -957,15 +957,47 @@ $(document).ready(function () {
     let searchBlock = $(".search-invis");
     let searchInput = searchBlock.find("input");
 
-    $(".btn-search").on("click", function (event) {
+    $(".btn-search").on("mouseover", function (event) {
       event.preventDefault();
       searchBlock.toggleClass("opened");
+
+      let timer = setTimeout(function () {
+        searchBlock.removeClass("opened").off("mouseleave");
+      }, 5000);
+
+      searchBlock.mouseover(function () {
+        clearInterval(timer);
+      });
+
+      $(document).mouseup(function (e) {
+        if (
+          !searchBlock.is(e.target) &&
+          searchBlock.has(e.target).length === 0 &&
+          !$(".btn-search").is(e.target)
+        ) {
+          searchBlock.removeClass("opened");
+          $(document).off("mouseup");
+        }
+      });
     });
+
+    searchBlock.mouseleave(function () {
+      let timer = setTimeout(function () {
+        searchBlock.removeClass("opened").off("mouseleave");
+      }, 5000);
+
+      searchInput.off("input");
+
+      searchInput.on("input", function () {
+        clearInterval(timer);
+      });
+    });
+
+
 
     $(".btn-close-search").on("click", function (event) {
       event.preventDefault();
       $(".search-invis").removeClass("opened");
-      $(".search-invis").find("input");
     });
   }
 
