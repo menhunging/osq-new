@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 
   if ($(window).width() >= 1200) {
     if ($(".indexPage").length > 0) {
@@ -84,7 +84,7 @@ $(document).ready(function () {
       slidesPerGroup: 1,
       loop: true,
       effect: "cards",
-      speed: 1000,
+      speed: 500,
       navigation: {
         nextEl: ".typeFood__slider__next",
         prevEl: ".typeFood__slider__prev",
@@ -397,14 +397,17 @@ $(document).ready(function () {
           slidesPerView: 1,
           spaceBetween: 20,
           autoHeight: true,
+          loop: true,
         },
         640: {
           slidesPerView: 2,
           spaceBetween: 20,
+          loop: true,
         },
         992: {
           slidesPerView: 3,
           spaceBetween: 20,
+          loop: true,
         },
       },
     });
@@ -1557,6 +1560,9 @@ $(document).ready(function () {
         $(this).addClass("active");
         $(".product-text").addClass("opened").height(defaultHeight);
       });
+    } else {
+      $(".product-text").addClass("visible");
+      btnAll.addClass("active");
     }
   }
 

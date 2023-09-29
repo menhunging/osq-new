@@ -2306,7 +2306,7 @@ div::-webkit-scrollbar-thumb {
   border-radius: 27px;
   max-width: 903px;
   width: 100%;
-  height: 435px;
+  height: auto;
   align-items: center;
   border: solid 1px rgba(170, 159, 142, 0.5);
 }
@@ -4593,8 +4593,8 @@ div::-webkit-scrollbar-thumb {
 }
 .product__name .caption {
   font-weight: 700;
-  font-size: 52px;
-  line-height: 64px;
+  font-size: 36px;
+  line-height: 40px;
 }
 .product__name .btn-favorite {
   top: 8px;
@@ -4613,8 +4613,8 @@ div::-webkit-scrollbar-thumb {
 
 .product__desc {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 20px;
   color: rgba(46, 46, 46, 0.6);
   display: block;
   margin-top: 19px;
@@ -4734,6 +4734,12 @@ div::-webkit-scrollbar-thumb {
   margin-top: 20px;
 }
 .product-text.opened::before {
+  display: none;
+}
+.product-text.visible {
+  height: auto;
+}
+.product-text.visible::before {
   display: none;
 }
 .product-text ul {
@@ -10486,18 +10492,16 @@ div::-webkit-scrollbar-thumb {
 
 .lineap-item__content-title {
   color: #fff;
-  font-family: Circe;
   font-size: 31px;
   font-weight: 700;
   line-height: 90.8%;
-  letter-spacing: -2.79px;
+  letter-spacing: -0.79px;
   text-transform: uppercase;
   position: relative;
 }
 
 .lineap-item__content-description {
   color: #fff;
-  font-family: Circe;
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
@@ -10543,7 +10547,6 @@ div::-webkit-scrollbar-thumb {
   margin-right: auto;
   gap: 20px;
   color: #fff;
-  font-family: Circe;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -10570,11 +10573,10 @@ div::-webkit-scrollbar-thumb {
   transform: rotate(90deg);
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.8);
-  font-family: Circe;
   font-size: 24px;
   font-weight: 400;
   line-height: 90.8%;
-  letter-spacing: -2.16px;
+  letter-spacing: -0.16px;
   text-transform: uppercase;
 }
 
@@ -10860,16 +10862,16 @@ div::-webkit-scrollbar-thumb {
   background-color: rgba(0, 161, 154, 0.85);
   backdrop-filter: blur(10px);
   color: rgb(255, 255, 255);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  padding: 32px;
+  line-height: 20px;
+  padding: 18px 23px;
   position: relative;
   z-index: 999;
 }
 .cookee-block__inner .btn {
-  padding: 17px 32px;
-  max-width: 280px;
+  padding: 11px 20px;
+  max-width: 240px;
   width: 100%;
 }
 
@@ -12005,6 +12007,7 @@ div::-webkit-scrollbar-thumb {
   right: 0;
   top: -80px;
   left: auto;
+  padding: 12px;
 }
 
 .search-invis .btn-close-search {
