@@ -45,7 +45,6 @@ $(document).ready(function () {
       });
     } else {
       $("[data-aos]").map((i, el) => {
-        console.log(el);
         $(el).removeAttr("data-aos");
       });
     }
@@ -993,8 +992,6 @@ $(document).ready(function () {
       });
     });
 
-
-
     $(".btn-close-search").on("click", function (event) {
       event.preventDefault();
       $(".search-invis").removeClass("opened");
@@ -1731,6 +1728,22 @@ $(document).ready(function () {
     $(".js-btn-cookie").on("click", function () {
       $(".cookee-block").addClass("good");
     });
+  }
+
+  if ($(".mobile-visible").length > 0) {
+    $(".mobile-visible .city-block .js-action-link").off();
+    $(".mobile-visible .location-block.js-action-link").off();
+
+    $(".mobile-visible .city-block .js-action-link").on("click", function () {
+      $(".mobile-visible .city-invis").slideToggle();
+    });
+
+    $(".mobile-visible .location-block.js-action-link").on(
+      "click",
+      function () {
+        $(".mobile-visible .location-invis").slideToggle();
+      }
+    );
   }
 });
 

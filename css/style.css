@@ -12865,6 +12865,11 @@ div::-webkit-scrollbar-thumb {
     bottom: -448px;
     width: 831px;
   }
+  .contacts-map {
+    width: 100%;
+    height: 800px;
+    margin-top: -80px;
+  }
 }
 @media (max-width: 1199px) {
   .logo-wrapper {
@@ -15579,14 +15584,14 @@ div::-webkit-scrollbar-thumb {
     width: 100%;
     height: 520px;
     padding-bottom: 50px;
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -webkit-transform: scale(0.5);
-    -o-transform: scale(0.5);
-    transform: scale(0.5);
-    left: -85px;
-    margin-top: -180px;
-    margin-bottom: 80px;
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    -webkit-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    transform: scale(0.2);
+    left: -112px;
+    margin-top: -190px;
+    margin-bottom: -140px;
   }
   .contacts-info {
     margin: 30px 0;
@@ -15928,11 +15933,13 @@ div::-webkit-scrollbar-thumb {
     padding: 0;
     margin: 0;
   }
+  .menu .mobile-visible .location-block {
+    display: flex;
+    margin-right: auto;
+    margin-left: 30px;
+  }
   .menu.sub-menu-opened .mobile-visible {
     display: none;
-  }
-  .city-block {
-    pointer-events: none;
   }
   .catalog-main__text {
     margin-top: 40px;
@@ -16030,6 +16037,24 @@ div::-webkit-scrollbar-thumb {
   }
   .individual-design__head {
     gap: 0;
+  }
+  .city-invis {
+    left: 0;
+    top: auto;
+    bottom: 100%;
+  }
+  .city-invis a {
+    padding: 5px 10px;
+  }
+  .location-invis {
+    top: auto;
+    bottom: calc(100% + 20px);
+  }
+  .location-invis li + li {
+    margin-top: 5px;
+  }
+  .location-invis {
+    padding: 5px;
   }
 }
 @media (max-width: 639px) {

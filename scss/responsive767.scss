@@ -1384,10 +1384,10 @@
     width: 100%;
     height: 520px;
     padding-bottom: 50px;
-    @include transform(scale(0.5));
-    left: -85px;
-    margin-top: -180px;
-    margin-bottom: 80px;
+    @include transform(scale(0.2));
+    left: -112px;
+    margin-top: -190px;
+    margin-bottom: -140px;
   }
 
   .contacts-info {
@@ -1797,6 +1797,12 @@
         padding: 0;
         margin: 0;
       }
+
+      .location-block {
+        display: flex;
+        margin-right: auto;
+        margin-left: 30px;
+      }
     }
   }
 
@@ -1806,10 +1812,6 @@
         display: none;
       }
     }
-  }
-
-  .city-block {
-    pointer-events: none;
   }
 
   .catalog-main__text {
@@ -1935,5 +1937,28 @@
 
   .individual-design__head {
     gap: 0;
+  }
+
+  .city-invis {
+    left: 0;
+    top: auto;
+    bottom: 100%;
+  }
+
+  .city-invis a {
+    padding: 5px 10px;
+  }
+
+  .location-invis {
+    top: auto;
+    bottom: calc(100% + 20px);
+  }
+
+  .location-invis li + li {
+    margin-top: 5px;
+  }
+
+  .location-invis {
+    padding: 5px;
   }
 }
