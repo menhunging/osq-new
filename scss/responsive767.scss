@@ -1753,6 +1753,7 @@
   .modal__form .caption {
     font-size: 28px;
     line-height: 30px;
+    max-width: 85%;
   }
 
   #modal-offer {
@@ -1964,5 +1965,28 @@
 
   .grettings {
     padding: 0;
+  }
+
+  .header__inner .btn {
+    &.btn-mobile-visible {
+      display: flex !important;
+      margin-top: 30px;
+      max-width: 250px;
+    }
+  }
+
+  .btn-favorite {
+    &:after {
+      display: none;
+    }
+  }
+
+  .typeFood__slider {
+    padding: 0;
+  }
+
+  .typeFood__slider .typeFood__slider__prev,
+  .typeFood__slider .typeFood__slider__next {
+    display: none;
   }
 }

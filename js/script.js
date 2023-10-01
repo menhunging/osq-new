@@ -3,14 +3,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
 
   if ($(window).width() >= 1200) {
     if ($(".indexPage").length > 0) {
       let invisPosition = 6500;
 
       if ($(window).width() < 1440) {
-        invisPosition = 7100;
+        invisPosition = 6500;
       }
 
       if (currentScroll > invisPosition) {
@@ -83,7 +83,6 @@ $(document).ready(function () {
       slidesPerGroup: 1,
       loop: true,
       effect: "cards",
-      speed: 500,
       navigation: {
         nextEl: ".typeFood__slider__next",
         prevEl: ".typeFood__slider__prev",
@@ -666,12 +665,34 @@ $(document).ready(function () {
 
   if ($(".our-brands__item").length > 0) {
     $(".our-brands__item").on("click", function () {
-      $(".our-brands__item").removeClass("opened");
-      $(".our-invis").stop().slideUp("opened");
+      if ($(this).hasClass("opened")) {
+        close();
+      } else {
+        close();
+        $(this).addClass("opened");
+        $(this).find(".our-invis").stop().slideDown();
+      }
 
-      $(this).addClass("opened");
-      $(this).find(".our-invis").stop().slideDown();
+      function close() {
+        $(".our-brands__item").removeClass("opened");
+        $(".our-invis").stop().slideUp("opened");
+      }
     });
+  }
+
+  if ($(".loop").length > 0) {
+    if ($(window).width() >= 1200) {
+      $(".loop").map(function () {
+        let url = $(this).attr("href");
+
+        $(this).zoom({
+          url: url,
+          callback: function () {
+            $(this).colorbox({ href: this.src });
+          },
+        });
+      });
+    }
   }
 
   if ($(".counter-box").length > 0) {
@@ -1113,7 +1134,7 @@ $(document).ready(function () {
 
       $(window).scroll(function () {
         if ($(window).width() < 1440) {
-          positionLottie2Paused = 7300;
+          positionLottie2Paused = 6600;
         }
 
         if (
@@ -1251,7 +1272,7 @@ $(document).ready(function () {
               y: -930,
               scrollTrigger: {
                 trigger: ".production",
-                start: "-650",
+                start: "-600",
                 scrub: true,
               },
             }
@@ -1575,10 +1596,11 @@ $(document).ready(function () {
 
   if ($(".product-text").length > 0) {
     let defaultHeight = $(".product-text").height();
+    let heightInfo = $(".product__info").height();
     let text = $(".product-text p");
     let btnAll = $(".product-text").next(".btn-read-all");
 
-    if (text.length >= 2) {
+    if (defaultHeight >= heightInfo) {
       let height =
         $(text[0]).height() + $(text[1]).height() + $(text[1]).height() / 2;
 

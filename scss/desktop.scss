@@ -2179,6 +2179,8 @@
   z-index: 3;
 
   .btn-favorite {
+    position: relative;
+    z-index: 8;
     margin-left: auto;
   }
 
@@ -2360,10 +2362,6 @@
 }
 
 .filter-product {
-  position: sticky;
-  top: 0;
-  left: 0;
-
   .caption {
     text-transform: none;
     line-height: 28px;
@@ -2672,12 +2670,14 @@
         top: 100%;
         background-color: $colorWhite;
         color: $colorBlack;
-        padding: 14px;
+        padding: 10px;
         font-size: 16px;
         text-align: center;
         line-height: 24px;
         @include border-radius(20px);
         @include box-shadow(1px 1px 10px 0px rgba(170, 159, 142, 0.1));
+        white-space: nowrap;
+        width: auto;
       }
     }
   }
@@ -2762,10 +2762,10 @@
     }
   }
 
-  &.visible{
+  &.visible {
     height: auto;
 
-    &::before{
+    &::before {
       display: none;
     }
   }
@@ -3004,6 +3004,16 @@
     width: 100%;
     margin-bottom: 85px;
     display: block;
+    min-height: 350px;
+
+    & > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .caption {
@@ -3459,7 +3469,7 @@
 
   .text-caption__inner {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 60px;
     width: 100%;
     padding: 0 58px;
@@ -7322,6 +7332,8 @@
 }
 
 .distr-list {
+  margin-top: 150px;
+
   .contacts-info__list {
     padding: 25px 60px;
     border-left: solid 1px rgba(182, 170, 155, 0.5);
@@ -8837,6 +8849,7 @@ $fontSize: (
     left: 200px;
     top: 50%;
     font-size: 18px;
+    z-index: auto;
 
     svg {
       @include transform(rotate(-90deg));
@@ -9935,3 +9948,29 @@ $fontSize: (
     }
   }
 }
+
+.btn-mobile-visible {
+  display: none;
+}
+
+.btn-filter .count {
+  position: absolute;
+  right: -25px;
+  font-size: 14px;
+  line-height: 18px;
+  top: 50%;
+  @include transform(translateY(-50%));
+  color: $colorBlack;
+}
+
+
+.loop:has(.zoomImg){
+  cursor: zoom-in;
+  
+  &:hover{
+    img:not(.zoomImg) {
+      opacity: 0;
+    }
+  }
+}
+

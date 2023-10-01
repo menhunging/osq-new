@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -1414,15 +1415,43 @@ div::-webkit-scrollbar-thumb {
   stroke: rgb(255, 255, 255);
 }
 
-.btn-favorite:hover svg path, .btn-favorite.favorite svg path {
+.btn-favorite.favorite svg path {
   fill: rgb(0, 161, 154);
   stroke: rgb(0, 161, 154);
 }
-.btn-favorite svg path {
-  stroke: #aa9f8e;
+.btn-favorite:hover::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  content: "Добавить в избранное";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: auto;
+  height: auto;
+  right: 0;
+  top: 100%;
+  min-width: 144px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(170, 159, 142, 0.4);
+  -moz-box-shadow: 1px 1px 10px 0px rgba(170, 159, 142, 0.4);
+  box-shadow: 1px 1px 10px 0px rgba(170, 159, 142, 0.4);
 }
-.btn-favorite.favorite:hover svg path {
-  fill: transparent;
+.btn-favorite svg path {
   stroke: #aa9f8e;
 }
 
@@ -4159,6 +4188,8 @@ div::-webkit-scrollbar-thumb {
   z-index: 3;
 }
 .product-item .btn-favorite {
+  position: relative;
+  z-index: 8;
   margin-left: auto;
 }
 .product-item .btn {
@@ -4361,11 +4392,6 @@ div::-webkit-scrollbar-thumb {
   width: calc(100% - 360px);
 }
 
-.filter-product {
-  position: sticky;
-  top: 0;
-  left: 0;
-}
 .filter-product .caption {
   text-transform: none;
   line-height: 28px;
@@ -4653,7 +4679,7 @@ div::-webkit-scrollbar-thumb {
   top: 100%;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  padding: 14px;
+  padding: 10px;
   font-size: 16px;
   text-align: center;
   line-height: 24px;
@@ -4664,6 +4690,8 @@ div::-webkit-scrollbar-thumb {
   -webkit-box-shadow: 1px 1px 10px 0px rgba(170, 159, 142, 0.1);
   -moz-box-shadow: 1px 1px 10px 0px rgba(170, 159, 142, 0.1);
   box-shadow: 1px 1px 10px 0px rgba(170, 159, 142, 0.1);
+  white-space: nowrap;
+  width: auto;
 }
 
 .product__info {
@@ -4972,6 +5000,15 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
   margin-bottom: 85px;
   display: block;
+  min-height: 350px;
+}
+.text-details .picture > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .text-details p + p {
   margin-top: 16px;
@@ -5412,7 +5449,7 @@ div::-webkit-scrollbar-thumb {
 }
 .text-caption .text-caption__inner {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 60px;
   width: 100%;
   padding: 0 58px;
@@ -9166,6 +9203,9 @@ div::-webkit-scrollbar-thumb {
   padding: 10px 32px;
 }
 
+.distr-list {
+  margin-top: 150px;
+}
 .distr-list .contacts-info__list {
   padding: 25px 60px;
   border-left: solid 1px rgba(182, 170, 155, 0.5);
@@ -10693,6 +10733,7 @@ div::-webkit-scrollbar-thumb {
   left: 200px;
   top: 50%;
   font-size: 18px;
+  z-index: auto;
 }
 .footer-bottom .btn-top-page svg {
   -moz-transform: rotate(-90deg);
@@ -12026,6 +12067,31 @@ div::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 
+.btn-mobile-visible {
+  display: none;
+}
+
+.btn-filter .count {
+  position: absolute;
+  right: -25px;
+  font-size: 14px;
+  line-height: 18px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+}
+
+.loop:has(.zoomImg) {
+  cursor: zoom-in;
+}
+.loop:has(.zoomImg):hover img:not(.zoomImg) {
+  opacity: 0;
+}
+
 @media (max-width: 1619px) {
   .animation-text {
     top: 20px;
@@ -12713,7 +12779,7 @@ div::-webkit-scrollbar-thumb {
     margin-top: 50px;
   }
   #lottie-1 {
-    top: 0;
+    top: -180px;
     margin: 0;
     margin-top: -250px;
   }
@@ -12814,7 +12880,6 @@ div::-webkit-scrollbar-thumb {
     margin-bottom: 10px;
   }
   .news-main .news-item--big {
-    height: 390px;
     width: calc(100% - 400px);
   }
   .news-main .news-item--big .news-item__picture {
@@ -12872,12 +12937,31 @@ div::-webkit-scrollbar-thumb {
   }
   .grettings {
     padding: 0 95px;
+    margin-bottom: -140px;
   }
   .grettings__slider .swiper-button-prev {
     left: -80px;
   }
   .grettings__slider .swiper-button-next {
     right: -80px;
+  }
+  .typeFood__slider .swiper-slide {
+    height: 400px;
+  }
+  .typeFood__slider {
+    padding: 0 90px;
+  }
+  .typeFood__slider .typeFood__slider__prev {
+    left: 0;
+  }
+  .typeFood__slider .typeFood__slider__next {
+    right: 0;
+  }
+  .food-type {
+    margin-top: 100px;
+  }
+  .lottie-three {
+    height: 1200px;
   }
 }
 @media (max-width: 1199px) {
@@ -13658,6 +13742,9 @@ div::-webkit-scrollbar-thumb {
   }
   .search-invis.opened {
     width: 360px;
+  }
+  .typeFood__slider .swiper-slide {
+    height: 100%;
   }
 }
 @media (max-width: 1023px) {
@@ -15908,6 +15995,7 @@ div::-webkit-scrollbar-thumb {
   .modal__form .caption {
     font-size: 28px;
     line-height: 30px;
+    max-width: 85%;
   }
   #modal-offer .modal__form .caption {
     font-size: 24px;
@@ -16067,6 +16155,21 @@ div::-webkit-scrollbar-thumb {
   }
   .grettings {
     padding: 0;
+  }
+  .header__inner .btn.btn-mobile-visible {
+    display: flex !important;
+    margin-top: 30px;
+    max-width: 250px;
+  }
+  .btn-favorite:after {
+    display: none;
+  }
+  .typeFood__slider {
+    padding: 0;
+  }
+  .typeFood__slider .typeFood__slider__prev,
+  .typeFood__slider .typeFood__slider__next {
+    display: none;
   }
 }
 @media (max-width: 639px) {
@@ -16310,8 +16413,15 @@ div::-webkit-scrollbar-thumb {
     margin-bottom: -70px;
     margin-top: 0;
   }
+  .search-section .product-list {
+    gap: 10px;
+  }
   .search-section .product-item {
-    width: 100%;
+    padding: 10px 10px;
+  }
+  .search-section .product-item .btn {
+    padding: 5px 5px;
+    font-size: 12px;
   }
 }
 

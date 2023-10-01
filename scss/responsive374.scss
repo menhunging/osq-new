@@ -25,7 +25,18 @@
     margin-top: 0;
   }
 
-  .search-section .product-item {
-    width: 100%;
+  .search-section {
+    .product-list {
+      gap: 10px;
+    }
+
+    .product-item {
+      padding: 10px 10px;
+
+      .btn {
+        padding: 5px 5px;
+        font-size: 12px;
+      }
+    }
   }
 }

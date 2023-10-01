@@ -201,7 +201,6 @@
 }
 
 .btn-favorite {
-  &:hover,
   &.favorite {
     svg {
       path {
@@ -211,22 +210,36 @@
     }
   }
 
+  &:hover {
+    @include after {
+      content: "Добавить в избранное";
+      position: absolute;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      width: auto;
+      height: auto;
+      right: 0;
+      top: 100%;
+      min-width: 144px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: left;
+      @include border-radius(20px);
+      @include box-shadow(1px 1px 10px 0px rgba(170, 159, 142, 0.4));
+    }
+  }
+
   svg {
     path {
       stroke: #aa9f8e;
     }
   }
 
-  &.favorite {
-    &:hover {
-      svg {
-        path {
-          fill: transparent;
-          stroke: #aa9f8e;
-        }
-      }
-    }
-  }
 }
 
 .btn-loadFile {
