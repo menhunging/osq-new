@@ -12092,6 +12092,15 @@ div::-webkit-scrollbar-thumb {
   opacity: 0;
 }
 
+.product-information {
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+
 @media (max-width: 1619px) {
   .animation-text {
     top: 20px;
@@ -16170,6 +16179,11 @@ div::-webkit-scrollbar-thumb {
   .typeFood__slider .typeFood__slider__prev,
   .typeFood__slider .typeFood__slider__next {
     display: none;
+  }
+  .product-information {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 10px;
   }
 }
 @media (max-width: 639px) {
