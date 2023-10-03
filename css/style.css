@@ -1776,6 +1776,7 @@ div::-webkit-scrollbar-thumb {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  font-size: 12px;
 }
 
 .header-info {
@@ -4031,7 +4032,6 @@ div::-webkit-scrollbar-thumb {
   padding: 93px 0;
   text-align: center;
 }
-
 .universal-containers__slider {
   max-width: 630px;
   width: 100%;
@@ -4186,6 +4186,7 @@ div::-webkit-scrollbar-thumb {
   border-radius: 20px;
   position: relative;
   z-index: 3;
+  transition: all 0.3s;
 }
 .product-item .btn-favorite {
   position: relative;
@@ -4200,10 +4201,10 @@ div::-webkit-scrollbar-thumb {
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   border-radius: 25px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
   opacity: 0;
   pointer-events: none;
 }
@@ -4945,6 +4946,8 @@ div::-webkit-scrollbar-thumb {
   transition: all 0.3s;
   background-color: #fefcfb;
   border: 0;
+  display: grid;
+  grid-template-columns: 435px 1fr;
 }
 .news-section .news-item:hover {
   background-color: rgb(255, 255, 255);
@@ -4967,13 +4970,16 @@ div::-webkit-scrollbar-thumb {
 }
 .news-section .news-item .news-item__content {
   padding: 10px 60px 0;
-  min-height: 340px;
+  min-height: 435px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  grid-row: 1/3;
 }
 .news-section .news-item .news-item__content .btn {
-  margin-top: auto;
+  margin-top: 20px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
@@ -8848,7 +8854,7 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 27px;
   border-radius: 27px;
   overflow: hidden;
-  padding: 20px 32px;
+  padding: 20px;
   position: relative;
   width: 100%;
   display: flex;
@@ -8917,6 +8923,7 @@ div::-webkit-scrollbar-thumb {
   color: rgb(255, 255, 255);
   margin-top: 15px;
   line-height: 32px;
+  font-size: 24px;
 }
 
 .js-action-link {
@@ -12856,7 +12863,7 @@ div::-webkit-scrollbar-thumb {
   }
   #lottie-2-2 {
     left: 0;
-    width: 1400px;
+    width: 1300px;
   }
   #lottie-3 {
     margin-left: -840px;
@@ -12919,11 +12926,19 @@ div::-webkit-scrollbar-thumb {
     margin-bottom: 120px;
   }
   .catalog-main__slider {
-    -moz-transform: scale(0.97);
-    -ms-transform: scale(0.97);
-    -webkit-transform: scale(0.97);
-    -o-transform: scale(0.97);
-    transform: scale(0.97);
+    -moz-transform: scale(0.86);
+    -ms-transform: scale(0.86);
+    -webkit-transform: scale(0.86);
+    -o-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+  .catalog-main__slider .swiper-pagination,
+  .catalog-main__slider .swiper-controls {
+    -moz-transform: scale(1.14);
+    -ms-transform: scale(1.14);
+    -webkit-transform: scale(1.14);
+    -o-transform: scale(1.14);
+    transform: scale(1.14);
   }
   .individual-design__head {
     gap: 20px 0;
@@ -12971,6 +12986,21 @@ div::-webkit-scrollbar-thumb {
   }
   .lottie-three {
     height: 1200px;
+  }
+  .production__slider .swiper-pagination {
+    margin-top: 20px;
+  }
+  .delivery .caption {
+    font-size: 86px;
+    line-height: 94px;
+  }
+  .delivery .desc {
+    font-size: 54px;
+    line-height: 70px;
+  }
+  .delivery-wrap {
+    width: 100%;
+    left: 0;
   }
 }
 @media (max-width: 1199px) {
@@ -14570,6 +14600,10 @@ div::-webkit-scrollbar-thumb {
   }
   .why-block + .sertificate {
     margin-top: 50px;
+  }
+  .news-section .news-item {
+    grid-template-columns: 275px 1fr;
+    align-items: flex-start;
   }
 }
 @media (min-width: 768px) {
@@ -16185,6 +16219,13 @@ div::-webkit-scrollbar-thumb {
     line-height: 16px;
     margin-top: 10px;
   }
+  .news-section .news-item {
+    grid-template-columns: 275px 1fr;
+    align-items: center;
+  }
+  .animation-text .caption--middle {
+    display: none;
+  }
 }
 @media (max-width: 639px) {
   .category-catalog__item {
@@ -16406,6 +16447,13 @@ div::-webkit-scrollbar-thumb {
     padding: 5px 20px;
     font-size: 14px;
     line-height: 18px;
+  }
+  .news-section .news-item {
+    display: block;
+    align-items: center;
+  }
+  .news-section .news-item {
+    overflow: hidden;
   }
 }
 @media (max-width: 479px) {

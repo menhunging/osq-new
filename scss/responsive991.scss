@@ -1027,10 +1027,14 @@
     margin-top: 50px;
   }
 
-  .why-block{
-    & + .sertificate{
+  .why-block {
+    & + .sertificate {
       margin-top: 50px;
     }
   }
 
+  .news-section .news-item {
+    grid-template-columns: 275px 1fr;
+    align-items: flex-start;
+  }
 }

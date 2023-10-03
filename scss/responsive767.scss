@@ -1995,4 +1995,13 @@
     line-height: 16px;
     margin-top: 10px;
   }
+
+  .news-section .news-item {
+    grid-template-columns: 275px 1fr;
+    align-items: center;
+  }
+
+  .animation-text .caption--middle{
+    display: none;
+  }
 }

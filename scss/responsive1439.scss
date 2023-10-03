@@ -820,7 +820,7 @@
 
   #lottie-2-2 {
     left: 0;
-    width: 1400px;
+    width: 1300px;
   }
 
   #lottie-3 {
@@ -904,7 +904,12 @@
   }
 
   .catalog-main__slider {
-    @include transform(scale(0.97));
+    @include transform(scale(0.86));
+
+    .swiper-pagination,
+    .swiper-controls {
+      @include transform(scale(1.14));
+    }
   }
 
   .individual-design__head {
@@ -960,11 +965,30 @@
     right: 0;
   }
 
-  .food-type{
+  .food-type {
     margin-top: 100px;
   }
 
-  .lottie-three{
+  .lottie-three {
     height: 1200px;
+  }
+
+  .production__slider .swiper-pagination {
+    margin-top: 20px;
+  }
+
+  .delivery .caption {
+    font-size: 86px;
+    line-height: 94px;
+  }
+
+  .delivery .desc {
+    font-size: 54px;
+    line-height: 70px;
+  }
+
+  .delivery-wrap {
+    width: 100%;
+    left: 0;
   }
 }

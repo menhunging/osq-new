@@ -282,4 +282,13 @@
     font-size: 14px;
     line-height: 18px;
   }
+
+  .news-section .news-item {
+    display: block;
+    align-items: center;
+  }
+
+  .news-section .news-item {
+    overflow: hidden;
+  }
 }
