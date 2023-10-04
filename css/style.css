@@ -6266,6 +6266,14 @@ div::-webkit-scrollbar-thumb {
   height: 796px;
   margin: 0;
 }
+.video-block .iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
 
 .about-advantages {
   padding: 111px 0 193px;
