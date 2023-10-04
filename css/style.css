@@ -6261,6 +6261,7 @@ div::-webkit-scrollbar-thumb {
 
 .video-block {
   padding: 34px 0;
+  position: relative;
 }
 .video-block .text-video {
   height: 796px;
