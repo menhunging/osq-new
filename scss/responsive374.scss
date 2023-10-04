@@ -39,4 +39,18 @@
       }
     }
   }
+
+  .universal-containers__inner .caption {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .title-page .caption {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .title-page__inner .title-page__text {
+    margin-top: 10px;
+  }
 }

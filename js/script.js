@@ -1601,10 +1601,7 @@ $(document).ready(function () {
     let btnAll = $(".product-text").next(".btn-read-all");
 
     if (defaultHeight >= heightInfo) {
-      let height =
-        $(text[0]).height() + $(text[1]).height() + $(text[1]).height() / 2;
-
-      $(".product-text").height(height);
+      $(".product-text").height(heightInfo);
 
       btnAll.on("click", function (event) {
         event.preventDefault();

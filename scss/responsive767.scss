@@ -11,6 +11,12 @@
     font-size: 48px;
   }
 
+  .universal-containers__inner {
+    .caption {
+      font-size: 48px;
+    }
+  }
+
   .title-page__inner {
     padding: 20px 0;
   }
@@ -2001,7 +2007,7 @@
     align-items: center;
   }
 
-  .animation-text .caption--middle{
+  .animation-text .caption--middle {
     display: none;
   }
 }
