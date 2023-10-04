@@ -6266,7 +6266,7 @@ div::-webkit-scrollbar-thumb {
   height: 796px;
   margin: 0;
 }
-.video-block .iframe {
+.video-block iframe {
   width: 100%;
   height: 100%;
   position: absolute;
