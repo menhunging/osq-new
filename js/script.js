@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 
   if ($(window).width() >= 1200) {
     if ($(".indexPage").length > 0) {
