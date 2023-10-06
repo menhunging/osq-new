@@ -1,4 +1,14 @@
 @media (max-width: 1439px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .catalog-main__slider .swiper-lines {
+    width: 1300px;
+    margin-left: -649px;
+    background-size: contain;
+  }
+
   .logo-wrapper {
     width: 100px;
   }
@@ -997,5 +1007,22 @@
   .delivery-wrap {
     width: 100%;
     left: 0;
+  }
+
+  .lineap-item__content {
+    padding: 35px 30px;
+  }
+
+  .lineap-item__title-text{
+    font-size: 18px;
+  }
+
+  :root {
+    --lineap-item-width: 590px;
+    --lineap-item-height: 276px;
+    --lineap-item-title-width: 45px;
+    --lineap-item-content-width: calc(
+      var(--lineap-item-width) - var(--lineap-item-title-width)
+    );
   }
 }
