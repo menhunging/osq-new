@@ -224,28 +224,27 @@ $(document).ready(function () {
       },
     });
 
-    $('body').on('click', '.catalog-main__slider .swiper-slide', function(e) {
-      if ($(this).hasClass('swiper-slide-next')) {
+    $("body").on("click", ".catalog-main__slider .swiper-slide", function (e) {
+      if ($(this).hasClass("swiper-slide-next")) {
         e.preventDefault();
-        $('.catalog-main__slider .swiper-button-next').trigger('click');
-      } else if ($(this).hasClass('swiper-slide-prev')) {
+        $(".catalog-main__slider .swiper-button-next").trigger("click");
+      } else if ($(this).hasClass("swiper-slide-prev")) {
         e.preventDefault();
-        $('.catalog-main__slider .swiper-button-prev').trigger('click');
-      } else if ($(this).prev().hasClass('swiper-slide-next')) {
+        $(".catalog-main__slider .swiper-button-prev").trigger("click");
+      } else if ($(this).prev().hasClass("swiper-slide-next")) {
         e.preventDefault();
-        $('.catalog-main__slider .swiper-button-next').trigger('click');
+        $(".catalog-main__slider .swiper-button-next").trigger("click");
         setTimeout(function (e) {
-          $('.catalog-main__slider .swiper-button-next').trigger('click');
-        },400)
-      } else if ($(this).next().hasClass('swiper-slide-prev')) {
+          $(".catalog-main__slider .swiper-button-next").trigger("click");
+        }, 400);
+      } else if ($(this).next().hasClass("swiper-slide-prev")) {
         e.preventDefault();
-        $('.catalog-main__slider .swiper-button-prev').trigger('click');
+        $(".catalog-main__slider .swiper-button-prev").trigger("click");
         setTimeout(function (e) {
-          $('.catalog-main__slider .swiper-button-prev').trigger('click');
-        },400)
+          $(".catalog-main__slider .swiper-button-prev").trigger("click");
+        }, 400);
       }
-
-    })
+    });
 
     swiper.on("init", function () {});
 
@@ -710,9 +709,9 @@ $(document).ready(function () {
 
         $(this).zoom({
           url: url,
-          callback: function () {
-            $(this).colorbox({ href: this.src });
-          },
+          // callback: function () {
+          //   // $(this).colorbox({ href: this.src });
+          // },
         });
       });
     }
@@ -1357,6 +1356,7 @@ $(document).ready(function () {
               },
             }
           );
+          
 
           // delivery
 

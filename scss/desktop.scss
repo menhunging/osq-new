@@ -7058,7 +7058,8 @@
     color: $colorWhite;
     margin-top: 15px;
     line-height: 32px;
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 
@@ -7155,6 +7156,7 @@
   }
 
   .event-small {
+    
   }
 
   .swiper-slide {
@@ -9989,7 +9991,6 @@ $fontSize: (
   @include transform(translateY(-50%));
   color: $colorBlack;
 }
-
 
 .loop:has(.zoomImg){
   cursor: zoom-in;

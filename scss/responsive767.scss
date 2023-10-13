@@ -7,6 +7,11 @@
 }
 
 @media (max-width: 767px) {
+
+  .container{
+    padding: 0 15px;
+  }
+
   .title-page .caption {
     font-size: 48px;
   }
@@ -1971,6 +1976,7 @@
 
   .grettings {
     padding: 0;
+    margin-bottom: 0;
   }
 
   .header__inner .btn {
